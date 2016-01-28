@@ -1,0 +1,6 @@
+1453851372.965118
+work	/home/kyttong/ECE-327/lab2/uw_tmp/rtlc_libs/work	I2C_AV_CONFIG	I2C_AV_CONFIG	0
+work	/home/kyttong/ECE-327/lab2/uw_tmp/rtlc_libs/work	I2C_CTRL	I2C_CTRL	0
+ieee	/opt/Precision_Synthesis_2008a.47/Mgc_home/pkgs/rtlc_psr.ixl/rtlc/IEEE	STD_LOGIC_1164	STD_LOGIC_1164	2
+ieee	/opt/Precision_Synthesis_2008a.47/Mgc_home/pkgs/rtlc_psr.ixl/rtlc/IEEE	NUMERIC_STD	NUMERIC_STD	2
+work	/home/kyttong/ECE-327/lab2/uw_tmp/rtlc_libs/work	MAIN	I2C_CTRL	1

@@ -1,0 +1,12 @@
+<interfaceDefinition version='1.2' language='vhdl' kind='component' name='fir'>
+  <useClause path='work.fir_synth_pkg.all' />
+  <useClause path='ieee.NUMERIC_STD.all' />
+  <useClause path='ieee.std_logic_1164.all' />
+    <portList>
+
+      <port name='clk' direction='in' type='STD_LOGIC' kind='' />
+      <port name='i_data' direction='in' type='word (15 downto 0)' kind='array' library='work' package='fir_synth_pkg' packedDimension='(15 downto 0)' />
+      <port name='o_data' direction='out' type='word (15 downto 0)' kind='array' library='work' package='fir_synth_pkg' packedDimension='(15 downto 0)' />
+
+    </portList>
+</interfaceDefinition>

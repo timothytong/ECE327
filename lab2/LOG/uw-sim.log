@@ -1,0 +1,41 @@
+uw-sim /home/ece327/bin/uw-sim fir_tb.vhd
+INFO: Using testbench        : fir_tb
+INFO: Using design entity    : fir
+INFO: Using simulation script: fir_tb.sim
+** Warning: vmap will not overwrite local modelsim.ini.
+ ** Warning: (vlib-34) Library already exists at "work-msim".
+ DEBUG: modelsim_pfx: testing: /opt/ModelSim101/modeltech/bin/
+** Warning: (vlib-34) Library already exists at "work-msim".
+** Warning: (vlib-34) Library already exists at "work-msim".
+  Model Technology ModelSim SE-64 vcom 10.1 Compiler 2011.12 Dec  5 2011
+Model Technology ModelSim SE-64 vcom 10.1 Compiler 2011.12 Dec  5 2011
+-- Loading package STANDARD
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package NUMERIC_STD
+-- Loading package fir_synth_pkg
+-- Loading package fir_synth_pkg
+-- Compiling entity fir
+-- Compiling entity fir
+-- Compiling architecture avg of fir
+-- Compiling architecture avg of fir
+-- Compiling architecture low_pass of fir
+-- Compiling architecture low_pass of fir
+-- Loading entity fir
+-- Loading entity fir
+-- Compiling entity shiftr
+-- Compiling entity shiftr
+-- Compiling architecture main of shiftr
+-- Compiling architecture main of shiftr
+-- Compiling entity fir_tb
+-- Compiling entity fir_tb
+-- Compiling architecture main of fir_tb
+-- Compiling architecture main of fir_tb
+-- Loading entity fir
+-- Loading entity fir
+ 
+ Reading /opt/ModelSim101/modeltech/tcl/vsim/pref.tcl 

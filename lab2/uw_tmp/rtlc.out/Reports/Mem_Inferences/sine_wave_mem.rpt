@@ -1,0 +1,7 @@
+Inferred ROM
+------------
+  1. Instance: rtlc_new_reduced_rom_I1
+    File: /home/kyttong/ECE-327/lab2/fir_lib.vhd , Net: sine_waveform_map_64
+    port 1  address width: 6
+    port 1  data width: 12
+

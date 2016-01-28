@@ -1,0 +1,35 @@
+module rom_13_7_128_36(address, q );
+
+input [6 : 0] address;
+wire [6 : 0] address;
+output [12 : 0] q;
+wire [12 : 0] q;
+
+mux_128u_7u mux0 (.a({ 1'b1, 1'b0, 2'b11, 1'b0, 2'b11, 2'b0, 1'b1, 2'b0, 1'b1, 2'b0, 2'b11, 1'b0, 2'b11, 1'b0, 2'b11, 2'b0, 1'b1, 2'b0, 1'b1, 2'b0, 2'b11, 1'b0, 2'b11, 1'b0, 2'b11, 2'b0, 1'b1, 2'b0, 1'b1, 2'b0, 2'b11, 1'b0, 2'b11, 1'b0, 2'b11, 2'b0, 1'b1, 2'b0, 1'b1, 2'b0, 2'b11, 1'b0, 2'b11, 1'b0, 2'b11, 2'b0, 1'b1, 2'b0, 1'b1, 2'b0, 2'b11, 1'b0, 2'b11, 1'b0, 2'b11, 2'b0, 1'b1, 2'b0, 1'b1, 2'b0, 2'b11, 1'b0, 2'b11, 1'b0, 2'b11, 2'b0, 1'b1, 2'b0, 1'b1, 2'b0, 2'b11, 1'b0, 2'b11, 1'b0, 2'b11, 2'b0, 1'b1, 2'b0, 1'b1, 2'b0, 1'b1 }), .b({ address[6], address[5], address[4], address[3], address[2], address[1], address[0] }), .d(q[0]));
+
+mux_128u_7u mux1 (.a({ 4'b0, 3'b111, 3'b0, 3'b111, 7'b0, 3'b111, 3'b0, 3'b111, 7'b0, 3'b111, 3'b0, 3'b111, 7'b0, 3'b111, 3'b0, 3'b111, 7'b0, 3'b111, 3'b0, 3'b111, 7'b0, 3'b111, 3'b0, 3'b111, 7'b0, 3'b111, 3'b0, 3'b111, 7'b0, 3'b111, 3'b0, 3'b111, 3'b0 }), .b({ address[6], address[5], address[4], address[3], address[2], address[1], address[0] }), .d(q[1]));
+
+mux_128u_7u mux2 (.a({ 7'b0, 6'b111111, 10'b0, 6'b111111, 10'b0, 6'b111111, 10'b0, 6'b111111, 10'b0, 6'b111111, 10'b0, 6'b111111, 10'b0, 6'b111111, 10'b0, 6'b111111, 3'b0 }), .b({ address[6], address[5], address[4], address[3], address[2], address[1], address[0] }), .d(q[2]));
+
+mux_128u_7u mux3 (.a({ 1'b1, 12'b0, 4'b1111, 12'b0, 4'b1111, 12'b0, 4'b1111, 12'b0, 4'b1111, 12'b0, 4'b1111, 12'b0, 4'b1111, 12'b0, 4'b1111, 12'b0, 3'b111 }), .b({ address[6], address[5], address[4], address[3], address[2], address[1], address[0] }), .d(q[3]));
+
+mux_128u_7u mux4 (.a({ 2'b0, 1'b1, 1'b0, 1'b1, 1'b0, 1'b1, 1'b0, 1'b1, 1'b0, 1'b1, 1'b0, 1'b1, 1'b0, 1'b1, 1'b0, 2'b11, 1'b0, 1'b1, 1'b0, 1'b1, 1'b0, 1'b1, 1'b0, 1'b1, 1'b0, 1'b1, 1'b0, 1'b1, 1'b0, 1'b1, 2'b0, 1'b1, 3'b0, 1'b1, 1'b0, 1'b1, 1'b0, 1'b1, 1'b0, 1'b1, 1'b0, 1'b1, 1'b0, 2'b11, 1'b0, 1'b1, 1'b0, 1'b1, 1'b0, 1'b1, 1'b0, 1'b1, 1'b0, 1'b1, 1'b0, 1'b1, 1'b0, 1'b1, 2'b0, 1'b1, 1'b0, 1'b1, 1'b0, 1'b1, 1'b0, 1'b1, 1'b0, 1'b1, 1'b0, 1'b1, 1'b0, 1'b1, 1'b0, 2'b11, 1'b0, 1'b1, 1'b0, 1'b1, 1'b0, 1'b1, 1'b0, 1'b1, 1'b0, 1'b1, 1'b0, 1'b1, 1'b0, 1'b1, 2'b0, 1'b1, 1'b0, 1'b1, 1'b0, 1'b1, 1'b0, 1'b1, 1'b0, 1'b1, 1'b0, 1'b1, 1'b0, 1'b1, 1'b0, 2'b11, 1'b0, 1'b1, 1'b0, 1'b1, 1'b0, 1'b1, 1'b0, 1'b1, 1'b0, 1'b1, 1'b0, 1'b1, 1'b0, 1'b1 }), .b({ address[6], address[5], address[4], address[3], address[2], address[1], address[0] }), .d(q[4]));
+
+mux_128u_7u mux5 (.a({ 4'b0, 2'b11, 2'b0, 2'b11, 4'b0, 2'b11, 3'b0, 2'b11, 4'b0, 2'b11, 2'b0, 2'b11, 5'b0, 2'b11, 2'b0, 2'b11, 4'b0, 2'b11, 3'b0, 2'b11, 4'b0, 2'b11, 2'b0, 2'b11, 5'b0, 2'b11, 2'b0, 2'b11, 4'b0, 2'b11, 3'b0, 2'b11, 4'b0, 2'b11, 2'b0, 2'b11, 5'b0, 2'b11, 2'b0, 2'b11, 4'b0, 2'b11, 3'b0, 2'b11, 4'b0, 2'b11, 2'b0, 2'b11, 1'b0 }), .b({ address[6], address[5], address[4], address[3], address[2], address[1], address[0] }), .d(q[5]));
+
+mux_128u_7u mux6 (.a({ 4'b0, 4'b1111, 6'b0, 5'b11111, 6'b0, 4'b1111, 8'b0, 3'b111, 6'b0, 5'b11111, 6'b0, 4'b1111, 7'b0, 4'b1111, 6'b0, 5'b11111, 6'b0, 4'b1111, 7'b0, 4'b1111, 6'b0, 5'b11111, 6'b0, 4'b1111, 3'b0 }), .b({ address[6], address[5], address[4], address[3], address[2], address[1], address[0] }), .d(q[6]));
+
+mux_128u_7u mux7 (.a({ 2'b0, 2'b11, 8'b0, 2'b11, 9'b0, 2'b11, 9'b0, 2'b11, 8'b0, 2'b11, 9'b0, 2'b11, 9'b0, 2'b11, 8'b0, 2'b11, 9'b0, 2'b11, 9'b0, 2'b11, 8'b0, 2'b11, 9'b0, 2'b11, 7'b0 }), .b({ address[6], address[5], address[4], address[3], address[2], address[1], address[0] }), .d(q[7]));
+
+mux_128u_7u mux8 (.a({ 2'b0, 10'b1111111111, 11'b0, 11'b11111111111, 10'b0, 11'b11111111111, 11'b0, 10'b1111111111, 11'b0, 11'b11111111111, 10'b0, 11'b11111111111, 9'b0 }), .b({ address[6], address[5], address[4], address[3], address[2], address[1], address[0] }), .d(q[8]));
+
+mux_128u_7u mux9 (.a({ 2'b11, 42'b0, 22'b1111111111111111111111, 21'b0, 21'b111111111111111111111, 20'b0 }), .b({ address[6], address[5], address[4], address[3], address[2], address[1], address[0] }), .d(q[9]));
+
+mux_128u_7u mux10 (.a({ 44'b0, 43'b1111111111111111111111111111111111111111111, 41'b0 }), .b({ address[6], address[5], address[4], address[3], address[2], address[1], address[0] }), .d(q[10]));
+
+mux_128u_7u mux11 (.a({ 23'b0, 21'b111111111111111111111, 84'b0 }), .b({ address[6], address[5], address[4], address[3], address[2], address[1], address[0] }), .d(q[11]));
+
+mux_128u_7u mux12 (.a({ 23'b11111111111111111111111, 105'b0 }), .b({ address[6], address[5], address[4], address[3], address[2], address[1], address[0] }), .d(q[12]));
+
+endmodule
+

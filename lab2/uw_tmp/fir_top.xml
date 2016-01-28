@@ -1,0 +1,30 @@
+<interfaceDefinition version='1.2' language='vhdl' kind='component' name='fir_top'>
+  <useClause path='work.fir_synth_pkg.all' />
+  <useClause path='ieee.NUMERIC_STD.all' />
+  <useClause path='ieee.std_logic_1164.all' />
+    <portList>
+
+      <port name='clock_50' direction='in' type='STD_LOGIC' kind='' />
+      <port name='clock_27' direction='in' type='STD_LOGIC' kind='' />
+      <port name='key' direction='in' type='std_logic_vector (3 downto 0)' kind='array' library='work' package='fir_top' packedDimension='(3 downto 0)' />
+      <port name='sw' direction='in' type='std_logic_vector (17 downto 0)' kind='array' library='work' package='fir_top' packedDimension='(17 downto 0)' />
+      <port name='ledg' direction='out' type='std_logic_vector (8 downto 0)' kind='array' library='work' package='fir_top' packedDimension='(8 downto 0)' />
+      <port name='ledr' direction='out' type='std_logic_vector (17 downto 0)' kind='array' library='work' package='fir_top' packedDimension='(17 downto 0)' />
+      <port name='hex0' direction='out' type='std_logic_vector (6 downto 0)' kind='array' library='work' package='fir_top' packedDimension='(6 downto 0)' />
+      <port name='hex1' direction='out' type='std_logic_vector (6 downto 0)' kind='array' library='work' package='fir_top' packedDimension='(6 downto 0)' />
+      <port name='hex2' direction='out' type='std_logic_vector (6 downto 0)' kind='array' library='work' package='fir_top' packedDimension='(6 downto 0)' />
+      <port name='hex3' direction='out' type='std_logic_vector (6 downto 0)' kind='array' library='work' package='fir_top' packedDimension='(6 downto 0)' />
+      <port name='hex4' direction='out' type='std_logic_vector (6 downto 0)' kind='array' library='work' package='fir_top' packedDimension='(6 downto 0)' />
+      <port name='hex5' direction='out' type='std_logic_vector (6 downto 0)' kind='array' library='work' package='fir_top' packedDimension='(6 downto 0)' />
+      <port name='hex6' direction='out' type='std_logic_vector (6 downto 0)' kind='array' library='work' package='fir_top' packedDimension='(6 downto 0)' />
+      <port name='hex7' direction='out' type='std_logic_vector (6 downto 0)' kind='array' library='work' package='fir_top' packedDimension='(6 downto 0)' />
+      <port name='aud_xck' direction='out' type='STD_LOGIC' kind='' />
+      <port name='aud_bclk' direction='inout' type='STD_LOGIC' kind='' />
+      <port name='aud_dacdat' direction='out' type='STD_LOGIC' kind='' />
+      <port name='aud_daclrck' direction='out' type='STD_LOGIC' kind='' />
+      <port name='aud_adclrck' direction='out' type='STD_LOGIC' kind='' />
+      <port name='i2c_sdat' direction='inout' type='STD_LOGIC' kind='' />
+      <port name='i2c_sclk' direction='out' type='STD_LOGIC' kind='' />
+
+    </portList>
+</interfaceDefinition>

@@ -1,0 +1,5 @@
+1453851372.895207
+work	/home/kyttong/ECE-327/lab2/uw_tmp/rtlc_libs/work	AUDIO_DAC	AUDIO_DAC	0
+work	/home/kyttong/ECE-327/lab2/uw_tmp/rtlc_libs/work	AUDIO_PLL	AUDIO_PLL	0
+ieee	/opt/Precision_Synthesis_2008a.47/Mgc_home/pkgs/rtlc_psr.ixl/rtlc/IEEE	STD_LOGIC_1164	STD_LOGIC_1164	2
+altera_mf	/opt/Precision_Synthesis_2008a.47/Mgc_home/pkgs/rtlc_psr.ixl/rtlc/ALTERA_MF	ALTERA_MF_COMPONENTS	ALTERA_MF_COMPONENTS	2

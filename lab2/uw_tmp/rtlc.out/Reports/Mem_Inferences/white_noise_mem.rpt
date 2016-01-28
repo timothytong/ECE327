@@ -1,0 +1,7 @@
+Inferred ROM
+------------
+  1. Instance: rtlc_new_rom_I3
+    File: /home/kyttong/ECE-327/lab2/fir_lib.vhd , Net: noise_waveform_map
+    port 1  address width: 10
+    port 1  data width: 8
+

@@ -1,0 +1,12 @@
+i2c_av_config i2c_av_config
+fir_top fir_top
+white_noise-0 white_noise_0
+shiftr shiftr
+i2c_ctrl i2c_ctrl
+audio_pll audio_pll
+fir fir
+sine_wave sine_wave
+heatingsys heatingsys
+altpll altpll
+audio_dac audio_dac
+#LEGALIZEDMOD_COUNTER 0

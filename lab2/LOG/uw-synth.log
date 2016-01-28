@@ -1,0 +1,1793 @@
+INFO: Starting PRECISION_RTL for logic synthesis
+precision: Executing on platform: CentOS release 5.11 (Final) Kernel \r on an \m  Linux ecelinux5.uwaterloo.ca 2.6.18-407.el5 #1 SMP Wed Nov 11 08:12:41 EST 2015 x86_64 x86_64 x86_64 GNU/Linux 
+precision: Setting MGC_HOME to /opt/Precision_Synthesis_2008a.47/Mgc_home ...
+Note: Defaulting to use the Next Generation GUI.
+//  Precision RTL Synthesis 2008a.47 (Production Release) Tue Dec  9 03:06:25 PST 2008
+//  
+//  Copyright (c) Mentor Graphics Corporation, 1996-2008, All Rights Reserved.
+//             Portions copyright 1991-2004 Compuware Corporation
+//                       UNPUBLISHED, LICENSED SOFTWARE.
+//            CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+//          PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+//  
+//  Running on Linux kyttong@ecelinux5.uwaterloo.ca #1 SMP Wed Nov 11 08:12:41 EST 2015 2.6.18-407.el5 x86_64
+//  
+//  Start time Tue Jan 26 18:36:11 2016
+-------------------------------------------------
+Info: Logging session transcript to file precision.log
+Info: Results directory: uw_tmp/
+Info: Moving session transcript to file uw_tmp/precision.log
+Info:  Setting up the design to use synthesis library "cycloneii.syn"
+Info: The global max fanout is currently set to 1000 for Altera - Cyclone II.
+Info:  Setting Part to: "EP2C35F672C"
+Info:  Setting Process to: "7"
+Info: USING DESIGN ARCH
+Info: Reading file: /opt/Precision_Synthesis_2008a.47/Mgc_home/pkgs/psr/techlibs/cycloneii.syn.
+Info: Loading library initialization file /opt/Precision_Synthesis_2008a.47/Mgc_home/pkgs/psr/userware/yeager_rename.tcl
+Info: vhdlorder, Release 2008a.22
+Info: Files sorted successfully.
+Info: hdl-analyze, Release RTLC-Precision 2008a.22
+INFO: Analyzing "fir_synth_pkg.vhd"
+INFO: Analyzing "fir_lib.vhd"
+INFO: Analyzing "fir.vhd"
+INFO: Analyzing "fir_top.vhd"
+Info: Current working directory: uw_tmp/.
+Info: RTLC-Driver, Release RTLC-Precision 2008a.22
+Info: Last compiled on Nov 27 2008 12:40:04
+Info: Initializing...
+Info: Partitioning design ....
+
+Info: RTLCompiler, Release RTLC-Precision 2008a.22
+Info: Last compiled on Nov 27 2008 12:46:53
+Info: Initializing...
+Info: Root Module work.fir_top(main): Pre-processing...
+Info: Module work.sine_wave(sample_64): Pre-processing...
+Info: Built-in hardware memory core inferred for variable ': sine_wave.sine_waveform_map_64 depth = 64, width = 16'.
+Info: Module work.white_noise(main){generic map (use_clock_50 => false)}: Pre-processing...
+Warning: "fir_lib.vhd", line 319: signal clock_count has never been used.
+Info: Built-in hardware memory core inferred for variable ': white_noise.noise_waveform_map depth = 1024, width = 16'.
+Info: Module work.fir(low_pass): Pre-processing...
+Info: Module work.shiftr(main): Pre-processing...
+Info: Module work.audio_dac(main): Pre-processing...
+Info: Module work.audio_pll(main): Pre-processing...
+Info: Module work.i2c_av_config(main): Pre-processing...
+Info: Module work.i2c_ctrl(main): Pre-processing...
+Info: Extracted FSM in module work.i2c_av_config(main), with state variable = m_setup_st[3:0], async set/reset state(s) = (none), number of states = 3.
+Info: Re-encoding 3 state FSM as "binary".
+Info: FSM: State encoding table.
+Info: FSM:	Index	                            Literal	                      Encoding
+Info: FSM:	    0	                               0000	                            00
+Info: FSM:	    1	                               0001	                            01
+Info: FSM:	    2	                               0010	                            10
+Info: FSM: Removing unreachable default branch
+Info: Built-in hardware memory core inferred for variable ': frequency_map depth = 128, width = 16'.
+Warning: "fir.vhd", line 73: signal taps(17) has never been used.
+Warning: "fir_lib.vhd", line 379: signal sub_wire0[5:2] has never been used.
+Warning: "fir_top.vhd", line 24: Input port clock_50 has never been used.
+Warning: "fir_top.vhd", line 27: Input port key[3:1] has never been used.
+Warning: "fir_top.vhd", line 28: Input port sw[15:7] has never been used.
+Warning: "fir_top.vhd", line 29: Output port ledg has never been assigned a value.
+Warning: "fir_top.vhd", line 30: Output port ledr has never been assigned a value.
+Warning: "fir_top.vhd", line 83: signal noise_clk has never been used.
+Info: Module work.sine_wave(sample_64): Compiling...
+Info: Module work.white_noise(main){generic map (use_clock_50 => false)}: Compiling...
+Info: "fir_lib.vhd", line 353: Sharing register o_data[15] with o_data[14]
+Info: "fir_lib.vhd", line 353: Sharing register o_data[15] with o_data[13]
+Info: "fir_lib.vhd", line 353: Sharing register o_data[15] with o_data[12]
+Info: "fir_lib.vhd", line 353: Sharing register o_data[15] with o_data[11]
+Info: "fir_lib.vhd", line 353: Sharing register o_data[3] with o_data[2]
+Info: "fir_lib.vhd", line 353: Sharing register o_data[3] with o_data[1]
+Info: "fir_lib.vhd", line 353: Sharing register o_data[3] with o_data[0]
+Info: "fir_lib.vhd", line 348: Macro Modgen_Counter "counter_up_clock_0_10" inferred for node "address".
+Info: Module work.shiftr(main): Compiling...
+Info: Module work.fir(low_pass): Compiling...
+Info: Module work.audio_pll(main): Compiling...
+Info: Module work.audio_dac(main): Compiling...
+Info: "fir_lib.vhd", line 481: Macro Modgen_Counter "counter_up_sclear_clock_0_4" inferred for node "bck_div".
+Info: "fir_lib.vhd", line 496: Macro Modgen_Counter "counter_up_sclear_clock_0_9" inferred for node "lrck_1x_div".
+Info: Module work.i2c_ctrl(main): Compiling...
+Info: "fir_lib.vhd", line 563: Macro Modgen_Counter "counter_up_sload_sclear_clock_cnt_en_0_6" inferred for node "sd_counter".
+Info: Module work.i2c_av_config(main): Compiling...
+Info: "fir_lib.vhd", line 734: Sharing register m_i2c_data[21] with m_i2c_data[20]
+Info: "fir_lib.vhd", line 734: Sharing register m_i2c_data[21] with m_i2c_data[18]
+Info: "fir_lib.vhd", line 734: Sharing register m_i2c_data[6] with m_i2c_data[5]
+Info: "fir_lib.vhd", line 734: Sharing register m_i2c_data[4] with m_i2c_data[3]
+Info: "fir_lib.vhd", line 700: Macro Modgen_Counter "counter_up_clock_cnt_en_0_16" inferred for node "cont".
+Info: "fir_lib.vhd", line 714: Macro Modgen_Counter "counter_up_sclear_clock_0_16" inferred for node "m_i2c_clk_div".
+Info: "fir_lib.vhd", line 759: Macro Modgen_Counter "counter_up_sclear_clock_cnt_en_0_6" inferred for node "lut_index".
+Info: Root Module work.fir_top(main): Compiling...
+Info: "fir_top.vhd", line 188: Macro Modgen_Counter "counter_up_clock_0_4" inferred for node "bit_position".
+Info: "fir_lib.vhd", line 111: Inferred rom instance 'rtlcI6' of type 'rom_12_6_64_30'.
+Info: "fir_lib.vhd", line 166: Inferred rom instance 'rtlcI7' of type 'rom_8_10_1024_32'.
+Warning: "fir_lib.vhd", line 353: Optimizing state bit(s) o_data[3] to constant 0
+Info: "fir_lib.vhd", line 767: Inferred rom instance 'rtlcI8' of type 'rom_8_6_64_33'.
+Warning: "fir_lib.vhd", line 734: Optimizing state bit(s) m_i2c_data[23] to constant 0
+Warning: "fir_lib.vhd", line 734: Optimizing state bit(s) m_i2c_data[19] to constant 0
+Warning: "fir_lib.vhd", line 734: Optimizing state bit(s) m_i2c_data[17:13] to constant 0
+Warning: "fir_lib.vhd", line 734: Optimizing state bit(s) m_i2c_data[8] to constant 0
+Info: "fir_synth_pkg.vhd", line 57: Inferred rom instance 'rtlcI9' of type 'rom_13_7_128_36'.
+Info: Rebalanced Expression Tree...
+Info: Compilation successfully completed.
+Info: Counter Inferencing === Detected : 9, Inferred (Modgen/Selcounter/AddSub) : 8 (8 / 0 / 0), AcrossDH (Merged/Not-Merged) : (0 / 0), Not-Inferred (Acrossdh/Attempted) : (0 / 0), Local Vars : 1 ===
+Info: Total CPU time taken for compilation: 1.0 secs.
+Info: Total lines of RTL compiled: 1303.
+Info: Overall running time 2.0 secs.
+Info: Current working directory: uw_tmp/.
+Info: Finished compiling design.
+Info: -- Saving the design database in uw_tmp/fir_top_gate.xdb
+Info: Writing file: uw_tmp/fir_top_gate.vhd.
+Info: Info, Writing xrf file 'uw_tmp/fir_top_gate.xrf'
+Info: Writing file: uw_tmp/fir_top_gate.xrf.
+Info: Info, Command 'auto_write' finished successfully
+Info: Current working directory: uw_tmp/.
+Info: 17 Instances are flattened in hierarchical block .work.fir.low_pass.
+Info: 1 Instances are flattened in hierarchical block .work.audio_dac.main.
+Info: 3 Instances are flattened in hierarchical block .work.fir_top.main.
+Info:  Writing ROM data in 'u_sine_modgen_rom_ix21__altsyncram_12_6_64_2_0.hex'.
+Info:  Writing ROM data in 'u_noise_modgen_rom_ix24__altsyncram_8_10_1024_2_0.hex'.
+Info: Optimizing design view:.OPERATORS.mult_32_70.IMPLEMENTATION
+Info: Optimizing design view:.OPERATORS.mult_32_80.IMPLEMENTATION
+Info: Optimizing design view:.work.fir.low_pass
+Info: Optimizing design view:.work.i2c_ctrl_notri.main_unfold_1393
+Info: Optimizing design view:.work.i2c_av_config_notri.main_unfold_1971
+Info: Optimizing design view:.work.fir_top.main
+Warning: Port hex0(6) is connected to a disabled tristate, possibly unconnected Port in design.
+Warning: Port hex0(5) is connected to a disabled tristate, possibly unconnected Port in design.
+Warning: Port hex0(4) is connected to a disabled tristate, possibly unconnected Port in design.
+Warning: Port hex0(3) is connected to a disabled tristate, possibly unconnected Port in design.
+Warning: Port hex0(2) is connected to a disabled tristate, possibly unconnected Port in design.
+Warning: Port hex0(1) is connected to a disabled tristate, possibly unconnected Port in design.
+Warning: Port hex0(0) is connected to a disabled tristate, possibly unconnected Port in design.
+Warning: Port hex1(6) is connected to a disabled tristate, possibly unconnected Port in design.
+Warning: Port hex1(5) is connected to a disabled tristate, possibly unconnected Port in design.
+Warning: Port hex1(4) is connected to a disabled tristate, possibly unconnected Port in design.
+Warning: Port hex1(3) is connected to a disabled tristate, possibly unconnected Port in design.
+Warning: Port hex1(2) is connected to a disabled tristate, possibly unconnected Port in design.
+Warning: Port hex1(1) is connected to a disabled tristate, possibly unconnected Port in design.
+Warning: Port hex1(0) is connected to a disabled tristate, possibly unconnected Port in design.
+Warning: Port hex2(6) is connected to a disabled tristate, possibly unconnected Port in design.
+Warning: Port hex2(5) is connected to a disabled tristate, possibly unconnected Port in design.
+Warning: Port hex2(4) is connected to a disabled tristate, possibly unconnected Port in design.
+Warning: Port hex2(3) is connected to a disabled tristate, possibly unconnected Port in design.
+Warning: Port hex2(2) is connected to a disabled tristate, possibly unconnected Port in design.
+Warning: Port hex2(1) is connected to a disabled tristate, possibly unconnected Port in design.
+Warning: Port hex2(0) is connected to a disabled tristate, possibly unconnected Port in design.
+Warning: Port hex3(6) is connected to a disabled tristate, possibly unconnected Port in design.
+Warning: Port hex3(5) is connected to a disabled tristate, possibly unconnected Port in design.
+Warning: Port hex3(4) is connected to a disabled tristate, possibly unconnected Port in design.
+Warning: Port hex3(3) is connected to a disabled tristate, possibly unconnected Port in design.
+Warning: Port hex3(2) is connected to a disabled tristate, possibly unconnected Port in design.
+Warning: Port hex3(1) is connected to a disabled tristate, possibly unconnected Port in design.
+Warning: Port hex3(0) is connected to a disabled tristate, possibly unconnected Port in design.
+Warning: Port ledg(0) is connected to a disabled tristate, possibly unconnected Port in design.
+Warning: Port ledg(1) is connected to a disabled tristate, possibly unconnected Port in design.
+Warning: Port ledg(2) is connected to a disabled tristate, possibly unconnected Port in design.
+Warning: Port ledg(3) is connected to a disabled tristate, possibly unconnected Port in design.
+Warning: Port ledg(4) is connected to a disabled tristate, possibly unconnected Port in design.
+Warning: Port ledg(5) is connected to a disabled tristate, possibly unconnected Port in design.
+Warning: Port ledg(6) is connected to a disabled tristate, possibly unconnected Port in design.
+Warning: Port ledg(7) is connected to a disabled tristate, possibly unconnected Port in design.
+Warning: Port ledg(8) is connected to a disabled tristate, possibly unconnected Port in design.
+Warning: Port ledr(0) is connected to a disabled tristate, possibly unconnected Port in design.
+Warning: Port ledr(1) is connected to a disabled tristate, possibly unconnected Port in design.
+Warning: Port ledr(2) is connected to a disabled tristate, possibly unconnected Port in design.
+Warning: Port ledr(3) is connected to a disabled tristate, possibly unconnected Port in design.
+Warning: Port ledr(4) is connected to a disabled tristate, possibly unconnected Port in design.
+Warning: Port ledr(5) is connected to a disabled tristate, possibly unconnected Port in design.
+Warning: Port ledr(6) is connected to a disabled tristate, possibly unconnected Port in design.
+Warning: Port ledr(7) is connected to a disabled tristate, possibly unconnected Port in design.
+Warning: Port ledr(8) is connected to a disabled tristate, possibly unconnected Port in design.
+Warning: Port ledr(9) is connected to a disabled tristate, possibly unconnected Port in design.
+Warning: Port ledr(10) is connected to a disabled tristate, possibly unconnected Port in design.
+Warning: Port ledr(11) is connected to a disabled tristate, possibly unconnected Port in design.
+Warning: Port ledr(12) is connected to a disabled tristate, possibly unconnected Port in design.
+Warning: Port ledr(13) is connected to a disabled tristate, possibly unconnected Port in design.
+Warning: Port ledr(14) is connected to a disabled tristate, possibly unconnected Port in design.
+Warning: Port ledr(15) is connected to a disabled tristate, possibly unconnected Port in design.
+Warning: Port ledr(16) is connected to a disabled tristate, possibly unconnected Port in design.
+Warning: Port ledr(17) is connected to a disabled tristate, possibly unconnected Port in design.
+Info: -- Running timing characterization...
+Warning: Timer notification: No timing arcs found for model 'altpll' in technology 'cycloneii'.
+Warning:     Creating black box model..
+Warning: Timer notification: Attempt to propagate clock u_i2c_av_config/reg_m_i2c_ctrl_clk/out(6) assigned to pin u_i2c_av_config/reg_m_i2c_ctrl_clk/regout from
+Warning:     instance u_i2c_av_config/ix83 over non-unate connection, stopping propagation of clocks to O..
+Info: -- Synthesize Done
+Info: Ripple clock net m_i2c_ctrl_clk converted into clock net and enable net.
+Info: -- Saving the design database in uw_tmp/fir_top.xdb
+Info: Writing file: uw_tmp/fir_top.edf.
+Info: Info, Writing xrf file 'uw_tmp/fir_top.xrf'
+Info: Writing file: uw_tmp/fir_top.xrf.
+Info: -- Writing file uw_tmp/fir_top.tcl
+Info: exq_pr_compile_project gen_vcf fir_top 1
+Info: Finished synthesizing design.
+Info: Total CPU time taken for synthesis: 5.3 secs.
+Info: Overall running time 5.6 secs.
+Info: uw_tmp/precision_tech.sdc
+Info: -- Saving the design database in uw_tmp/fir_top_logic.xdb
+Info: Writing file: uw_tmp/fir_top_logic.vhd.
+Info: Info, Writing xrf file 'uw_tmp/fir_top_logic.xrf'
+Info: Writing file: uw_tmp/fir_top_logic.xrf.
+Info: Info, Command 'auto_write' finished successfully
+Info: clock_27 aud_bclk u_audio_dac_reg_lrck_1x.regout
+Info: -- Saving the design database in uw_tmp/fir_top_logic.xdb
+Info: Writing file: uw_tmp/fir_top_logic.v.
+Info: Warning, Moving uw_tmp/fir_top_logic.xrf to uw_tmp/mgc_old_fir_top_logic.xrf as uw_tmp/fir_top_logic.xrf exists
+Info: Writing file: uw_tmp/fir_top_logic.xrf.
+Info: Info, Command 'auto_write' finished successfully
+Info: *** logic synthesis succeeded ***
+Warning: vmap will not overwrite local modelsim.ini.
+Warning: Library already exists at "work-msim".
+Warning: Library already exists at "altera_mf".
+Modifying modelsim.ini
+Warning: Library already exists at "cycloneii".
+Modifying modelsim.ini
+INFO: generic-gate       netlist         written to uw_tmp/fir_top_gate.vhd
+INFO: generic-gate       area estimate   written to RPT/area_gate.rpt
+INFO: logic-synthesis    netlist         written to uw_tmp/fir_top_logic.edf
+INFO: logic-synthesis    area estimate   written to RPT/area_logic.rpt
+INFO: logic-synthesis    timing estimate written to RPT/timing_logic.rpt
+INFO: -----------------------------------------------------------------------
+INFO: CRITICAL PATHS (slowest 5 paths, estimated by logic synthesis)
+INFO: 
+INFO: ..........Delays.........
+INFO:  Total  Datapath  Routing          Source              Dest
+INFO: ------  --------  -------   --------------------  ---------------------
+INFO:   7.86    15.45    -7.59    u_fir/tap...ap(0)/clk reg_audio...15)/sdata
+INFO:   7.86    15.45    -7.59    u_fir/tap...ap(1)/clk reg_audio...15)/sdata
+INFO:   7.80    15.39    -7.59    u_fir/tap...ap(2)/clk reg_audio...15)/sdata
+INFO:   7.80    15.39    -7.59    u_fir/tap...ap(0)/clk reg_audio...15)/sdata
+INFO:   7.80    15.39    -7.59    u_fir/tap...ap(3)/clk reg_audio...15)/sdata
+INFO: -----------------------------------------------------------------------
+INFO: Speed on Cyclone II = 130 MHz,  7.67 ns (estimated by logic-synthesis)
+INFO: AREA = 715 cells (715 luts, 296 regs) (estimated by logic-synthesis)
+INFO: Starting QUARTUS for physical synthesis
+Info: *******************************************************************
+Info: Running Quartus II Shell
+    Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
+    Info: Copyright (C) 1991-2009 Altera Corporation. All rights reserved.
+    Info: Your use of Altera Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Altera Program License 
+    Info: Subscription Agreement, Altera MegaCore Function License 
+    Info: Agreement, or other applicable license agreement, including, 
+    Info: without limitation, that your use is for the sole purpose of 
+    Info: programming logic devices manufactured by Altera and sold by 
+    Info: Altera or its authorized distributors.  Please refer to the 
+    Info: applicable agreement for further details.
+    Info: Processing started: Tue Jan 26 18:36:25 2016
+Info: Command: quartus_sh -t uw-chip-synth-quartus.tcl fir_top
+Info: Quartus(args): fir_top
+Info: Evaluation of Tcl script uw-chip-synth-quartus.tcl was successful
+Info: Quartus II Shell was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 52 megabytes
+    Info: Processing ended: Tue Jan 26 18:36:25 2016
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+Info: *******************************************************************
+Info: Running Quartus II Shell
+    Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
+    Info: Copyright (C) 1991-2009 Altera Corporation. All rights reserved.
+    Info: Your use of Altera Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Altera Program License 
+    Info: Subscription Agreement, Altera MegaCore Function License 
+    Info: Agreement, or other applicable license agreement, including, 
+    Info: without limitation, that your use is for the sole purpose of 
+    Info: programming logic devices manufactured by Altera and sold by 
+    Info: Altera or its authorized distributors.  Please refer to the 
+    Info: applicable agreement for further details.
+    Info: Processing started: Tue Jan 26 18:36:25 2016
+Info: Command: quartus_sh -t /home/ece327/lib/pins-lab2.tcl fir_top
+Info: Quartus(args): fir_top
+Info: Evaluation of Tcl script /home/ece327/lib/pins-lab2.tcl was successful
+Info: Quartus II Shell was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 52 megabytes
+    Info: Processing ended: Tue Jan 26 18:36:25 2016
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+Warning: Can't contact license server "7417@maxwell5.uwaterloo.ca" -- this server will be ignored
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
+    Info: Copyright (C) 1991-2009 Altera Corporation. All rights reserved.
+    Info: Your use of Altera Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Altera Program License 
+    Info: Subscription Agreement, Altera MegaCore Function License 
+    Info: Agreement, or other applicable license agreement, including, 
+    Info: without limitation, that your use is for the sole purpose of 
+    Info: programming logic devices manufactured by Altera and sold by 
+    Info: Altera or its authorized distributors.  Please refer to the 
+    Info: applicable agreement for further details.
+    Info: Processing started: Tue Jan 26 18:36:26 2016
+Info: Command: quartus_map fir_top --source=fir_top_logic.edf --family=CycloneII
+Info: Found 44 design units, including 44 entities, in source file fir_top_logic.edf
+    Info: Found entity 1: add_16_0
+    Info: Found entity 2: add_16_1
+    Info: Found entity 3: add_16_10
+    Info: Found entity 4: add_16_11
+    Info: Found entity 5: add_16_12
+    Info: Found entity 6: add_16_13
+    Info: Found entity 7: add_16_14
+    Info: Found entity 8: add_16_15
+    Info: Found entity 9: add_16_2
+    Info: Found entity 10: add_16_3
+    Info: Found entity 11: add_16_4
+    Info: Found entity 12: add_16_5
+    Info: Found entity 13: add_16_6
+    Info: Found entity 14: add_16_7
+    Info: Found entity 15: add_16_8
+    Info: Found entity 16: add_16_9
+    Info: Found entity 17: add_9_0
+    Info: Found entity 18: modgen_counter_10_0
+    Info: Found entity 19: modgen_counter_16_0
+    Info: Found entity 20: modgen_counter_16_1
+    Info: Found entity 21: modgen_counter_6_0
+    Info: Found entity 22: modgen_counter_9_0
+    Info: Found entity 23: mult_32_67
+    Info: Found entity 24: mult_32_68
+    Info: Found entity 25: mult_32_69
+    Info: Found entity 26: mult_32_70
+    Info: Found entity 27: mult_32_71
+    Info: Found entity 28: mult_32_72
+    Info: Found entity 29: mult_32_73
+    Info: Found entity 30: mult_32_74
+    Info: Found entity 31: mult_32_75
+    Info: Found entity 32: mult_32_76
+    Info: Found entity 33: mult_32_77
+    Info: Found entity 34: mult_32_78
+    Info: Found entity 35: mult_32_79
+    Info: Found entity 36: mult_32_80
+    Info: Found entity 37: mult_32_81
+    Info: Found entity 38: mult_32_82
+    Info: Found entity 39: mult_32_83
+    Info: Found entity 40: sub_5_0
+    Info: Found entity 41: fir
+    Info: Found entity 42: fir_top
+    Info: Found entity 43: i2c_av_config_notri
+    Info: Found entity 44: i2c_ctrl_notri
+Info: Elaborating entity "fir_top" for the top level hierarchy
+Warning: EDA design entry or synthesis tool was not specified.  Detecting EDA tool "Precision Synthesis" as the tool that generated the EDIF Input File.
+Info: Elaborating entity "modgen_counter_9_0" for hierarchy "modgen_counter_9_0:u_audio_dac_modgen_counter_lrck_1x_div"
+Warning: EDA design entry or synthesis tool was not specified.  Detecting EDA tool "Precision Synthesis" as the tool that generated the EDIF Input File.
+Info: Elaborating entity "altpll" for hierarchy "altpll:u_audio_dac_p1_altpll"
+Info: Elaborated megafunction instantiation "altpll:u_audio_dac_p1_altpll"
+Info: Instantiated megafunction "altpll:u_audio_dac_p1_altpll" with the following parameter:
+    Info: Parameter "CLK0_DIVIDE_BY" = "15"
+    Info: Parameter "CLK1_MULTIPLY_BY" = "2"
+    Info: Parameter "CLK1_PHASE_SHIFT" = "0"
+    Info: Parameter "bus_names" = "clk(9:0)  clkbad(1:0)  clkena(5:0)  extclk(3:0)  extclkena(3:0)  inclk(1:0)  phasecounterselect(3:0)  "
+    Info: Parameter "CLK1_DIVIDE_BY" = "3"
+    Info: Parameter "INCLK0_INPUT_FREQUENCY" = "37037"
+    Info: Parameter "OPERATION_MODE" = "NORMAL"
+    Info: Parameter "PLL_TYPE" = "FAST"
+    Info: Parameter "CLK0_DUTY_CYCLE" = "50"
+    Info: Parameter "COMPENSATE_CLOCK" = "CLK0"
+    Info: Parameter "CLK0_MULTIPLY_BY" = "14"
+    Info: Parameter "CLK0_PHASE_SHIFT" = "0"
+    Info: Parameter "CLK1_DUTY_CYCLE" = "50"
+    Info: Parameter "INTENDED_DEVICE_FAMILY" = "Cyclone II"
+Info: Elaborating entity "fir" for hierarchy "fir:u_fir"
+Warning: EDA design entry or synthesis tool was not specified.  Detecting EDA tool "Precision Synthesis" as the tool that generated the EDIF Input File.
+Info: Elaborating entity "add_16_8" for hierarchy "fir:u_fir|add_16_8:tap_array_10_filter_block_next_sum_add16_0"
+Warning: EDA design entry or synthesis tool was not specified.  Detecting EDA tool "Precision Synthesis" as the tool that generated the EDIF Input File.
+Info: Elaborating entity "mult_32_76" for hierarchy "fir:u_fir|mult_32_76:tap_array_10_filter_block_prod_mults28_0"
+Warning: EDA design entry or synthesis tool was not specified.  Detecting EDA tool "Precision Synthesis" as the tool that generated the EDIF Input File.
+Info: Elaborating entity "add_16_9" for hierarchy "fir:u_fir|add_16_9:tap_array_11_filter_block_next_sum_add16_0"
+Warning: EDA design entry or synthesis tool was not specified.  Detecting EDA tool "Precision Synthesis" as the tool that generated the EDIF Input File.
+Info: Elaborating entity "mult_32_77" for hierarchy "fir:u_fir|mult_32_77:tap_array_11_filter_block_prod_mults28_0"
+Warning: EDA design entry or synthesis tool was not specified.  Detecting EDA tool "Precision Synthesis" as the tool that generated the EDIF Input File.
+Info: Elaborating entity "add_16_10" for hierarchy "fir:u_fir|add_16_10:tap_array_12_filter_block_next_sum_add16_0"
+Warning: EDA design entry or synthesis tool was not specified.  Detecting EDA tool "Precision Synthesis" as the tool that generated the EDIF Input File.
+Info: Elaborating entity "mult_32_78" for hierarchy "fir:u_fir|mult_32_78:tap_array_12_filter_block_prod_mults28_0"
+Warning: EDA design entry or synthesis tool was not specified.  Detecting EDA tool "Precision Synthesis" as the tool that generated the EDIF Input File.
+Info: Elaborating entity "add_16_11" for hierarchy "fir:u_fir|add_16_11:tap_array_13_filter_block_next_sum_add16_0"
+Warning: EDA design entry or synthesis tool was not specified.  Detecting EDA tool "Precision Synthesis" as the tool that generated the EDIF Input File.
+Info: Elaborating entity "mult_32_79" for hierarchy "fir:u_fir|mult_32_79:tap_array_13_filter_block_prod_mults28_0"
+Warning: EDA design entry or synthesis tool was not specified.  Detecting EDA tool "Precision Synthesis" as the tool that generated the EDIF Input File.
+Info: Elaborating entity "add_16_12" for hierarchy "fir:u_fir|add_16_12:tap_array_14_filter_block_next_sum_add16_0"
+Warning: EDA design entry or synthesis tool was not specified.  Detecting EDA tool "Precision Synthesis" as the tool that generated the EDIF Input File.
+Info: Elaborating entity "mult_32_80" for hierarchy "fir:u_fir|mult_32_80:tap_array_14_filter_block_prod_mults28_0"
+Warning: EDA design entry or synthesis tool was not specified.  Detecting EDA tool "Precision Synthesis" as the tool that generated the EDIF Input File.
+Info: Elaborating entity "add_16_13" for hierarchy "fir:u_fir|add_16_13:tap_array_15_filter_block_next_sum_add16_0"
+Warning: EDA design entry or synthesis tool was not specified.  Detecting EDA tool "Precision Synthesis" as the tool that generated the EDIF Input File.
+Info: Elaborating entity "mult_32_81" for hierarchy "fir:u_fir|mult_32_81:tap_array_15_filter_block_prod_mults28_0"
+Warning: EDA design entry or synthesis tool was not specified.  Detecting EDA tool "Precision Synthesis" as the tool that generated the EDIF Input File.
+Info: Elaborating entity "add_16_14" for hierarchy "fir:u_fir|add_16_14:tap_array_16_filter_block_next_sum_add16_0"
+Warning: EDA design entry or synthesis tool was not specified.  Detecting EDA tool "Precision Synthesis" as the tool that generated the EDIF Input File.
+Info: Elaborating entity "mult_32_82" for hierarchy "fir:u_fir|mult_32_82:tap_array_16_filter_block_prod_mults28_0"
+Warning: EDA design entry or synthesis tool was not specified.  Detecting EDA tool "Precision Synthesis" as the tool that generated the EDIF Input File.
+Info: Elaborating entity "add_16_15" for hierarchy "fir:u_fir|add_16_15:tap_array_17_filter_block_next_sum_add16_0"
+Warning: EDA design entry or synthesis tool was not specified.  Detecting EDA tool "Precision Synthesis" as the tool that generated the EDIF Input File.
+Info: Elaborating entity "mult_32_83" for hierarchy "fir:u_fir|mult_32_83:tap_array_17_filter_block_prod_mults28_0"
+Warning: EDA design entry or synthesis tool was not specified.  Detecting EDA tool "Precision Synthesis" as the tool that generated the EDIF Input File.
+Info: Elaborating entity "mult_32_67" for hierarchy "fir:u_fir|mult_32_67:tap_array_1_filter_block_prod_mults28_0"
+Warning: EDA design entry or synthesis tool was not specified.  Detecting EDA tool "Precision Synthesis" as the tool that generated the EDIF Input File.
+Info: Elaborating entity "add_16_0" for hierarchy "fir:u_fir|add_16_0:tap_array_2_filter_block_next_sum_add16_0"
+Warning: EDA design entry or synthesis tool was not specified.  Detecting EDA tool "Precision Synthesis" as the tool that generated the EDIF Input File.
+Info: Elaborating entity "mult_32_68" for hierarchy "fir:u_fir|mult_32_68:tap_array_2_filter_block_prod_mults28_0"
+Warning: EDA design entry or synthesis tool was not specified.  Detecting EDA tool "Precision Synthesis" as the tool that generated the EDIF Input File.
+Info: Elaborating entity "add_16_1" for hierarchy "fir:u_fir|add_16_1:tap_array_3_filter_block_next_sum_add16_0"
+Warning: EDA design entry or synthesis tool was not specified.  Detecting EDA tool "Precision Synthesis" as the tool that generated the EDIF Input File.
+Info: Elaborating entity "mult_32_69" for hierarchy "fir:u_fir|mult_32_69:tap_array_3_filter_block_prod_mults28_0"
+Warning: EDA design entry or synthesis tool was not specified.  Detecting EDA tool "Precision Synthesis" as the tool that generated the EDIF Input File.
+Info: Elaborating entity "add_16_2" for hierarchy "fir:u_fir|add_16_2:tap_array_4_filter_block_next_sum_add16_0"
+Warning: EDA design entry or synthesis tool was not specified.  Detecting EDA tool "Precision Synthesis" as the tool that generated the EDIF Input File.
+Info: Elaborating entity "mult_32_70" for hierarchy "fir:u_fir|mult_32_70:tap_array_4_filter_block_prod_mults28_0"
+Warning: EDA design entry or synthesis tool was not specified.  Detecting EDA tool "Precision Synthesis" as the tool that generated the EDIF Input File.
+Info: Elaborating entity "add_16_3" for hierarchy "fir:u_fir|add_16_3:tap_array_5_filter_block_next_sum_add16_0"
+Warning: EDA design entry or synthesis tool was not specified.  Detecting EDA tool "Precision Synthesis" as the tool that generated the EDIF Input File.
+Info: Elaborating entity "mult_32_71" for hierarchy "fir:u_fir|mult_32_71:tap_array_5_filter_block_prod_mults28_0"
+Warning: EDA design entry or synthesis tool was not specified.  Detecting EDA tool "Precision Synthesis" as the tool that generated the EDIF Input File.
+Info: Elaborating entity "add_16_4" for hierarchy "fir:u_fir|add_16_4:tap_array_6_filter_block_next_sum_add16_0"
+Warning: EDA design entry or synthesis tool was not specified.  Detecting EDA tool "Precision Synthesis" as the tool that generated the EDIF Input File.
+Info: Elaborating entity "mult_32_72" for hierarchy "fir:u_fir|mult_32_72:tap_array_6_filter_block_prod_mults28_0"
+Warning: EDA design entry or synthesis tool was not specified.  Detecting EDA tool "Precision Synthesis" as the tool that generated the EDIF Input File.
+Info: Elaborating entity "add_16_5" for hierarchy "fir:u_fir|add_16_5:tap_array_7_filter_block_next_sum_add16_0"
+Warning: EDA design entry or synthesis tool was not specified.  Detecting EDA tool "Precision Synthesis" as the tool that generated the EDIF Input File.
+Info: Elaborating entity "mult_32_73" for hierarchy "fir:u_fir|mult_32_73:tap_array_7_filter_block_prod_mults28_0"
+Warning: EDA design entry or synthesis tool was not specified.  Detecting EDA tool "Precision Synthesis" as the tool that generated the EDIF Input File.
+Info: Elaborating entity "add_16_6" for hierarchy "fir:u_fir|add_16_6:tap_array_8_filter_block_next_sum_add16_0"
+Warning: EDA design entry or synthesis tool was not specified.  Detecting EDA tool "Precision Synthesis" as the tool that generated the EDIF Input File.
+Info: Elaborating entity "mult_32_74" for hierarchy "fir:u_fir|mult_32_74:tap_array_8_filter_block_prod_mults28_0"
+Warning: EDA design entry or synthesis tool was not specified.  Detecting EDA tool "Precision Synthesis" as the tool that generated the EDIF Input File.
+Info: Elaborating entity "add_16_7" for hierarchy "fir:u_fir|add_16_7:tap_array_9_filter_block_next_sum_add16_0"
+Warning: EDA design entry or synthesis tool was not specified.  Detecting EDA tool "Precision Synthesis" as the tool that generated the EDIF Input File.
+Info: Elaborating entity "mult_32_75" for hierarchy "fir:u_fir|mult_32_75:tap_array_9_filter_block_prod_mults28_0"
+Warning: EDA design entry or synthesis tool was not specified.  Detecting EDA tool "Precision Synthesis" as the tool that generated the EDIF Input File.
+Info: Elaborating entity "i2c_av_config_notri" for hierarchy "i2c_av_config_notri:u_i2c_av_config"
+Warning: EDA design entry or synthesis tool was not specified.  Detecting EDA tool "Precision Synthesis" as the tool that generated the EDIF Input File.
+Info: Elaborating entity "modgen_counter_16_0" for hierarchy "i2c_av_config_notri:u_i2c_av_config|modgen_counter_16_0:modgen_counter_cont"
+Warning: EDA design entry or synthesis tool was not specified.  Detecting EDA tool "Precision Synthesis" as the tool that generated the EDIF Input File.
+Info: Elaborating entity "modgen_counter_16_1" for hierarchy "i2c_av_config_notri:u_i2c_av_config|modgen_counter_16_1:modgen_counter_m_i2c_clk_div"
+Warning: EDA design entry or synthesis tool was not specified.  Detecting EDA tool "Precision Synthesis" as the tool that generated the EDIF Input File.
+Info: Elaborating entity "i2c_ctrl_notri" for hierarchy "i2c_av_config_notri:u_i2c_av_config|i2c_ctrl_notri:u0"
+Warning: EDA design entry or synthesis tool was not specified.  Detecting EDA tool "Precision Synthesis" as the tool that generated the EDIF Input File.
+Info: Elaborating entity "modgen_counter_6_0" for hierarchy "i2c_av_config_notri:u_i2c_av_config|i2c_ctrl_notri:u0|modgen_counter_6_0:modgen_counter_sd_counter"
+Warning: EDA design entry or synthesis tool was not specified.  Detecting EDA tool "Precision Synthesis" as the tool that generated the EDIF Input File.
+Info: Elaborating entity "sub_5_0" for hierarchy "i2c_av_config_notri:u_i2c_av_config|i2c_ctrl_notri:u0|sub_5_0:sdo_sub5_5i2"
+Warning: EDA design entry or synthesis tool was not specified.  Detecting EDA tool "Precision Synthesis" as the tool that generated the EDIF Input File.
+Info: Elaborating entity "modgen_counter_10_0" for hierarchy "modgen_counter_10_0:u_noise_modgen_counter_address"
+Warning: EDA design entry or synthesis tool was not specified.  Detecting EDA tool "Precision Synthesis" as the tool that generated the EDIF Input File.
+Info: Elaborating entity "altsyncram" for hierarchy "altsyncram:u_noise_modgen_rom_ix24__ix62120z34212"
+Info: Elaborated megafunction instantiation "altsyncram:u_noise_modgen_rom_ix24__ix62120z34212"
+Info: Instantiated megafunction "altsyncram:u_noise_modgen_rom_ix24__ix62120z34212" with the following parameter:
+    Info: Parameter "init_file_layout" = "UNUSED"
+    Info: Parameter "numwords_b" = "1024"
+    Info: Parameter "outdata_reg_b" = "UNREGISTERED"
+    Info: Parameter "width_a" = "8"
+    Info: Parameter "byteena_aclr_a" = "NONE"
+    Info: Parameter "rdcontrol_aclr_b" = "NONE"
+    Info: Parameter "width_b" = "8"
+    Info: Parameter "byteena_aclr_b" = "NONE"
+    Info: Parameter "indata_aclr_a" = "NONE"
+    Info: Parameter "maximum_depth" = "0"
+    Info: Parameter "indata_aclr_b" = "NONE"
+    Info: Parameter "init_file" = "u_noise_modgen_rom_ix24__altsyncram_8_10_1024_2_0.hex"
+    Info: Parameter "intended_device_family" = "Stratix"
+    Info: Parameter "outdata_aclr_a" = "NONE"
+    Info: Parameter "ram_block_type" = "AUTO"
+    Info: Parameter "wrcontrol_aclr_a" = "NONE"
+    Info: Parameter "address_reg_b" = "CLOCK1"
+    Info: Parameter "outdata_aclr_b" = "NONE"
+    Info: Parameter "wrcontrol_aclr_b" = "NONE"
+    Info: Parameter "operation_mode" = "ROM"
+    Info: Parameter "rdcontrol_reg_b" = "CLOCK1"
+    Info: Parameter "widthad_a" = "10"
+    Info: Parameter "byte_size" = "8"
+    Info: Parameter "byteena_reg_b" = "CLOCK1"
+    Info: Parameter "widthad_b" = "10"
+    Info: Parameter "wrcontrol_wraddress_reg_b" = "CLOCK1"
+    Info: Parameter "address_aclr_a" = "NONE"
+    Info: Parameter "indata_reg_b" = "CLOCK1"
+    Info: Parameter "numwords_a" = "1024"
+    Info: Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info: Parameter "read_during_write_mode_mixed_ports" = "DONT_CARE"
+    Info: Parameter "width_byteena_a" = "1"
+    Info: Parameter "address_aclr_b" = "NONE"
+    Info: Parameter "width_byteena_b" = "1"
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_9nk2.tdf
+    Info: Found entity 1: altsyncram_9nk2
+Info: Elaborating entity "altsyncram_9nk2" for hierarchy "altsyncram:u_noise_modgen_rom_ix24__ix62120z34212|altsyncram_9nk2:auto_generated"
+Warning: Byte addressed memory initialization file "u_noise_modgen_rom_ix24__altsyncram_8_10_1024_2_0.hex" was read in the word-addressed format
+Warning: Width of data items in "u_noise_modgen_rom_ix24__altsyncram_8_10_1024_2_0.hex" is greater than the memory width. Wrapping data items to subsequent addresses. Found 128 warnings, reporting 10
+    Warning: Data at line (2) of memory initialization file "u_noise_modgen_rom_ix24__altsyncram_8_10_1024_2_0.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses.
+    Warning: Data at line (3) of memory initialization file "u_noise_modgen_rom_ix24__altsyncram_8_10_1024_2_0.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses.
+    Warning: Data at line (4) of memory initialization file "u_noise_modgen_rom_ix24__altsyncram_8_10_1024_2_0.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses.
+    Warning: Data at line (5) of memory initialization file "u_noise_modgen_rom_ix24__altsyncram_8_10_1024_2_0.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses.
+    Warning: Data at line (6) of memory initialization file "u_noise_modgen_rom_ix24__altsyncram_8_10_1024_2_0.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses.
+    Warning: Data at line (7) of memory initialization file "u_noise_modgen_rom_ix24__altsyncram_8_10_1024_2_0.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses.
+    Warning: Data at line (8) of memory initialization file "u_noise_modgen_rom_ix24__altsyncram_8_10_1024_2_0.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses.
+    Warning: Data at line (9) of memory initialization file "u_noise_modgen_rom_ix24__altsyncram_8_10_1024_2_0.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses.
+    Warning: Data at line (10) of memory initialization file "u_noise_modgen_rom_ix24__altsyncram_8_10_1024_2_0.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses.
+    Warning: Data at line (11) of memory initialization file "u_noise_modgen_rom_ix24__altsyncram_8_10_1024_2_0.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses.
+Info: Elaborating entity "add_9_0" for hierarchy "add_9_0:u_sine_address_add9_0i1"
+Warning: EDA design entry or synthesis tool was not specified.  Detecting EDA tool "Precision Synthesis" as the tool that generated the EDIF Input File.
+Info: Elaborating entity "altsyncram" for hierarchy "altsyncram:u_sine_modgen_rom_ix21__ix62120z58996"
+Info: Elaborated megafunction instantiation "altsyncram:u_sine_modgen_rom_ix21__ix62120z58996"
+Info: Instantiated megafunction "altsyncram:u_sine_modgen_rom_ix21__ix62120z58996" with the following parameter:
+    Info: Parameter "init_file_layout" = "UNUSED"
+    Info: Parameter "numwords_b" = "64"
+    Info: Parameter "outdata_reg_b" = "UNREGISTERED"
+    Info: Parameter "width_a" = "12"
+    Info: Parameter "byteena_aclr_a" = "NONE"
+    Info: Parameter "rdcontrol_aclr_b" = "NONE"
+    Info: Parameter "width_b" = "12"
+    Info: Parameter "byteena_aclr_b" = "NONE"
+    Info: Parameter "indata_aclr_a" = "NONE"
+    Info: Parameter "maximum_depth" = "0"
+    Info: Parameter "indata_aclr_b" = "NONE"
+    Info: Parameter "init_file" = "u_sine_modgen_rom_ix21__altsyncram_12_6_64_2_0.hex"
+    Info: Parameter "intended_device_family" = "Stratix"
+    Info: Parameter "outdata_aclr_a" = "NONE"
+    Info: Parameter "ram_block_type" = "AUTO"
+    Info: Parameter "wrcontrol_aclr_a" = "NONE"
+    Info: Parameter "address_reg_b" = "CLOCK1"
+    Info: Parameter "outdata_aclr_b" = "NONE"
+    Info: Parameter "wrcontrol_aclr_b" = "NONE"
+    Info: Parameter "operation_mode" = "ROM"
+    Info: Parameter "rdcontrol_reg_b" = "CLOCK1"
+    Info: Parameter "widthad_a" = "6"
+    Info: Parameter "byte_size" = "8"
+    Info: Parameter "byteena_reg_b" = "CLOCK1"
+    Info: Parameter "widthad_b" = "6"
+    Info: Parameter "wrcontrol_wraddress_reg_b" = "CLOCK1"
+    Info: Parameter "address_aclr_a" = "NONE"
+    Info: Parameter "indata_reg_b" = "CLOCK1"
+    Info: Parameter "numwords_a" = "64"
+    Info: Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info: Parameter "read_during_write_mode_mixed_ports" = "DONT_CARE"
+    Info: Parameter "width_byteena_a" = "1"
+    Info: Parameter "address_aclr_b" = "NONE"
+    Info: Parameter "width_byteena_b" = "1"
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_0bk2.tdf
+    Info: Found entity 1: altsyncram_0bk2
+Info: Elaborating entity "altsyncram_0bk2" for hierarchy "altsyncram:u_sine_modgen_rom_ix21__ix62120z58996|altsyncram_0bk2:auto_generated"
+Warning: Width of data items in "u_sine_modgen_rom_ix21__altsyncram_12_6_64_2_0.hex" is greater than the memory width. Wrapping data items to subsequent addresses. Found 8 warnings, reporting 8
+    Warning: Data at line (2) of memory initialization file "u_sine_modgen_rom_ix21__altsyncram_12_6_64_2_0.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses.
+    Warning: Data at line (3) of memory initialization file "u_sine_modgen_rom_ix21__altsyncram_12_6_64_2_0.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses.
+    Warning: Data at line (4) of memory initialization file "u_sine_modgen_rom_ix21__altsyncram_12_6_64_2_0.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses.
+    Warning: Data at line (5) of memory initialization file "u_sine_modgen_rom_ix21__altsyncram_12_6_64_2_0.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses.
+    Warning: Data at line (6) of memory initialization file "u_sine_modgen_rom_ix21__altsyncram_12_6_64_2_0.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses.
+    Warning: Data at line (7) of memory initialization file "u_sine_modgen_rom_ix21__altsyncram_12_6_64_2_0.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses.
+    Warning: Data at line (8) of memory initialization file "u_sine_modgen_rom_ix21__altsyncram_12_6_64_2_0.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses.
+    Warning: Data at line (9) of memory initialization file "u_sine_modgen_rom_ix21__altsyncram_12_6_64_2_0.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses.
+Info: One or more bidirs are fed by always enabled tri-state buffers
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "aud_bclk" is moved to its source
+Warning: TRI or OPNDRN buffers permanently enabled
+    Warning: Node "ix12601z20184"
+Warning: Design contains 13 input pin(s) that do not drive logic
+    Warning: No output dependent on input pin "clock_50"
+    Warning: No output dependent on input pin "key[1]"
+    Warning: No output dependent on input pin "key[2]"
+    Warning: No output dependent on input pin "key[3]"
+    Warning: No output dependent on input pin "sw[7]"
+    Warning: No output dependent on input pin "sw[8]"
+    Warning: No output dependent on input pin "sw[9]"
+    Warning: No output dependent on input pin "sw[10]"
+    Warning: No output dependent on input pin "sw[11]"
+    Warning: No output dependent on input pin "sw[12]"
+    Warning: No output dependent on input pin "sw[13]"
+    Warning: No output dependent on input pin "sw[14]"
+    Warning: No output dependent on input pin "sw[15]"
+Info: Implemented 1076 device resources after synthesis - the final resource count might be different
+    Info: Implemented 24 input pins
+    Info: Implemented 88 output pins
+    Info: Implemented 2 bidirectional pins
+    Info: Implemented 941 logic cells
+    Info: Implemented 20 RAM segments
+    Info: Implemented 1 ClockLock PLLs
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 82 warnings
+    Info: Peak virtual memory: 196 megabytes
+    Info: Processing ended: Tue Jan 26 18:36:35 2016
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:02
+Warning: Can't contact license server "7417@maxwell5.uwaterloo.ca" -- this server will be ignored
+Info: *******************************************************************
+Info: Running Quartus II Fitter
+    Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
+    Info: Copyright (C) 1991-2009 Altera Corporation. All rights reserved.
+    Info: Your use of Altera Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Altera Program License 
+    Info: Subscription Agreement, Altera MegaCore Function License 
+    Info: Agreement, or other applicable license agreement, including, 
+    Info: without limitation, that your use is for the sole purpose of 
+    Info: programming logic devices manufactured by Altera and sold by 
+    Info: Altera or its authorized distributors.  Please refer to the 
+    Info: applicable agreement for further details.
+    Info: Processing started: Tue Jan 26 18:36:36 2016
+Info: Command: quartus_fit fir_top --effort=fast --part=EP2C35F672C7
+Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info: Selected device EP2C35F672C7 for design "fir_top"
+Warning: Compensate clock of PLL "altpll:u_audio_dac_p1_altpll|pll" has been set to clock1
+Info: Implemented PLL "altpll:u_audio_dac_p1_altpll|pll" as Cyclone II PLL type
+    Info: Implementing clock multiplication of 2, clock division of 3, and phase shift of 0 degrees (0 ps) for altpll:u_audio_dac_p1_altpll|_clk1 port
+Info: Fitter is performing a Fast Fit compilation, which decreases Fitter effort to reduce compilation time
+Info: Device migration not selected. If you intend to use device migration later, you may need to change the pin assignments as they may be incompatible with other devices
+    Info: Device EP2C50F672C7 is compatible
+    Info: Device EP2C70F672C7 is compatible
+Info: Fitter converted 3 user pins into dedicated programming pins
+    Info: Pin ~ASDO~ is reserved at location E3
+    Info: Pin ~nCSO~ is reserved at location D3
+    Info: Pin ~LVDS150p/nCEO~ is reserved at location AE24
+Info: Design uses memory blocks. Violating setup or hold times of memory block address registers for either read or write operations could cause memory contents to be corrupted. Make sure that all memory block address registers meet the setup and hold time requirements.
+Info: Fitter is using the Classic Timing Analyzer
+Info: Detected fmax, tsu, tco, and/or tpd requirements -- optimizing circuit to achieve only the specified requirements
+Info: Automatically promoted node altpll:u_audio_dac_p1_altpll|_clk1 (placed in counter C0 of PLL_3)
+    Info: Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G11
+Info: Automatically promoted node clock_27 (placed in PIN D13 (CLK11, LVDSCLK5p, Input))
+    Info: Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G9
+Info: Automatically promoted node aud_adclrck_dup0 
+    Info: Automatically promoted destinations to use location or clock signal Global Clock
+    Info: Following destination nodes may be non-global or may not use global or regional clocks
+        Info: Destination node aud_daclrck_obuf
+        Info: Destination node aud_adclrck_obuf
+        Info: Destination node ix50205z52923
+Info: Automatically promoted node aud_bclk_dup0 
+    Info: Automatically promoted destinations to use location or clock signal Global Clock
+    Info: Following destination nodes may be non-global or may not use global or regional clocks
+        Info: Destination node ix15494z52923
+        Info: Destination node aud_bclk
+Info: Starting register packing
+Info: Finished register packing
+    Extra Info: No registers were packed into other blocks
+Warning: PLL "altpll:u_audio_dac_p1_altpll|pll" output port clk[1] feeds output pin "aud_xck_obuf" via non-dedicated routing -- jitter performance depends on switching rate of other design elements. Use PLL dedicated clock outputs to ensure jitter performance
+Warning: Ignored locations or region assignments to the following nodes
+    Warning: Node "AUD_ADCDAT" is assigned to location or region, but does not exist in design
+    Warning: Node "EXT_CLOCK" is assigned to location or region, but does not exist in design
+    Warning: Node "PS2_CLK" is assigned to location or region, but does not exist in design
+    Warning: Node "PS2_DAT" is assigned to location or region, but does not exist in design
+    Warning: Node "TCK" is assigned to location or region, but does not exist in design
+    Warning: Node "TCS" is assigned to location or region, but does not exist in design
+    Warning: Node "TDI" is assigned to location or region, but does not exist in design
+    Warning: Node "TDO" is assigned to location or region, but does not exist in design
+    Warning: Node "TD_DATA[0]" is assigned to location or region, but does not exist in design
+    Warning: Node "TD_DATA[1]" is assigned to location or region, but does not exist in design
+    Warning: Node "TD_DATA[2]" is assigned to location or region, but does not exist in design
+    Warning: Node "TD_DATA[3]" is assigned to location or region, but does not exist in design
+    Warning: Node "TD_DATA[4]" is assigned to location or region, but does not exist in design
+    Warning: Node "TD_DATA[5]" is assigned to location or region, but does not exist in design
+    Warning: Node "TD_DATA[6]" is assigned to location or region, but does not exist in design
+    Warning: Node "TD_DATA[7]" is assigned to location or region, but does not exist in design
+    Warning: Node "TD_HS" is assigned to location or region, but does not exist in design
+    Warning: Node "TD_RESET" is assigned to location or region, but does not exist in design
+    Warning: Node "TD_VS" is assigned to location or region, but does not exist in design
+    Warning: Node "UART_RXD" is assigned to location or region, but does not exist in design
+    Warning: Node "UART_TXD" is assigned to location or region, but does not exist in design
+Info: Fitter preparation operations ending: elapsed time is 00:00:00
+Info: Fitter placement preparation operations beginning
+Info: Fitter placement preparation operations ending: elapsed time is 00:00:00
+Info: Fitter placement operations beginning
+Info: Fitter placement was successful
+Info: Fitter placement operations ending: elapsed time is 00:00:01
+Info: Slack time is 21.549 ns between source register "fir:u_fir|taps_1__0_" and destination register "audio_out_15_"
+    Info: + Largest register to register requirement is 55.316 ns
+    Info:   Shortest clock path from clock "altpll:u_audio_dac_p1_altpll|_clk1" to destination register is 6.108 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = PLL_3; Fanout = 1; CLK Node = 'altpll:u_audio_dac_p1_altpll|_clk1'
+        Info: 2: + IC(1.224 ns) + CELL(0.000 ns) = 1.224 ns; Loc. = Unassigned; Fanout = 15; COMB Node = 'altpll:u_audio_dac_p1_altpll|_clk1~clkctrl'
+        Info: 3: + IC(1.111 ns) + CELL(0.879 ns) = 3.214 ns; Loc. = Unassigned; Fanout = 4; REG Node = 'aud_adclrck_dup0'
+        Info: 4: + IC(1.181 ns) + CELL(0.000 ns) = 4.395 ns; Loc. = Unassigned; Fanout = 391; COMB Node = 'aud_adclrck_dup0~clkctrl'
+        Info: 5: + IC(1.111 ns) + CELL(0.602 ns) = 6.108 ns; Loc. = Unassigned; Fanout = 1; REG Node = 'audio_out_15_'
+        Info: Total cell delay = 1.481 ns ( 24.25 % )
+        Info: Total interconnect delay = 4.627 ns ( 75.75 % )
+    Info:   Longest clock path from clock "altpll:u_audio_dac_p1_altpll|_clk1" to destination register is 6.108 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = PLL_3; Fanout = 1; CLK Node = 'altpll:u_audio_dac_p1_altpll|_clk1'
+        Info: 2: + IC(1.224 ns) + CELL(0.000 ns) = 1.224 ns; Loc. = Unassigned; Fanout = 15; COMB Node = 'altpll:u_audio_dac_p1_altpll|_clk1~clkctrl'
+        Info: 3: + IC(1.111 ns) + CELL(0.879 ns) = 3.214 ns; Loc. = Unassigned; Fanout = 4; REG Node = 'aud_adclrck_dup0'
+        Info: 4: + IC(1.181 ns) + CELL(0.000 ns) = 4.395 ns; Loc. = Unassigned; Fanout = 391; COMB Node = 'aud_adclrck_dup0~clkctrl'
+        Info: 5: + IC(1.111 ns) + CELL(0.602 ns) = 6.108 ns; Loc. = Unassigned; Fanout = 1; REG Node = 'audio_out_15_'
+        Info: Total cell delay = 1.481 ns ( 24.25 % )
+        Info: Total interconnect delay = 4.627 ns ( 75.75 % )
+    Info:   Shortest clock path from clock "altpll:u_audio_dac_p1_altpll|_clk1" to source register is 6.108 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = PLL_3; Fanout = 1; CLK Node = 'altpll:u_audio_dac_p1_altpll|_clk1'
+        Info: 2: + IC(1.224 ns) + CELL(0.000 ns) = 1.224 ns; Loc. = Unassigned; Fanout = 15; COMB Node = 'altpll:u_audio_dac_p1_altpll|_clk1~clkctrl'
+        Info: 3: + IC(1.111 ns) + CELL(0.879 ns) = 3.214 ns; Loc. = Unassigned; Fanout = 4; REG Node = 'aud_adclrck_dup0'
+        Info: 4: + IC(1.181 ns) + CELL(0.000 ns) = 4.395 ns; Loc. = Unassigned; Fanout = 391; COMB Node = 'aud_adclrck_dup0~clkctrl'
+        Info: 5: + IC(1.111 ns) + CELL(0.602 ns) = 6.108 ns; Loc. = Unassigned; Fanout = 2; REG Node = 'fir:u_fir|taps_1__0_'
+        Info: Total cell delay = 1.481 ns ( 24.25 % )
+        Info: Total interconnect delay = 4.627 ns ( 75.75 % )
+    Info:   Longest clock path from clock "altpll:u_audio_dac_p1_altpll|_clk1" to source register is 6.108 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = PLL_3; Fanout = 1; CLK Node = 'altpll:u_audio_dac_p1_altpll|_clk1'
+        Info: 2: + IC(1.224 ns) + CELL(0.000 ns) = 1.224 ns; Loc. = Unassigned; Fanout = 15; COMB Node = 'altpll:u_audio_dac_p1_altpll|_clk1~clkctrl'
+        Info: 3: + IC(1.111 ns) + CELL(0.879 ns) = 3.214 ns; Loc. = Unassigned; Fanout = 4; REG Node = 'aud_adclrck_dup0'
+        Info: 4: + IC(1.181 ns) + CELL(0.000 ns) = 4.395 ns; Loc. = Unassigned; Fanout = 391; COMB Node = 'aud_adclrck_dup0~clkctrl'
+        Info: 5: + IC(1.111 ns) + CELL(0.602 ns) = 6.108 ns; Loc. = Unassigned; Fanout = 2; REG Node = 'fir:u_fir|taps_1__0_'
+        Info: Total cell delay = 1.481 ns ( 24.25 % )
+        Info: Total interconnect delay = 4.627 ns ( 75.75 % )
+    Info:   Micro clock to output delay of source is 0.277 ns
+    Info:   Micro setup delay of destination is -0.038 ns
+    Info: - Longest register to register delay is 33.767 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = Unassigned; Fanout = 2; REG Node = 'fir:u_fir|taps_1__0_'
+        Info: 2: + IC(0.782 ns) + CELL(0.517 ns) = 1.299 ns; Loc. = Unassigned; Fanout = 1; COMB Node = 'fir:u_fir|mult_32_67:tap_array_1_filter_block_prod_mults28_0|nx12219z15'
+        Info: 3: + IC(0.000 ns) + CELL(0.080 ns) = 1.379 ns; Loc. = Unassigned; Fanout = 1; COMB Node = 'fir:u_fir|mult_32_67:tap_array_1_filter_block_prod_mults28_0|nx12219z14'
+        Info: 4: + IC(0.000 ns) + CELL(0.080 ns) = 1.459 ns; Loc. = Unassigned; Fanout = 2; COMB Node = 'fir:u_fir|mult_32_67:tap_array_1_filter_block_prod_mults28_0|nx12219z13'
+        Info: 5: + IC(0.000 ns) + CELL(0.458 ns) = 1.917 ns; Loc. = Unassigned; Fanout = 2; COMB Node = 'fir:u_fir|mult_32_67:tap_array_1_filter_block_prod_mults28_0|d_3_'
+        Info: 6: + IC(1.052 ns) + CELL(0.521 ns) = 3.490 ns; Loc. = Unassigned; Fanout = 2; COMB Node = 'fir:u_fir|add_16_0:tap_array_2_filter_block_next_sum_add16_0|nx37973z1'
+        Info: 7: + IC(1.084 ns) + CELL(0.495 ns) = 5.069 ns; Loc. = Unassigned; Fanout = 2; COMB Node = 'fir:u_fir|add_16_1:tap_array_3_filter_block_next_sum_add16_0|nx2247z46'
+        Info: 8: + IC(0.000 ns) + CELL(0.458 ns) = 5.527 ns; Loc. = Unassigned; Fanout = 2; COMB Node = 'fir:u_fir|add_16_1:tap_array_3_filter_block_next_sum_add16_0|nx38970z1'
+        Info: 9: + IC(1.065 ns) + CELL(0.517 ns) = 7.109 ns; Loc. = Unassigned; Fanout = 2; COMB Node = 'fir:u_fir|add_16_2:tap_array_4_filter_block_next_sum_add16_0|nx2247z43'
+        Info: 10: + IC(0.000 ns) + CELL(0.458 ns) = 7.567 ns; Loc. = Unassigned; Fanout = 2; COMB Node = 'fir:u_fir|add_16_2:tap_array_4_filter_block_next_sum_add16_0|nx39967z1'
+        Info: 11: + IC(1.029 ns) + CELL(0.517 ns) = 9.113 ns; Loc. = Unassigned; Fanout = 2; COMB Node = 'fir:u_fir|add_16_3:tap_array_5_filter_block_next_sum_add16_0|nx2247z40'
+        Info: 12: + IC(0.000 ns) + CELL(0.458 ns) = 9.571 ns; Loc. = Unassigned; Fanout = 2; COMB Node = 'fir:u_fir|add_16_3:tap_array_5_filter_block_next_sum_add16_0|nx40964z1'
+        Info: 13: + IC(1.059 ns) + CELL(0.517 ns) = 11.147 ns; Loc. = Unassigned; Fanout = 2; COMB Node = 'fir:u_fir|add_16_4:tap_array_6_filter_block_next_sum_add16_0|nx2247z37'
+        Info: 14: + IC(0.000 ns) + CELL(0.458 ns) = 11.605 ns; Loc. = Unassigned; Fanout = 2; COMB Node = 'fir:u_fir|add_16_4:tap_array_6_filter_block_next_sum_add16_0|nx41961z1'
+        Info: 15: + IC(0.710 ns) + CELL(0.517 ns) = 12.832 ns; Loc. = Unassigned; Fanout = 2; COMB Node = 'fir:u_fir|add_16_5:tap_array_7_filter_block_next_sum_add16_0|nx2247z34'
+        Info: 16: + IC(0.000 ns) + CELL(0.458 ns) = 13.290 ns; Loc. = Unassigned; Fanout = 2; COMB Node = 'fir:u_fir|add_16_5:tap_array_7_filter_block_next_sum_add16_0|nx42958z1'
+        Info: 17: + IC(0.710 ns) + CELL(0.517 ns) = 14.517 ns; Loc. = Unassigned; Fanout = 2; COMB Node = 'fir:u_fir|add_16_6:tap_array_8_filter_block_next_sum_add16_0|nx2247z31'
+        Info: 18: + IC(0.000 ns) + CELL(0.458 ns) = 14.975 ns; Loc. = Unassigned; Fanout = 2; COMB Node = 'fir:u_fir|add_16_6:tap_array_8_filter_block_next_sum_add16_0|nx43955z1'
+        Info: 19: + IC(1.049 ns) + CELL(0.517 ns) = 16.541 ns; Loc. = Unassigned; Fanout = 2; COMB Node = 'fir:u_fir|add_16_7:tap_array_9_filter_block_next_sum_add16_0|nx2247z28'
+        Info: 20: + IC(0.000 ns) + CELL(0.458 ns) = 16.999 ns; Loc. = Unassigned; Fanout = 2; COMB Node = 'fir:u_fir|add_16_7:tap_array_9_filter_block_next_sum_add16_0|nx44952z1'
+        Info: 21: + IC(0.710 ns) + CELL(0.517 ns) = 18.226 ns; Loc. = Unassigned; Fanout = 2; COMB Node = 'fir:u_fir|add_16_8:tap_array_10_filter_block_next_sum_add16_0|nx2247z25'
+        Info: 22: + IC(0.000 ns) + CELL(0.458 ns) = 18.684 ns; Loc. = Unassigned; Fanout = 2; COMB Node = 'fir:u_fir|add_16_8:tap_array_10_filter_block_next_sum_add16_0|nx45949z1'
+        Info: 23: + IC(1.030 ns) + CELL(0.517 ns) = 20.231 ns; Loc. = Unassigned; Fanout = 2; COMB Node = 'fir:u_fir|add_16_9:tap_array_11_filter_block_next_sum_add16_0|nx2247z22'
+        Info: 24: + IC(0.000 ns) + CELL(0.458 ns) = 20.689 ns; Loc. = Unassigned; Fanout = 2; COMB Node = 'fir:u_fir|add_16_9:tap_array_11_filter_block_next_sum_add16_0|nx46946z1'
+        Info: 25: + IC(1.051 ns) + CELL(0.517 ns) = 22.257 ns; Loc. = Unassigned; Fanout = 2; COMB Node = 'fir:u_fir|add_16_10:tap_array_12_filter_block_next_sum_add16_0|nx2247z19'
+        Info: 26: + IC(0.000 ns) + CELL(0.458 ns) = 22.715 ns; Loc. = Unassigned; Fanout = 2; COMB Node = 'fir:u_fir|add_16_10:tap_array_12_filter_block_next_sum_add16_0|nx62798z1'
+        Info: 27: + IC(0.710 ns) + CELL(0.517 ns) = 23.942 ns; Loc. = Unassigned; Fanout = 2; COMB Node = 'fir:u_fir|add_16_11:tap_array_13_filter_block_next_sum_add16_0|nx2247z16'
+        Info: 28: + IC(0.000 ns) + CELL(0.458 ns) = 24.400 ns; Loc. = Unassigned; Fanout = 2; COMB Node = 'fir:u_fir|add_16_11:tap_array_13_filter_block_next_sum_add16_0|nx63795z1'
+        Info: 29: + IC(1.061 ns) + CELL(0.517 ns) = 25.978 ns; Loc. = Unassigned; Fanout = 2; COMB Node = 'fir:u_fir|add_16_12:tap_array_14_filter_block_next_sum_add16_0|nx2247z13'
+        Info: 30: + IC(0.000 ns) + CELL(0.458 ns) = 26.436 ns; Loc. = Unassigned; Fanout = 2; COMB Node = 'fir:u_fir|add_16_12:tap_array_14_filter_block_next_sum_add16_0|nx64792z1'
+        Info: 31: + IC(0.710 ns) + CELL(0.517 ns) = 27.663 ns; Loc. = Unassigned; Fanout = 2; COMB Node = 'fir:u_fir|add_16_13:tap_array_15_filter_block_next_sum_add16_0|nx2247z10'
+        Info: 32: + IC(0.000 ns) + CELL(0.458 ns) = 28.121 ns; Loc. = Unassigned; Fanout = 2; COMB Node = 'fir:u_fir|add_16_13:tap_array_15_filter_block_next_sum_add16_0|nx253z1'
+        Info: 33: + IC(1.064 ns) + CELL(0.517 ns) = 29.702 ns; Loc. = Unassigned; Fanout = 2; COMB Node = 'fir:u_fir|add_16_14:tap_array_16_filter_block_next_sum_add16_0|nx2247z7'
+        Info: 34: + IC(0.000 ns) + CELL(0.458 ns) = 30.160 ns; Loc. = Unassigned; Fanout = 2; COMB Node = 'fir:u_fir|add_16_14:tap_array_16_filter_block_next_sum_add16_0|nx1250z1'
+        Info: 35: + IC(1.030 ns) + CELL(0.517 ns) = 31.707 ns; Loc. = Unassigned; Fanout = 1; COMB Node = 'fir:u_fir|add_16_15:tap_array_17_filter_block_next_sum_add16_0|nx2247z4'
+        Info: 36: + IC(0.000 ns) + CELL(0.458 ns) = 32.165 ns; Loc. = Unassigned; Fanout = 1; COMB Node = 'fir:u_fir|add_16_15:tap_array_17_filter_block_next_sum_add16_0|nx2247z1'
+        Info: 37: + IC(1.189 ns) + CELL(0.413 ns) = 33.767 ns; Loc. = Unassigned; Fanout = 1; REG Node = 'audio_out_15_'
+        Info: Total cell delay = 16.672 ns ( 49.37 % )
+        Info: Total interconnect delay = 17.095 ns ( 50.63 % )
+Info: Estimated most critical path is register to register delay of 33.767 ns
+    Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LAB_X49_Y16; Fanout = 2; REG Node = 'fir:u_fir|taps_1__0_'
+    Info: 2: + IC(0.782 ns) + CELL(0.517 ns) = 1.299 ns; Loc. = LAB_X48_Y16; Fanout = 1; COMB Node = 'fir:u_fir|mult_32_67:tap_array_1_filter_block_prod_mults28_0|nx12219z15'
+    Info: 3: + IC(0.000 ns) + CELL(0.080 ns) = 1.379 ns; Loc. = LAB_X48_Y16; Fanout = 1; COMB Node = 'fir:u_fir|mult_32_67:tap_array_1_filter_block_prod_mults28_0|nx12219z14'
+    Info: 4: + IC(0.000 ns) + CELL(0.080 ns) = 1.459 ns; Loc. = LAB_X48_Y16; Fanout = 2; COMB Node = 'fir:u_fir|mult_32_67:tap_array_1_filter_block_prod_mults28_0|nx12219z13'
+    Info: 5: + IC(0.000 ns) + CELL(0.458 ns) = 1.917 ns; Loc. = LAB_X48_Y16; Fanout = 2; COMB Node = 'fir:u_fir|mult_32_67:tap_array_1_filter_block_prod_mults28_0|d_3_'
+    Info: 6: + IC(1.052 ns) + CELL(0.521 ns) = 3.490 ns; Loc. = LAB_X50_Y16; Fanout = 2; COMB Node = 'fir:u_fir|add_16_0:tap_array_2_filter_block_next_sum_add16_0|nx37973z1'
+    Info: 7: + IC(1.084 ns) + CELL(0.495 ns) = 5.069 ns; Loc. = LAB_X54_Y16; Fanout = 2; COMB Node = 'fir:u_fir|add_16_1:tap_array_3_filter_block_next_sum_add16_0|nx2247z46'
+    Info: 8: + IC(0.000 ns) + CELL(0.458 ns) = 5.527 ns; Loc. = LAB_X54_Y16; Fanout = 2; COMB Node = 'fir:u_fir|add_16_1:tap_array_3_filter_block_next_sum_add16_0|nx38970z1'
+    Info: 9: + IC(1.065 ns) + CELL(0.517 ns) = 7.109 ns; Loc. = LAB_X54_Y12; Fanout = 2; COMB Node = 'fir:u_fir|add_16_2:tap_array_4_filter_block_next_sum_add16_0|nx2247z43'
+    Info: 10: + IC(0.000 ns) + CELL(0.458 ns) = 7.567 ns; Loc. = LAB_X54_Y12; Fanout = 2; COMB Node = 'fir:u_fir|add_16_2:tap_array_4_filter_block_next_sum_add16_0|nx39967z1'
+    Info: 11: + IC(1.029 ns) + CELL(0.517 ns) = 9.113 ns; Loc. = LAB_X56_Y12; Fanout = 2; COMB Node = 'fir:u_fir|add_16_3:tap_array_5_filter_block_next_sum_add16_0|nx2247z40'
+    Info: 12: + IC(0.000 ns) + CELL(0.458 ns) = 9.571 ns; Loc. = LAB_X56_Y12; Fanout = 2; COMB Node = 'fir:u_fir|add_16_3:tap_array_5_filter_block_next_sum_add16_0|nx40964z1'
+    Info: 13: + IC(1.059 ns) + CELL(0.517 ns) = 11.147 ns; Loc. = LAB_X57_Y10; Fanout = 2; COMB Node = 'fir:u_fir|add_16_4:tap_array_6_filter_block_next_sum_add16_0|nx2247z37'
+    Info: 14: + IC(0.000 ns) + CELL(0.458 ns) = 11.605 ns; Loc. = LAB_X57_Y10; Fanout = 2; COMB Node = 'fir:u_fir|add_16_4:tap_array_6_filter_block_next_sum_add16_0|nx41961z1'
+    Info: 15: + IC(0.710 ns) + CELL(0.517 ns) = 12.832 ns; Loc. = LAB_X58_Y10; Fanout = 2; COMB Node = 'fir:u_fir|add_16_5:tap_array_7_filter_block_next_sum_add16_0|nx2247z34'
+    Info: 16: + IC(0.000 ns) + CELL(0.458 ns) = 13.290 ns; Loc. = LAB_X58_Y10; Fanout = 2; COMB Node = 'fir:u_fir|add_16_5:tap_array_7_filter_block_next_sum_add16_0|nx42958z1'
+    Info: 17: + IC(0.710 ns) + CELL(0.517 ns) = 14.517 ns; Loc. = LAB_X59_Y10; Fanout = 2; COMB Node = 'fir:u_fir|add_16_6:tap_array_8_filter_block_next_sum_add16_0|nx2247z31'
+    Info: 18: + IC(0.000 ns) + CELL(0.458 ns) = 14.975 ns; Loc. = LAB_X59_Y10; Fanout = 2; COMB Node = 'fir:u_fir|add_16_6:tap_array_8_filter_block_next_sum_add16_0|nx43955z1'
+    Info: 19: + IC(1.049 ns) + CELL(0.517 ns) = 16.541 ns; Loc. = LAB_X59_Y11; Fanout = 2; COMB Node = 'fir:u_fir|add_16_7:tap_array_9_filter_block_next_sum_add16_0|nx2247z28'
+    Info: 20: + IC(0.000 ns) + CELL(0.458 ns) = 16.999 ns; Loc. = LAB_X59_Y11; Fanout = 2; COMB Node = 'fir:u_fir|add_16_7:tap_array_9_filter_block_next_sum_add16_0|nx44952z1'
+    Info: 21: + IC(0.710 ns) + CELL(0.517 ns) = 18.226 ns; Loc. = LAB_X58_Y11; Fanout = 2; COMB Node = 'fir:u_fir|add_16_8:tap_array_10_filter_block_next_sum_add16_0|nx2247z25'
+    Info: 22: + IC(0.000 ns) + CELL(0.458 ns) = 18.684 ns; Loc. = LAB_X58_Y11; Fanout = 2; COMB Node = 'fir:u_fir|add_16_8:tap_array_10_filter_block_next_sum_add16_0|nx45949z1'
+    Info: 23: + IC(1.030 ns) + CELL(0.517 ns) = 20.231 ns; Loc. = LAB_X55_Y11; Fanout = 2; COMB Node = 'fir:u_fir|add_16_9:tap_array_11_filter_block_next_sum_add16_0|nx2247z22'
+    Info: 24: + IC(0.000 ns) + CELL(0.458 ns) = 20.689 ns; Loc. = LAB_X55_Y11; Fanout = 2; COMB Node = 'fir:u_fir|add_16_9:tap_array_11_filter_block_next_sum_add16_0|nx46946z1'
+    Info: 25: + IC(1.051 ns) + CELL(0.517 ns) = 22.257 ns; Loc. = LAB_X51_Y11; Fanout = 2; COMB Node = 'fir:u_fir|add_16_10:tap_array_12_filter_block_next_sum_add16_0|nx2247z19'
+    Info: 26: + IC(0.000 ns) + CELL(0.458 ns) = 22.715 ns; Loc. = LAB_X51_Y11; Fanout = 2; COMB Node = 'fir:u_fir|add_16_10:tap_array_12_filter_block_next_sum_add16_0|nx62798z1'
+    Info: 27: + IC(0.710 ns) + CELL(0.517 ns) = 23.942 ns; Loc. = LAB_X50_Y11; Fanout = 2; COMB Node = 'fir:u_fir|add_16_11:tap_array_13_filter_block_next_sum_add16_0|nx2247z16'
+    Info: 28: + IC(0.000 ns) + CELL(0.458 ns) = 24.400 ns; Loc. = LAB_X50_Y11; Fanout = 2; COMB Node = 'fir:u_fir|add_16_11:tap_array_13_filter_block_next_sum_add16_0|nx63795z1'
+    Info: 29: + IC(1.061 ns) + CELL(0.517 ns) = 25.978 ns; Loc. = LAB_X46_Y11; Fanout = 2; COMB Node = 'fir:u_fir|add_16_12:tap_array_14_filter_block_next_sum_add16_0|nx2247z13'
+    Info: 30: + IC(0.000 ns) + CELL(0.458 ns) = 26.436 ns; Loc. = LAB_X46_Y11; Fanout = 2; COMB Node = 'fir:u_fir|add_16_12:tap_array_14_filter_block_next_sum_add16_0|nx64792z1'
+    Info: 31: + IC(0.710 ns) + CELL(0.517 ns) = 27.663 ns; Loc. = LAB_X45_Y11; Fanout = 2; COMB Node = 'fir:u_fir|add_16_13:tap_array_15_filter_block_next_sum_add16_0|nx2247z10'
+    Info: 32: + IC(0.000 ns) + CELL(0.458 ns) = 28.121 ns; Loc. = LAB_X45_Y11; Fanout = 2; COMB Node = 'fir:u_fir|add_16_13:tap_array_15_filter_block_next_sum_add16_0|nx253z1'
+    Info: 33: + IC(1.064 ns) + CELL(0.517 ns) = 29.702 ns; Loc. = LAB_X45_Y14; Fanout = 2; COMB Node = 'fir:u_fir|add_16_14:tap_array_16_filter_block_next_sum_add16_0|nx2247z7'
+    Info: 34: + IC(0.000 ns) + CELL(0.458 ns) = 30.160 ns; Loc. = LAB_X45_Y14; Fanout = 2; COMB Node = 'fir:u_fir|add_16_14:tap_array_16_filter_block_next_sum_add16_0|nx1250z1'
+    Info: 35: + IC(1.030 ns) + CELL(0.517 ns) = 31.707 ns; Loc. = LAB_X42_Y14; Fanout = 1; COMB Node = 'fir:u_fir|add_16_15:tap_array_17_filter_block_next_sum_add16_0|nx2247z4'
+    Info: 36: + IC(0.000 ns) + CELL(0.458 ns) = 32.165 ns; Loc. = LAB_X42_Y14; Fanout = 1; COMB Node = 'fir:u_fir|add_16_15:tap_array_17_filter_block_next_sum_add16_0|nx2247z1'
+    Info: 37: + IC(1.189 ns) + CELL(0.413 ns) = 33.767 ns; Loc. = LAB_X35_Y14; Fanout = 1; REG Node = 'audio_out_15_'
+    Info: Total cell delay = 16.672 ns ( 49.37 % )
+    Info: Total interconnect delay = 17.095 ns ( 50.63 % )
+Info: Fitter routing operations beginning
+Info: Average interconnect usage is 0% of the available device resources
+    Info: Peak interconnect usage is 2% of the available device resources in the region that extends from location X44_Y12 to location X54_Y23
+Info: Fitter routing operations ending: elapsed time is 00:00:00
+Info: Started post-fitting delay annotation
+Warning: Found 90 output pins without output pin load capacitance assignment
+    Info: Pin "ledg[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "ledg[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "ledg[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "ledg[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "ledg[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "ledg[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "ledg[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "ledg[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "ledg[8]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "ledr[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "ledr[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "ledr[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "ledr[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "ledr[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "ledr[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "ledr[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "ledr[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "ledr[8]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "ledr[9]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "ledr[10]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "ledr[11]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "ledr[12]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "ledr[13]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "ledr[14]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "ledr[15]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "ledr[16]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "ledr[17]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex0[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex0[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex0[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex0[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex0[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex0[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex0[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex1[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex1[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex1[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex1[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex1[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex1[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex1[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex2[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex2[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex2[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex2[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex2[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex2[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex2[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex3[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex3[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex3[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex3[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex3[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex3[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex3[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex4[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex4[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex4[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex4[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex4[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex4[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex4[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex5[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex5[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex5[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex5[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex5[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex5[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex5[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex6[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex6[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex6[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex6[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex6[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex6[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex6[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex7[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex7[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex7[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex7[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex7[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex7[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "hex7[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "aud_xck" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "aud_dacdat" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "aud_daclrck" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "aud_adclrck" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "i2c_sclk" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "i2c_sdat" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "aud_bclk" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+Info: Delay annotation completed successfully
+Info: Design uses memory blocks. Violating setup or hold times of memory block address registers for either read or write operations could cause memory contents to be corrupted. Make sure that all memory block address registers meet the setup and hold time requirements.
+Warning: Following 1 pins have no output enable or a GND or VCC output enable - later changes to this connectivity may change fitting results
+    Info: Pin aud_bclk has a permanently enabled output enable
+Warning: Following 58 pins have nothing, GND, or VCC driving datain port -- changes to this connectivity may change fitting results
+    Info: Pin ledg[0] has GND driving its datain port
+    Info: Pin ledg[1] has GND driving its datain port
+    Info: Pin ledg[2] has GND driving its datain port
+    Info: Pin ledg[3] has GND driving its datain port
+    Info: Pin ledg[4] has GND driving its datain port
+    Info: Pin ledg[5] has GND driving its datain port
+    Info: Pin ledg[6] has GND driving its datain port
+    Info: Pin ledg[7] has GND driving its datain port
+    Info: Pin ledg[8] has GND driving its datain port
+    Info: Pin ledr[0] has GND driving its datain port
+    Info: Pin ledr[1] has GND driving its datain port
+    Info: Pin ledr[2] has GND driving its datain port
+    Info: Pin ledr[3] has GND driving its datain port
+    Info: Pin ledr[4] has GND driving its datain port
+    Info: Pin ledr[5] has GND driving its datain port
+    Info: Pin ledr[6] has GND driving its datain port
+    Info: Pin ledr[7] has GND driving its datain port
+    Info: Pin ledr[8] has GND driving its datain port
+    Info: Pin ledr[9] has GND driving its datain port
+    Info: Pin ledr[10] has GND driving its datain port
+    Info: Pin ledr[11] has GND driving its datain port
+    Info: Pin ledr[12] has GND driving its datain port
+    Info: Pin ledr[13] has GND driving its datain port
+    Info: Pin ledr[14] has GND driving its datain port
+    Info: Pin ledr[15] has GND driving its datain port
+    Info: Pin ledr[16] has GND driving its datain port
+    Info: Pin ledr[17] has GND driving its datain port
+    Info: Pin hex0[0] has GND driving its datain port
+    Info: Pin hex0[1] has GND driving its datain port
+    Info: Pin hex0[2] has GND driving its datain port
+    Info: Pin hex0[3] has GND driving its datain port
+    Info: Pin hex0[4] has GND driving its datain port
+    Info: Pin hex0[5] has GND driving its datain port
+    Info: Pin hex0[6] has GND driving its datain port
+    Info: Pin hex1[0] has GND driving its datain port
+    Info: Pin hex1[1] has GND driving its datain port
+    Info: Pin hex1[2] has GND driving its datain port
+    Info: Pin hex1[3] has GND driving its datain port
+    Info: Pin hex1[4] has GND driving its datain port
+    Info: Pin hex1[5] has GND driving its datain port
+    Info: Pin hex1[6] has GND driving its datain port
+    Info: Pin hex2[0] has GND driving its datain port
+    Info: Pin hex2[1] has GND driving its datain port
+    Info: Pin hex2[2] has GND driving its datain port
+    Info: Pin hex2[3] has GND driving its datain port
+    Info: Pin hex2[4] has GND driving its datain port
+    Info: Pin hex2[5] has GND driving its datain port
+    Info: Pin hex2[6] has GND driving its datain port
+    Info: Pin hex3[0] has GND driving its datain port
+    Info: Pin hex3[1] has GND driving its datain port
+    Info: Pin hex3[2] has GND driving its datain port
+    Info: Pin hex3[3] has GND driving its datain port
+    Info: Pin hex3[4] has GND driving its datain port
+    Info: Pin hex3[5] has GND driving its datain port
+    Info: Pin hex3[6] has GND driving its datain port
+    Info: Pin hex7[1] has GND driving its datain port
+    Info: Pin hex7[2] has GND driving its datain port
+    Info: Pin hex7[6] has VCC driving its datain port
+Info: Following groups of pins have the same output enable
+    Info: Following pins have the same output enable: i2c_av_config_notri:u_i2c_av_config|i2c_ctrl_notri:u0|nx51857z1
+        Info: Type bi-directional pin i2c_sdat uses the 3.3-V LVTTL I/O standard
+Info: Quartus II Fitter was successful. 0 errors, 28 warnings
+    Info: Peak virtual memory: 318 megabytes
+    Info: Processing ended: Tue Jan 26 18:36:48 2016
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:07
+Warning: Can't contact license server "7417@maxwell5.uwaterloo.ca" -- this server will be ignored
+Info: *******************************************************************
+Info: Running Quartus II TimeQuest Timing Analyzer
+    Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
+    Info: Copyright (C) 1991-2009 Altera Corporation. All rights reserved.
+    Info: Your use of Altera Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Altera Program License 
+    Info: Subscription Agreement, Altera MegaCore Function License 
+    Info: Agreement, or other applicable license agreement, including, 
+    Info: without limitation, that your use is for the sole purpose of 
+    Info: programming logic devices manufactured by Altera and sold by 
+    Info: Altera or its authorized distributors.  Please refer to the 
+    Info: applicable agreement for further details.
+    Info: Processing started: Tue Jan 26 18:36:49 2016
+Info: Command: quartus_sta -t uw-chip-synth-quartus-timing.tcl fir_top
+Info: Quartus(args): fir_top
+Info: Detected changes in Quartus II Settings File (.qsf).
+    Info: Assignment USE_TIMEQUEST_TIMING_ANALYZER changed value from OFF to ON.
+Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info: No user constrained generated clocks found in the design. Calling "derive_pll_clocks -create_base_clocks"
+Info: Deriving PLL Clocks
+    Info: create_clock -period 37.037 -waveform {0.000 18.518} -name clock_27 clock_27
+    Info: create_generated_clock -source {u_audio_dac_p1_altpll|pll|inclk[0]} -divide_by 3 -multiply_by 2 -duty_cycle 50.00 -name {u_audio_dac_p1_altpll|pll|clk[1]} {u_audio_dac_p1_altpll|pll|clk[1]}
+Info: No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info: Deriving Clocks
+    Info: create_clock -period 1.000 -name aud_bclk_dup0 aud_bclk_dup0
+    Info: create_clock -period 1.000 -name aud_adclrck_dup0 aud_adclrck_dup0
+Info: Fmax Summary
+    Info:                Restricted
+    Info:         Fmax         Fmax      Clock Note
+    Info: ============ ============ ========== =====================
+    Info:    29.35 MHz    29.35 MHz aud_adclrck_dup0   
+    Info:   137.21 MHz   137.21 MHz   clock_27   
+    Info:   206.61 MHz   206.61 MHz u_audio_dac_p1_altpll|pll|clk[1]   
+    Info:   657.46 MHz   450.05 MHz aud_bclk_dup0 limit due to high minimum pulse width violation (tch) 
+Info: Report Timing: Found 5 setup paths (5 violated).  Worst case slack is -33.072
+    Info: -setup
+    Info: -npaths 5
+    Info: -detail path_only
+    Info: -file {timing_chip_path.rpt}
+Info: Report Timing: Found 5 setup paths (5 violated).  Worst case slack is -33.072
+    Info: -setup
+    Info: -npaths 5
+    Info: -detail path_only
+Info: Path #1: Setup slack is -33.072 (VIOLATED)
+    Info: ===================================================================
+    Info: From Node    : fir:u_fir|taps_2__1_
+    Info: To Node      : audio_out_15_
+    Info: Launch Clock : aud_adclrck_dup0
+    Info: Latch Clock  : aud_adclrck_dup0
+    Info: 
+    Info: Data Arrival Path:
+    Info: 
+    Info: Total (ns)  Incr (ns)     Type  Element
+    Info: ==========  ========= ==  ====  ===================================
+    Info:      0.000      0.000           launch edge time
+    Info:      2.597      2.597  R        clock network delay
+    Info:      2.874      0.277     uTco  fir:u_fir|taps_2__1_
+    Info:      2.874      0.000 FF  CELL  u_fir|tap_array_2_filter_block_reg_current_tap_1_|regout
+    Info:      3.774      0.900 FF    IC  u_fir|tap_array_2_filter_block_prod_mults28_0|modgen_add_1_ix8231z52936|dataa
+    Info:      4.291      0.517 FF  CELL  u_fir|tap_array_2_filter_block_prod_mults28_0|modgen_add_1_ix8231z52936|cout
+    Info:      4.291      0.000 FF    IC  u_fir|tap_array_2_filter_block_prod_mults28_0|modgen_add_1_ix8231z52935|cin
+    Info:      4.371      0.080 FR  CELL  u_fir|tap_array_2_filter_block_prod_mults28_0|modgen_add_1_ix8231z52935|cout
+    Info:      4.371      0.000 RR    IC  u_fir|tap_array_2_filter_block_prod_mults28_0|modgen_add_1_ix8231z52934|cin
+    Info:      4.451      0.080 RF  CELL  u_fir|tap_array_2_filter_block_prod_mults28_0|modgen_add_1_ix8231z52934|cout
+    Info:      4.451      0.000 FF    IC  u_fir|tap_array_2_filter_block_prod_mults28_0|modgen_add_1_ix8231z52933|cin
+    Info:      4.531      0.080 FR  CELL  u_fir|tap_array_2_filter_block_prod_mults28_0|modgen_add_1_ix8231z52933|cout
+    Info:      4.531      0.000 RR    IC  u_fir|tap_array_2_filter_block_prod_mults28_0|modgen_add_1_ix8231z52932|cin
+    Info:      4.989      0.458 RR  CELL  u_fir|tap_array_2_filter_block_prod_mults28_0|modgen_add_1_ix8231z52932|combout
+    Info:      5.554      0.565 RR    IC  u_fir|tap_array_2_filter_block_next_sum_add16_0|ix2247z52939|dataa
+    Info:      6.098      0.544 RR  CELL  u_fir|tap_array_2_filter_block_next_sum_add16_0|ix2247z52939|combout
+    Info:      7.233      1.135 RR    IC  u_fir|tap_array_3_filter_block_next_sum_add16_0|ix2247z52939|dataa
+    Info:      7.750      0.517 RR  CELL  u_fir|tap_array_3_filter_block_next_sum_add16_0|ix2247z52939|cout
+    Info:      7.750      0.000 RR    IC  u_fir|tap_array_3_filter_block_next_sum_add16_0|ix2247z52938|cin
+    Info:      8.208      0.458 RR  CELL  u_fir|tap_array_3_filter_block_next_sum_add16_0|ix2247z52938|combout
+    Info:      9.702      1.494 RR    IC  u_fir|tap_array_4_filter_block_next_sum_add16_0|ix2247z52938|dataa
+    Info:     10.219      0.517 RF  CELL  u_fir|tap_array_4_filter_block_next_sum_add16_0|ix2247z52938|cout
+    Info:     10.219      0.000 FF    IC  u_fir|tap_array_4_filter_block_next_sum_add16_0|ix2247z52937|cin
+    Info:     10.677      0.458 FF  CELL  u_fir|tap_array_4_filter_block_next_sum_add16_0|ix2247z52937|combout
+    Info:     12.249      1.572 FF    IC  u_fir|tap_array_5_filter_block_next_sum_add16_0|ix2247z52937|datab
+    Info:     12.770      0.521 FF  CELL  u_fir|tap_array_5_filter_block_next_sum_add16_0|ix2247z52937|combout
+    Info:     13.929      1.159 FF    IC  u_fir|tap_array_6_filter_block_next_sum_add16_0|ix2247z52937|dataa
+    Info:     14.473      0.544 FF  CELL  u_fir|tap_array_6_filter_block_next_sum_add16_0|ix2247z52937|combout
+    Info:     15.005      0.532 FF    IC  u_fir|tap_array_7_filter_block_next_sum_add16_0|ix2247z52937|datab
+    Info:     15.526      0.521 FF  CELL  u_fir|tap_array_7_filter_block_next_sum_add16_0|ix2247z52937|combout
+    Info:     16.615      1.089 FF    IC  u_fir|tap_array_8_filter_block_next_sum_add16_0|ix2247z52937|dataa
+    Info:     17.159      0.544 FF  CELL  u_fir|tap_array_8_filter_block_next_sum_add16_0|ix2247z52937|combout
+    Info:     18.691      1.532 FF    IC  u_fir|tap_array_9_filter_block_next_sum_add16_0|ix2247z52937|dataa
+    Info:     19.208      0.517 FF  CELL  u_fir|tap_array_9_filter_block_next_sum_add16_0|ix2247z52937|cout
+    Info:     19.208      0.000 FF    IC  u_fir|tap_array_9_filter_block_next_sum_add16_0|ix2247z52936|cin
+    Info:     19.666      0.458 FF  CELL  u_fir|tap_array_9_filter_block_next_sum_add16_0|ix2247z52936|combout
+    Info:     20.452      0.786 FF    IC  u_fir|tap_array_10_filter_block_next_sum_add16_0|ix2247z52936|datab
+    Info:     20.968      0.516 FF  CELL  u_fir|tap_array_10_filter_block_next_sum_add16_0|ix2247z52936|combout
+    Info:     21.809      0.841 FF    IC  u_fir|tap_array_11_filter_block_next_sum_add16_0|ix2247z52936|dataa
+    Info:     22.326      0.517 FR  CELL  u_fir|tap_array_11_filter_block_next_sum_add16_0|ix2247z52936|cout
+    Info:     22.326      0.000 RR    IC  u_fir|tap_array_11_filter_block_next_sum_add16_0|ix2247z52935|cin
+    Info:     22.784      0.458 RR  CELL  u_fir|tap_array_11_filter_block_next_sum_add16_0|ix2247z52935|combout
+    Info:     24.312      1.528 RR    IC  u_fir|tap_array_12_filter_block_next_sum_add16_0|ix2247z52935|datab
+    Info:     24.807      0.495 RR  CELL  u_fir|tap_array_12_filter_block_next_sum_add16_0|ix2247z52935|cout
+    Info:     24.807      0.000 RR    IC  u_fir|tap_array_12_filter_block_next_sum_add16_0|ix2247z52934|cin
+    Info:     24.887      0.080 RF  CELL  u_fir|tap_array_12_filter_block_next_sum_add16_0|ix2247z52934|cout
+    Info:     24.887      0.000 FF    IC  u_fir|tap_array_12_filter_block_next_sum_add16_0|ix2247z52933|cin
+    Info:     25.345      0.458 FF  CELL  u_fir|tap_array_12_filter_block_next_sum_add16_0|ix2247z52933|combout
+    Info:     26.185      0.840 FF    IC  u_fir|tap_array_13_filter_block_next_sum_add16_0|ix2247z52933|dataa
+    Info:     26.702      0.517 FF  CELL  u_fir|tap_array_13_filter_block_next_sum_add16_0|ix2247z52933|cout
+    Info:     26.702      0.000 FF    IC  u_fir|tap_array_13_filter_block_next_sum_add16_0|ix2247z52932|cin
+    Info:     27.160      0.458 FF  CELL  u_fir|tap_array_13_filter_block_next_sum_add16_0|ix2247z52932|combout
+    Info:     28.038      0.878 FF    IC  u_fir|tap_array_14_filter_block_next_sum_add16_0|ix2247z52932|dataa
+    Info:     28.658      0.620 FR  CELL  u_fir|tap_array_14_filter_block_next_sum_add16_0|ix2247z52932|cout
+    Info:     28.658      0.000 RR    IC  u_fir|tap_array_14_filter_block_next_sum_add16_0|ix2247z52931|cin
+    Info:     29.116      0.458 RR  CELL  u_fir|tap_array_14_filter_block_next_sum_add16_0|ix2247z52931|combout
+    Info:     29.666      0.550 RR    IC  u_fir|tap_array_15_filter_block_next_sum_add16_0|ix2247z52931|dataa
+    Info:     30.183      0.517 RR  CELL  u_fir|tap_array_15_filter_block_next_sum_add16_0|ix2247z52931|cout
+    Info:     30.183      0.000 RR    IC  u_fir|tap_array_15_filter_block_next_sum_add16_0|ix2247z52930|cin
+    Info:     30.641      0.458 RR  CELL  u_fir|tap_array_15_filter_block_next_sum_add16_0|ix2247z52930|combout
+    Info:     32.114      1.473 RR    IC  u_fir|tap_array_16_filter_block_next_sum_add16_0|ix2247z52930|datab
+    Info:     32.609      0.495 RF  CELL  u_fir|tap_array_16_filter_block_next_sum_add16_0|ix2247z52930|cout
+    Info:     32.609      0.000 FF    IC  u_fir|tap_array_16_filter_block_next_sum_add16_0|ix2247z52929|cin
+    Info:     32.689      0.080 FR  CELL  u_fir|tap_array_16_filter_block_next_sum_add16_0|ix2247z52929|cout
+    Info:     32.689      0.000 RR    IC  u_fir|tap_array_16_filter_block_next_sum_add16_0|ix2247z52928|cin
+    Info:     33.147      0.458 RR  CELL  u_fir|tap_array_16_filter_block_next_sum_add16_0|ix2247z52928|combout
+    Info:     33.964      0.817 RR    IC  u_fir|tap_array_17_filter_block_next_sum_add16_0|ix2247z52928|dataa
+    Info:     34.481      0.517 RF  CELL  u_fir|tap_array_17_filter_block_next_sum_add16_0|ix2247z52928|cout
+    Info:     34.481      0.000 FF    IC  u_fir|tap_array_17_filter_block_next_sum_add16_0|ix2247z52927|cin
+    Info:     34.561      0.080 FR  CELL  u_fir|tap_array_17_filter_block_next_sum_add16_0|ix2247z52927|cout
+    Info:     34.561      0.000 RR    IC  u_fir|tap_array_17_filter_block_next_sum_add16_0|ix2247z52926|cin
+    Info:     34.641      0.080 RF  CELL  u_fir|tap_array_17_filter_block_next_sum_add16_0|ix2247z52926|cout
+    Info:     34.641      0.000 FF    IC  u_fir|tap_array_17_filter_block_next_sum_add16_0|ix2247z52925|cin
+    Info:     34.721      0.080 FR  CELL  u_fir|tap_array_17_filter_block_next_sum_add16_0|ix2247z52925|cout
+    Info:     34.721      0.000 RR    IC  u_fir|tap_array_17_filter_block_next_sum_add16_0|ix2247z52923|cin
+    Info:     35.179      0.458 RR  CELL  u_fir|tap_array_17_filter_block_next_sum_add16_0|ix2247z52923|combout
+    Info:     36.271      1.092 RR    IC  reg_audio_out_15_|sdata
+    Info:     36.684      0.413 RR  CELL  audio_out_15_
+    Info: 
+    Info: Data Required Path:
+    Info: 
+    Info: Total (ns)  Incr (ns)     Type  Element
+    Info: ==========  ========= ==  ====  ===================================
+    Info:      1.000      1.000           latch edge time
+    Info:      3.574      2.574  R        clock network delay
+    Info:      3.612      0.038     uTsu  audio_out_15_
+    Info: 
+    Info: Data Arrival Time  :    36.684
+    Info: Data Required Time :     3.612
+    Info: Slack              :   -33.072 (VIOLATED)
+    Info: ===================================================================
+    Info: 
+Info: Path #2: Setup slack is -33.065 (VIOLATED)
+    Info: ===================================================================
+    Info: From Node    : fir:u_fir|taps_2__1_
+    Info: To Node      : audio_out_15_
+    Info: Launch Clock : aud_adclrck_dup0
+    Info: Latch Clock  : aud_adclrck_dup0
+    Info: 
+    Info: Data Arrival Path:
+    Info: 
+    Info: Total (ns)  Incr (ns)     Type  Element
+    Info: ==========  ========= ==  ====  ===================================
+    Info:      0.000      0.000           launch edge time
+    Info:      2.597      2.597  R        clock network delay
+    Info:      2.874      0.277     uTco  fir:u_fir|taps_2__1_
+    Info:      2.874      0.000 RR  CELL  u_fir|tap_array_2_filter_block_reg_current_tap_1_|regout
+    Info:      3.774      0.900 RR    IC  u_fir|tap_array_2_filter_block_prod_mults28_0|modgen_add_1_ix8231z52936|dataa
+    Info:      4.291      0.517 RR  CELL  u_fir|tap_array_2_filter_block_prod_mults28_0|modgen_add_1_ix8231z52936|cout
+    Info:      4.291      0.000 RR    IC  u_fir|tap_array_2_filter_block_prod_mults28_0|modgen_add_1_ix8231z52935|cin
+    Info:      4.371      0.080 RF  CELL  u_fir|tap_array_2_filter_block_prod_mults28_0|modgen_add_1_ix8231z52935|cout
+    Info:      4.371      0.000 FF    IC  u_fir|tap_array_2_filter_block_prod_mults28_0|modgen_add_1_ix8231z52934|cin
+    Info:      4.451      0.080 FR  CELL  u_fir|tap_array_2_filter_block_prod_mults28_0|modgen_add_1_ix8231z52934|cout
+    Info:      4.451      0.000 RR    IC  u_fir|tap_array_2_filter_block_prod_mults28_0|modgen_add_1_ix8231z52933|cin
+    Info:      4.531      0.080 RF  CELL  u_fir|tap_array_2_filter_block_prod_mults28_0|modgen_add_1_ix8231z52933|cout
+    Info:      4.531      0.000 FF    IC  u_fir|tap_array_2_filter_block_prod_mults28_0|modgen_add_1_ix8231z52932|cin
+    Info:      4.989      0.458 FF  CELL  u_fir|tap_array_2_filter_block_prod_mults28_0|modgen_add_1_ix8231z52932|combout
+    Info:      5.554      0.565 FF    IC  u_fir|tap_array_2_filter_block_next_sum_add16_0|ix2247z52939|dataa
+    Info:      6.098      0.544 FF  CELL  u_fir|tap_array_2_filter_block_next_sum_add16_0|ix2247z52939|combout
+    Info:      7.233      1.135 FF    IC  u_fir|tap_array_3_filter_block_next_sum_add16_0|ix2247z52939|dataa
+    Info:      7.750      0.517 FF  CELL  u_fir|tap_array_3_filter_block_next_sum_add16_0|ix2247z52939|cout
+    Info:      7.750      0.000 FF    IC  u_fir|tap_array_3_filter_block_next_sum_add16_0|ix2247z52938|cin
+    Info:      8.208      0.458 FF  CELL  u_fir|tap_array_3_filter_block_next_sum_add16_0|ix2247z52938|combout
+    Info:      9.702      1.494 FF    IC  u_fir|tap_array_4_filter_block_next_sum_add16_0|ix2247z52938|dataa
+    Info:     10.219      0.517 FR  CELL  u_fir|tap_array_4_filter_block_next_sum_add16_0|ix2247z52938|cout
+    Info:     10.219      0.000 RR    IC  u_fir|tap_array_4_filter_block_next_sum_add16_0|ix2247z52937|cin
+    Info:     10.677      0.458 RR  CELL  u_fir|tap_array_4_filter_block_next_sum_add16_0|ix2247z52937|combout
+    Info:     12.249      1.572 RR    IC  u_fir|tap_array_5_filter_block_next_sum_add16_0|ix2247z52937|datab
+    Info:     12.770      0.521 RR  CELL  u_fir|tap_array_5_filter_block_next_sum_add16_0|ix2247z52937|combout
+    Info:     13.929      1.159 RR    IC  u_fir|tap_array_6_filter_block_next_sum_add16_0|ix2247z52937|dataa
+    Info:     14.473      0.544 RR  CELL  u_fir|tap_array_6_filter_block_next_sum_add16_0|ix2247z52937|combout
+    Info:     15.005      0.532 RR    IC  u_fir|tap_array_7_filter_block_next_sum_add16_0|ix2247z52937|datab
+    Info:     15.526      0.521 RR  CELL  u_fir|tap_array_7_filter_block_next_sum_add16_0|ix2247z52937|combout
+    Info:     16.615      1.089 RR    IC  u_fir|tap_array_8_filter_block_next_sum_add16_0|ix2247z52937|dataa
+    Info:     17.159      0.544 RR  CELL  u_fir|tap_array_8_filter_block_next_sum_add16_0|ix2247z52937|combout
+    Info:     18.691      1.532 RR    IC  u_fir|tap_array_9_filter_block_next_sum_add16_0|ix2247z52937|dataa
+    Info:     19.208      0.517 RR  CELL  u_fir|tap_array_9_filter_block_next_sum_add16_0|ix2247z52937|cout
+    Info:     19.208      0.000 RR    IC  u_fir|tap_array_9_filter_block_next_sum_add16_0|ix2247z52936|cin
+    Info:     19.666      0.458 RR  CELL  u_fir|tap_array_9_filter_block_next_sum_add16_0|ix2247z52936|combout
+    Info:     20.452      0.786 RR    IC  u_fir|tap_array_10_filter_block_next_sum_add16_0|ix2247z52936|datab
+    Info:     20.968      0.516 RR  CELL  u_fir|tap_array_10_filter_block_next_sum_add16_0|ix2247z52936|combout
+    Info:     21.809      0.841 RR    IC  u_fir|tap_array_11_filter_block_next_sum_add16_0|ix2247z52936|dataa
+    Info:     22.326      0.517 RF  CELL  u_fir|tap_array_11_filter_block_next_sum_add16_0|ix2247z52936|cout
+    Info:     22.326      0.000 FF    IC  u_fir|tap_array_11_filter_block_next_sum_add16_0|ix2247z52935|cin
+    Info:     22.784      0.458 FF  CELL  u_fir|tap_array_11_filter_block_next_sum_add16_0|ix2247z52935|combout
+    Info:     24.312      1.528 FF    IC  u_fir|tap_array_12_filter_block_next_sum_add16_0|ix2247z52935|datab
+    Info:     24.807      0.495 FF  CELL  u_fir|tap_array_12_filter_block_next_sum_add16_0|ix2247z52935|cout
+    Info:     24.807      0.000 FF    IC  u_fir|tap_array_12_filter_block_next_sum_add16_0|ix2247z52934|cin
+    Info:     24.887      0.080 FR  CELL  u_fir|tap_array_12_filter_block_next_sum_add16_0|ix2247z52934|cout
+    Info:     24.887      0.000 RR    IC  u_fir|tap_array_12_filter_block_next_sum_add16_0|ix2247z52933|cin
+    Info:     25.345      0.458 RR  CELL  u_fir|tap_array_12_filter_block_next_sum_add16_0|ix2247z52933|combout
+    Info:     26.185      0.840 RR    IC  u_fir|tap_array_13_filter_block_next_sum_add16_0|ix2247z52933|dataa
+    Info:     26.702      0.517 RR  CELL  u_fir|tap_array_13_filter_block_next_sum_add16_0|ix2247z52933|cout
+    Info:     26.702      0.000 RR    IC  u_fir|tap_array_13_filter_block_next_sum_add16_0|ix2247z52932|cin
+    Info:     27.160      0.458 RR  CELL  u_fir|tap_array_13_filter_block_next_sum_add16_0|ix2247z52932|combout
+    Info:     28.038      0.878 RR    IC  u_fir|tap_array_14_filter_block_next_sum_add16_0|ix2247z52932|dataa
+    Info:     28.658      0.620 RF  CELL  u_fir|tap_array_14_filter_block_next_sum_add16_0|ix2247z52932|cout
+    Info:     28.658      0.000 FF    IC  u_fir|tap_array_14_filter_block_next_sum_add16_0|ix2247z52931|cin
+    Info:     29.116      0.458 FF  CELL  u_fir|tap_array_14_filter_block_next_sum_add16_0|ix2247z52931|combout
+    Info:     29.666      0.550 FF    IC  u_fir|tap_array_15_filter_block_next_sum_add16_0|ix2247z52931|dataa
+    Info:     30.183      0.517 FF  CELL  u_fir|tap_array_15_filter_block_next_sum_add16_0|ix2247z52931|cout
+    Info:     30.183      0.000 FF    IC  u_fir|tap_array_15_filter_block_next_sum_add16_0|ix2247z52930|cin
+    Info:     30.641      0.458 FF  CELL  u_fir|tap_array_15_filter_block_next_sum_add16_0|ix2247z52930|combout
+    Info:     32.114      1.473 FF    IC  u_fir|tap_array_16_filter_block_next_sum_add16_0|ix2247z52930|datab
+    Info:     32.609      0.495 FR  CELL  u_fir|tap_array_16_filter_block_next_sum_add16_0|ix2247z52930|cout
+    Info:     32.609      0.000 RR    IC  u_fir|tap_array_16_filter_block_next_sum_add16_0|ix2247z52929|cin
+    Info:     33.067      0.458 RR  CELL  u_fir|tap_array_16_filter_block_next_sum_add16_0|ix2247z52929|combout
+    Info:     33.877      0.810 RR    IC  u_fir|tap_array_17_filter_block_next_sum_add16_0|ix2247z52929|dataa
+    Info:     34.394      0.517 RR  CELL  u_fir|tap_array_17_filter_block_next_sum_add16_0|ix2247z52929|cout
+    Info:     34.394      0.000 RR    IC  u_fir|tap_array_17_filter_block_next_sum_add16_0|ix2247z52928|cin
+    Info:     34.474      0.080 RF  CELL  u_fir|tap_array_17_filter_block_next_sum_add16_0|ix2247z52928|cout
+    Info:     34.474      0.000 FF    IC  u_fir|tap_array_17_filter_block_next_sum_add16_0|ix2247z52927|cin
+    Info:     34.554      0.080 FR  CELL  u_fir|tap_array_17_filter_block_next_sum_add16_0|ix2247z52927|cout
+    Info:     34.554      0.000 RR    IC  u_fir|tap_array_17_filter_block_next_sum_add16_0|ix2247z52926|cin
+    Info:     34.634      0.080 RF  CELL  u_fir|tap_array_17_filter_block_next_sum_add16_0|ix2247z52926|cout
+    Info:     34.634      0.000 FF    IC  u_fir|tap_array_17_filter_block_next_sum_add16_0|ix2247z52925|cin
+    Info:     34.714      0.080 FR  CELL  u_fir|tap_array_17_filter_block_next_sum_add16_0|ix2247z52925|cout
+    Info:     34.714      0.000 RR    IC  u_fir|tap_array_17_filter_block_next_sum_add16_0|ix2247z52923|cin
+    Info:     35.172      0.458 RR  CELL  u_fir|tap_array_17_filter_block_next_sum_add16_0|ix2247z52923|combout
+    Info:     36.264      1.092 RR    IC  reg_audio_out_15_|sdata
+    Info:     36.677      0.413 RR  CELL  audio_out_15_
+    Info: 
+    Info: Data Required Path:
+    Info: 
+    Info: Total (ns)  Incr (ns)     Type  Element
+    Info: ==========  ========= ==  ====  ===================================
+    Info:      1.000      1.000           latch edge time
+    Info:      3.574      2.574  R        clock network delay
+    Info:      3.612      0.038     uTsu  audio_out_15_
+    Info: 
+    Info: Data Arrival Time  :    36.677
+    Info: Data Required Time :     3.612
+    Info: Slack              :   -33.065 (VIOLATED)
+    Info: ===================================================================
+    Info: 
+Info: Path #3: Setup slack is -33.060 (VIOLATED)
+    Info: ===================================================================
+    Info: From Node    : fir:u_fir|taps_2__1_
+    Info: To Node      : audio_out_15_
+    Info: Launch Clock : aud_adclrck_dup0
+    Info: Latch Clock  : aud_adclrck_dup0
+    Info: 
+    Info: Data Arrival Path:
+    Info: 
+    Info: Total (ns)  Incr (ns)     Type  Element
+    Info: ==========  ========= ==  ====  ===================================
+    Info:      0.000      0.000           launch edge time
+    Info:      2.597      2.597  R        clock network delay
+    Info:      2.874      0.277     uTco  fir:u_fir|taps_2__1_
+    Info:      2.874      0.000 RR  CELL  u_fir|tap_array_2_filter_block_reg_current_tap_1_|regout
+    Info:      3.774      0.900 RR    IC  u_fir|tap_array_2_filter_block_prod_mults28_0|modgen_add_1_ix8231z52936|dataa
+    Info:      4.291      0.517 RR  CELL  u_fir|tap_array_2_filter_block_prod_mults28_0|modgen_add_1_ix8231z52936|cout
+    Info:      4.291      0.000 RR    IC  u_fir|tap_array_2_filter_block_prod_mults28_0|modgen_add_1_ix8231z52935|cin
+    Info:      4.371      0.080 RF  CELL  u_fir|tap_array_2_filter_block_prod_mults28_0|modgen_add_1_ix8231z52935|cout
+    Info:      4.371      0.000 FF    IC  u_fir|tap_array_2_filter_block_prod_mults28_0|modgen_add_1_ix8231z52934|cin
+    Info:      4.451      0.080 FR  CELL  u_fir|tap_array_2_filter_block_prod_mults28_0|modgen_add_1_ix8231z52934|cout
+    Info:      4.451      0.000 RR    IC  u_fir|tap_array_2_filter_block_prod_mults28_0|modgen_add_1_ix8231z52933|cin
+    Info:      4.531      0.080 RF  CELL  u_fir|tap_array_2_filter_block_prod_mults28_0|modgen_add_1_ix8231z52933|cout
+    Info:      4.531      0.000 FF    IC  u_fir|tap_array_2_filter_block_prod_mults28_0|modgen_add_1_ix8231z52932|cin
+    Info:      4.989      0.458 FF  CELL  u_fir|tap_array_2_filter_block_prod_mults28_0|modgen_add_1_ix8231z52932|combout
+    Info:      5.554      0.565 FF    IC  u_fir|tap_array_2_filter_block_next_sum_add16_0|ix2247z52939|dataa
+    Info:      6.098      0.544 FF  CELL  u_fir|tap_array_2_filter_block_next_sum_add16_0|ix2247z52939|combout
+    Info:      7.233      1.135 FF    IC  u_fir|tap_array_3_filter_block_next_sum_add16_0|ix2247z52939|dataa
+    Info:      7.750      0.517 FF  CELL  u_fir|tap_array_3_filter_block_next_sum_add16_0|ix2247z52939|cout
+    Info:      7.750      0.000 FF    IC  u_fir|tap_array_3_filter_block_next_sum_add16_0|ix2247z52938|cin
+    Info:      8.208      0.458 FF  CELL  u_fir|tap_array_3_filter_block_next_sum_add16_0|ix2247z52938|combout
+    Info:      9.702      1.494 FF    IC  u_fir|tap_array_4_filter_block_next_sum_add16_0|ix2247z52938|dataa
+    Info:     10.219      0.517 FR  CELL  u_fir|tap_array_4_filter_block_next_sum_add16_0|ix2247z52938|cout
+    Info:     10.219      0.000 RR    IC  u_fir|tap_array_4_filter_block_next_sum_add16_0|ix2247z52937|cin
+    Info:     10.677      0.458 RR  CELL  u_fir|tap_array_4_filter_block_next_sum_add16_0|ix2247z52937|combout
+    Info:     12.249      1.572 RR    IC  u_fir|tap_array_5_filter_block_next_sum_add16_0|ix2247z52937|datab
+    Info:     12.770      0.521 RR  CELL  u_fir|tap_array_5_filter_block_next_sum_add16_0|ix2247z52937|combout
+    Info:     13.929      1.159 RR    IC  u_fir|tap_array_6_filter_block_next_sum_add16_0|ix2247z52937|dataa
+    Info:     14.473      0.544 RR  CELL  u_fir|tap_array_6_filter_block_next_sum_add16_0|ix2247z52937|combout
+    Info:     15.005      0.532 RR    IC  u_fir|tap_array_7_filter_block_next_sum_add16_0|ix2247z52937|datab
+    Info:     15.526      0.521 RR  CELL  u_fir|tap_array_7_filter_block_next_sum_add16_0|ix2247z52937|combout
+    Info:     16.615      1.089 RR    IC  u_fir|tap_array_8_filter_block_next_sum_add16_0|ix2247z52937|dataa
+    Info:     17.159      0.544 RR  CELL  u_fir|tap_array_8_filter_block_next_sum_add16_0|ix2247z52937|combout
+    Info:     18.691      1.532 RR    IC  u_fir|tap_array_9_filter_block_next_sum_add16_0|ix2247z52937|dataa
+    Info:     19.208      0.517 RR  CELL  u_fir|tap_array_9_filter_block_next_sum_add16_0|ix2247z52937|cout
+    Info:     19.208      0.000 RR    IC  u_fir|tap_array_9_filter_block_next_sum_add16_0|ix2247z52936|cin
+    Info:     19.666      0.458 RR  CELL  u_fir|tap_array_9_filter_block_next_sum_add16_0|ix2247z52936|combout
+    Info:     20.452      0.786 RR    IC  u_fir|tap_array_10_filter_block_next_sum_add16_0|ix2247z52936|datab
+    Info:     20.968      0.516 RR  CELL  u_fir|tap_array_10_filter_block_next_sum_add16_0|ix2247z52936|combout
+    Info:     21.809      0.841 RR    IC  u_fir|tap_array_11_filter_block_next_sum_add16_0|ix2247z52936|dataa
+    Info:     22.326      0.517 RF  CELL  u_fir|tap_array_11_filter_block_next_sum_add16_0|ix2247z52936|cout
+    Info:     22.326      0.000 FF    IC  u_fir|tap_array_11_filter_block_next_sum_add16_0|ix2247z52935|cin
+    Info:     22.784      0.458 FF  CELL  u_fir|tap_array_11_filter_block_next_sum_add16_0|ix2247z52935|combout
+    Info:     24.312      1.528 FF    IC  u_fir|tap_array_12_filter_block_next_sum_add16_0|ix2247z52935|datab
+    Info:     24.807      0.495 FF  CELL  u_fir|tap_array_12_filter_block_next_sum_add16_0|ix2247z52935|cout
+    Info:     24.807      0.000 FF    IC  u_fir|tap_array_12_filter_block_next_sum_add16_0|ix2247z52934|cin
+    Info:     24.887      0.080 FR  CELL  u_fir|tap_array_12_filter_block_next_sum_add16_0|ix2247z52934|cout
+    Info:     24.887      0.000 RR    IC  u_fir|tap_array_12_filter_block_next_sum_add16_0|ix2247z52933|cin
+    Info:     25.345      0.458 RR  CELL  u_fir|tap_array_12_filter_block_next_sum_add16_0|ix2247z52933|combout
+    Info:     26.185      0.840 RR    IC  u_fir|tap_array_13_filter_block_next_sum_add16_0|ix2247z52933|dataa
+    Info:     26.702      0.517 RR  CELL  u_fir|tap_array_13_filter_block_next_sum_add16_0|ix2247z52933|cout
+    Info:     26.702      0.000 RR    IC  u_fir|tap_array_13_filter_block_next_sum_add16_0|ix2247z52932|cin
+    Info:     27.160      0.458 RR  CELL  u_fir|tap_array_13_filter_block_next_sum_add16_0|ix2247z52932|combout
+    Info:     28.038      0.878 RR    IC  u_fir|tap_array_14_filter_block_next_sum_add16_0|ix2247z52932|dataa
+    Info:     28.658      0.620 RF  CELL  u_fir|tap_array_14_filter_block_next_sum_add16_0|ix2247z52932|cout
+    Info:     28.658      0.000 FF    IC  u_fir|tap_array_14_filter_block_next_sum_add16_0|ix2247z52931|cin
+    Info:     29.116      0.458 FF  CELL  u_fir|tap_array_14_filter_block_next_sum_add16_0|ix2247z52931|combout
+    Info:     29.666      0.550 FF    IC  u_fir|tap_array_15_filter_block_next_sum_add16_0|ix2247z52931|dataa
+    Info:     30.183      0.517 FF  CELL  u_fir|tap_array_15_filter_block_next_sum_add16_0|ix2247z52931|cout
+    Info:     30.183      0.000 FF    IC  u_fir|tap_array_15_filter_block_next_sum_add16_0|ix2247z52930|cin
+    Info:     30.641      0.458 FF  CELL  u_fir|tap_array_15_filter_block_next_sum_add16_0|ix2247z52930|combout
+    Info:     32.114      1.473 FF    IC  u_fir|tap_array_16_filter_block_next_sum_add16_0|ix2247z52930|datab
+    Info:     32.609      0.495 FR  CELL  u_fir|tap_array_16_filter_block_next_sum_add16_0|ix2247z52930|cout
+    Info:     32.609      0.000 RR    IC  u_fir|tap_array_16_filter_block_next_sum_add16_0|ix2247z52929|cin
+    Info:     32.689      0.080 RF  CELL  u_fir|tap_array_16_filter_block_next_sum_add16_0|ix2247z52929|cout
+    Info:     32.689      0.000 FF    IC  u_fir|tap_array_16_filter_block_next_sum_add16_0|ix2247z52928|cin
+    Info:     32.769      0.080 FR  CELL  u_fir|tap_array_16_filter_block_next_sum_add16_0|ix2247z52928|cout
+    Info:     32.769      0.000 RR    IC  u_fir|tap_array_16_filter_block_next_sum_add16_0|ix2247z52927|cin
+    Info:     32.849      0.080 RF  CELL  u_fir|tap_array_16_filter_block_next_sum_add16_0|ix2247z52927|cout
+    Info:     32.849      0.000 FF    IC  u_fir|tap_array_16_filter_block_next_sum_add16_0|ix2247z52926|cin
+    Info:     32.929      0.080 FR  CELL  u_fir|tap_array_16_filter_block_next_sum_add16_0|ix2247z52926|cout
+    Info:     32.929      0.000 RR    IC  u_fir|tap_array_16_filter_block_next_sum_add16_0|ix2247z52925|cin
+    Info:     33.387      0.458 RR  CELL  u_fir|tap_array_16_filter_block_next_sum_add16_0|ix2247z52925|combout
+    Info:     34.214      0.827 RR    IC  u_fir|tap_array_17_filter_block_next_sum_add16_0|ix2247z52925|datab
+    Info:     34.709      0.495 RR  CELL  u_fir|tap_array_17_filter_block_next_sum_add16_0|ix2247z52925|cout
+    Info:     34.709      0.000 RR    IC  u_fir|tap_array_17_filter_block_next_sum_add16_0|ix2247z52923|cin
+    Info:     35.167      0.458 RR  CELL  u_fir|tap_array_17_filter_block_next_sum_add16_0|ix2247z52923|combout
+    Info:     36.259      1.092 RR    IC  reg_audio_out_15_|sdata
+    Info:     36.672      0.413 RR  CELL  audio_out_15_
+    Info: 
+    Info: Data Required Path:
+    Info: 
+    Info: Total (ns)  Incr (ns)     Type  Element
+    Info: ==========  ========= ==  ====  ===================================
+    Info:      1.000      1.000           latch edge time
+    Info:      3.574      2.574  R        clock network delay
+    Info:      3.612      0.038     uTsu  audio_out_15_
+    Info: 
+    Info: Data Arrival Time  :    36.672
+    Info: Data Required Time :     3.612
+    Info: Slack              :   -33.060 (VIOLATED)
+    Info: ===================================================================
+    Info: 
+Info: Path #4: Setup slack is -33.039 (VIOLATED)
+    Info: ===================================================================
+    Info: From Node    : fir:u_fir|taps_2__1_
+    Info: To Node      : audio_out_15_
+    Info: Launch Clock : aud_adclrck_dup0
+    Info: Latch Clock  : aud_adclrck_dup0
+    Info: 
+    Info: Data Arrival Path:
+    Info: 
+    Info: Total (ns)  Incr (ns)     Type  Element
+    Info: ==========  ========= ==  ====  ===================================
+    Info:      0.000      0.000           launch edge time
+    Info:      2.597      2.597  R        clock network delay
+    Info:      2.874      0.277     uTco  fir:u_fir|taps_2__1_
+    Info:      2.874      0.000 FF  CELL  u_fir|tap_array_2_filter_block_reg_current_tap_1_|regout
+    Info:      3.774      0.900 FF    IC  u_fir|tap_array_2_filter_block_prod_mults28_0|modgen_add_1_ix8231z52936|dataa
+    Info:      4.291      0.517 FF  CELL  u_fir|tap_array_2_filter_block_prod_mults28_0|modgen_add_1_ix8231z52936|cout
+    Info:      4.291      0.000 FF    IC  u_fir|tap_array_2_filter_block_prod_mults28_0|modgen_add_1_ix8231z52935|cin
+    Info:      4.371      0.080 FR  CELL  u_fir|tap_array_2_filter_block_prod_mults28_0|modgen_add_1_ix8231z52935|cout
+    Info:      4.371      0.000 RR    IC  u_fir|tap_array_2_filter_block_prod_mults28_0|modgen_add_1_ix8231z52934|cin
+    Info:      4.451      0.080 RF  CELL  u_fir|tap_array_2_filter_block_prod_mults28_0|modgen_add_1_ix8231z52934|cout
+    Info:      4.451      0.000 FF    IC  u_fir|tap_array_2_filter_block_prod_mults28_0|modgen_add_1_ix8231z52933|cin
+    Info:      4.531      0.080 FR  CELL  u_fir|tap_array_2_filter_block_prod_mults28_0|modgen_add_1_ix8231z52933|cout
+    Info:      4.531      0.000 RR    IC  u_fir|tap_array_2_filter_block_prod_mults28_0|modgen_add_1_ix8231z52932|cin
+    Info:      4.989      0.458 RR  CELL  u_fir|tap_array_2_filter_block_prod_mults28_0|modgen_add_1_ix8231z52932|combout
+    Info:      5.554      0.565 RR    IC  u_fir|tap_array_2_filter_block_next_sum_add16_0|ix2247z52939|dataa
+    Info:      6.098      0.544 RR  CELL  u_fir|tap_array_2_filter_block_next_sum_add16_0|ix2247z52939|combout
+    Info:      7.233      1.135 RR    IC  u_fir|tap_array_3_filter_block_next_sum_add16_0|ix2247z52939|dataa
+    Info:      7.750      0.517 RR  CELL  u_fir|tap_array_3_filter_block_next_sum_add16_0|ix2247z52939|cout
+    Info:      7.750      0.000 RR    IC  u_fir|tap_array_3_filter_block_next_sum_add16_0|ix2247z52938|cin
+    Info:      8.208      0.458 RR  CELL  u_fir|tap_array_3_filter_block_next_sum_add16_0|ix2247z52938|combout
+    Info:      9.702      1.494 RR    IC  u_fir|tap_array_4_filter_block_next_sum_add16_0|ix2247z52938|dataa
+    Info:     10.219      0.517 RF  CELL  u_fir|tap_array_4_filter_block_next_sum_add16_0|ix2247z52938|cout
+    Info:     10.219      0.000 FF    IC  u_fir|tap_array_4_filter_block_next_sum_add16_0|ix2247z52937|cin
+    Info:     10.677      0.458 FF  CELL  u_fir|tap_array_4_filter_block_next_sum_add16_0|ix2247z52937|combout
+    Info:     12.249      1.572 FF    IC  u_fir|tap_array_5_filter_block_next_sum_add16_0|ix2247z52937|datab
+    Info:     12.770      0.521 FF  CELL  u_fir|tap_array_5_filter_block_next_sum_add16_0|ix2247z52937|combout
+    Info:     13.929      1.159 FF    IC  u_fir|tap_array_6_filter_block_next_sum_add16_0|ix2247z52937|dataa
+    Info:     14.473      0.544 FF  CELL  u_fir|tap_array_6_filter_block_next_sum_add16_0|ix2247z52937|combout
+    Info:     15.005      0.532 FF    IC  u_fir|tap_array_7_filter_block_next_sum_add16_0|ix2247z52937|datab
+    Info:     15.526      0.521 FF  CELL  u_fir|tap_array_7_filter_block_next_sum_add16_0|ix2247z52937|combout
+    Info:     16.615      1.089 FF    IC  u_fir|tap_array_8_filter_block_next_sum_add16_0|ix2247z52937|dataa
+    Info:     17.159      0.544 FF  CELL  u_fir|tap_array_8_filter_block_next_sum_add16_0|ix2247z52937|combout
+    Info:     18.691      1.532 FF    IC  u_fir|tap_array_9_filter_block_next_sum_add16_0|ix2247z52937|dataa
+    Info:     19.208      0.517 FF  CELL  u_fir|tap_array_9_filter_block_next_sum_add16_0|ix2247z52937|cout
+    Info:     19.208      0.000 FF    IC  u_fir|tap_array_9_filter_block_next_sum_add16_0|ix2247z52936|cin
+    Info:     19.666      0.458 FF  CELL  u_fir|tap_array_9_filter_block_next_sum_add16_0|ix2247z52936|combout
+    Info:     20.452      0.786 FF    IC  u_fir|tap_array_10_filter_block_next_sum_add16_0|ix2247z52936|datab
+    Info:     20.968      0.516 FF  CELL  u_fir|tap_array_10_filter_block_next_sum_add16_0|ix2247z52936|combout
+    Info:     21.809      0.841 FF    IC  u_fir|tap_array_11_filter_block_next_sum_add16_0|ix2247z52936|dataa
+    Info:     22.326      0.517 FR  CELL  u_fir|tap_array_11_filter_block_next_sum_add16_0|ix2247z52936|cout
+    Info:     22.326      0.000 RR    IC  u_fir|tap_array_11_filter_block_next_sum_add16_0|ix2247z52935|cin
+    Info:     22.784      0.458 RR  CELL  u_fir|tap_array_11_filter_block_next_sum_add16_0|ix2247z52935|combout
+    Info:     24.312      1.528 RR    IC  u_fir|tap_array_12_filter_block_next_sum_add16_0|ix2247z52935|datab
+    Info:     24.807      0.495 RR  CELL  u_fir|tap_array_12_filter_block_next_sum_add16_0|ix2247z52935|cout
+    Info:     24.807      0.000 RR    IC  u_fir|tap_array_12_filter_block_next_sum_add16_0|ix2247z52934|cin
+    Info:     24.887      0.080 RF  CELL  u_fir|tap_array_12_filter_block_next_sum_add16_0|ix2247z52934|cout
+    Info:     24.887      0.000 FF    IC  u_fir|tap_array_12_filter_block_next_sum_add16_0|ix2247z52933|cin
+    Info:     25.345      0.458 FF  CELL  u_fir|tap_array_12_filter_block_next_sum_add16_0|ix2247z52933|combout
+    Info:     26.185      0.840 FF    IC  u_fir|tap_array_13_filter_block_next_sum_add16_0|ix2247z52933|dataa
+    Info:     26.702      0.517 FF  CELL  u_fir|tap_array_13_filter_block_next_sum_add16_0|ix2247z52933|cout
+    Info:     26.702      0.000 FF    IC  u_fir|tap_array_13_filter_block_next_sum_add16_0|ix2247z52932|cin
+    Info:     27.160      0.458 FF  CELL  u_fir|tap_array_13_filter_block_next_sum_add16_0|ix2247z52932|combout
+    Info:     28.038      0.878 FF    IC  u_fir|tap_array_14_filter_block_next_sum_add16_0|ix2247z52932|dataa
+    Info:     28.658      0.620 FR  CELL  u_fir|tap_array_14_filter_block_next_sum_add16_0|ix2247z52932|cout
+    Info:     28.658      0.000 RR    IC  u_fir|tap_array_14_filter_block_next_sum_add16_0|ix2247z52931|cin
+    Info:     29.116      0.458 RR  CELL  u_fir|tap_array_14_filter_block_next_sum_add16_0|ix2247z52931|combout
+    Info:     29.666      0.550 RR    IC  u_fir|tap_array_15_filter_block_next_sum_add16_0|ix2247z52931|dataa
+    Info:     30.183      0.517 RR  CELL  u_fir|tap_array_15_filter_block_next_sum_add16_0|ix2247z52931|cout
+    Info:     30.183      0.000 RR    IC  u_fir|tap_array_15_filter_block_next_sum_add16_0|ix2247z52930|cin
+    Info:     30.641      0.458 RR  CELL  u_fir|tap_array_15_filter_block_next_sum_add16_0|ix2247z52930|combout
+    Info:     32.114      1.473 RR    IC  u_fir|tap_array_16_filter_block_next_sum_add16_0|ix2247z52930|datab
+    Info:     32.609      0.495 RF  CELL  u_fir|tap_array_16_filter_block_next_sum_add16_0|ix2247z52930|cout
+    Info:     32.609      0.000 FF    IC  u_fir|tap_array_16_filter_block_next_sum_add16_0|ix2247z52929|cin
+    Info:     32.689      0.080 FR  CELL  u_fir|tap_array_16_filter_block_next_sum_add16_0|ix2247z52929|cout
+    Info:     32.689      0.000 RR    IC  u_fir|tap_array_16_filter_block_next_sum_add16_0|ix2247z52928|cin
+    Info:     32.769      0.080 RF  CELL  u_fir|tap_array_16_filter_block_next_sum_add16_0|ix2247z52928|cout
+    Info:     32.769      0.000 FF    IC  u_fir|tap_array_16_filter_block_next_sum_add16_0|ix2247z52927|cin
+    Info:     32.849      0.080 FR  CELL  u_fir|tap_array_16_filter_block_next_sum_add16_0|ix2247z52927|cout
+    Info:     32.849      0.000 RR    IC  u_fir|tap_array_16_filter_block_next_sum_add16_0|ix2247z52926|cin
+    Info:     33.307      0.458 RR  CELL  u_fir|tap_array_16_filter_block_next_sum_add16_0|ix2247z52926|combout
+    Info:     34.113      0.806 RR    IC  u_fir|tap_array_17_filter_block_next_sum_add16_0|ix2247z52926|datab
+    Info:     34.608      0.495 RF  CELL  u_fir|tap_array_17_filter_block_next_sum_add16_0|ix2247z52926|cout
+    Info:     34.608      0.000 FF    IC  u_fir|tap_array_17_filter_block_next_sum_add16_0|ix2247z52925|cin
+    Info:     34.688      0.080 FR  CELL  u_fir|tap_array_17_filter_block_next_sum_add16_0|ix2247z52925|cout
+    Info:     34.688      0.000 RR    IC  u_fir|tap_array_17_filter_block_next_sum_add16_0|ix2247z52923|cin
+    Info:     35.146      0.458 RR  CELL  u_fir|tap_array_17_filter_block_next_sum_add16_0|ix2247z52923|combout
+    Info:     36.238      1.092 RR    IC  reg_audio_out_15_|sdata
+    Info:     36.651      0.413 RR  CELL  audio_out_15_
+    Info: 
+    Info: Data Required Path:
+    Info: 
+    Info: Total (ns)  Incr (ns)     Type  Element
+    Info: ==========  ========= ==  ====  ===================================
+    Info:      1.000      1.000           latch edge time
+    Info:      3.574      2.574  R        clock network delay
+    Info:      3.612      0.038     uTsu  audio_out_15_
+    Info: 
+    Info: Data Arrival Time  :    36.651
+    Info: Data Required Time :     3.612
+    Info: Slack              :   -33.039 (VIOLATED)
+    Info: ===================================================================
+    Info: 
+Info: Path #5: Setup slack is -33.028 (VIOLATED)
+    Info: ===================================================================
+    Info: From Node    : fir:u_fir|taps_2__1_
+    Info: To Node      : audio_out_15_
+    Info: Launch Clock : aud_adclrck_dup0
+    Info: Latch Clock  : aud_adclrck_dup0
+    Info: 
+    Info: Data Arrival Path:
+    Info: 
+    Info: Total (ns)  Incr (ns)     Type  Element
+    Info: ==========  ========= ==  ====  ===================================
+    Info:      0.000      0.000           launch edge time
+    Info:      2.597      2.597  R        clock network delay
+    Info:      2.874      0.277     uTco  fir:u_fir|taps_2__1_
+    Info:      2.874      0.000 RR  CELL  u_fir|tap_array_2_filter_block_reg_current_tap_1_|regout
+    Info:      3.774      0.900 RR    IC  u_fir|tap_array_2_filter_block_prod_mults28_0|modgen_add_1_ix8231z52936|dataa
+    Info:      4.291      0.517 RR  CELL  u_fir|tap_array_2_filter_block_prod_mults28_0|modgen_add_1_ix8231z52936|cout
+    Info:      4.291      0.000 RR    IC  u_fir|tap_array_2_filter_block_prod_mults28_0|modgen_add_1_ix8231z52935|cin
+    Info:      4.371      0.080 RF  CELL  u_fir|tap_array_2_filter_block_prod_mults28_0|modgen_add_1_ix8231z52935|cout
+    Info:      4.371      0.000 FF    IC  u_fir|tap_array_2_filter_block_prod_mults28_0|modgen_add_1_ix8231z52934|cin
+    Info:      4.451      0.080 FR  CELL  u_fir|tap_array_2_filter_block_prod_mults28_0|modgen_add_1_ix8231z52934|cout
+    Info:      4.451      0.000 RR    IC  u_fir|tap_array_2_filter_block_prod_mults28_0|modgen_add_1_ix8231z52933|cin
+    Info:      4.531      0.080 RF  CELL  u_fir|tap_array_2_filter_block_prod_mults28_0|modgen_add_1_ix8231z52933|cout
+    Info:      4.531      0.000 FF    IC  u_fir|tap_array_2_filter_block_prod_mults28_0|modgen_add_1_ix8231z52932|cin
+    Info:      4.989      0.458 FF  CELL  u_fir|tap_array_2_filter_block_prod_mults28_0|modgen_add_1_ix8231z52932|combout
+    Info:      5.554      0.565 FF    IC  u_fir|tap_array_2_filter_block_next_sum_add16_0|ix2247z52939|dataa
+    Info:      6.098      0.544 FF  CELL  u_fir|tap_array_2_filter_block_next_sum_add16_0|ix2247z52939|combout
+    Info:      7.233      1.135 FF    IC  u_fir|tap_array_3_filter_block_next_sum_add16_0|ix2247z52939|dataa
+    Info:      7.750      0.517 FF  CELL  u_fir|tap_array_3_filter_block_next_sum_add16_0|ix2247z52939|cout
+    Info:      7.750      0.000 FF    IC  u_fir|tap_array_3_filter_block_next_sum_add16_0|ix2247z52938|cin
+    Info:      8.208      0.458 FF  CELL  u_fir|tap_array_3_filter_block_next_sum_add16_0|ix2247z52938|combout
+    Info:      9.702      1.494 FF    IC  u_fir|tap_array_4_filter_block_next_sum_add16_0|ix2247z52938|dataa
+    Info:     10.219      0.517 FR  CELL  u_fir|tap_array_4_filter_block_next_sum_add16_0|ix2247z52938|cout
+    Info:     10.219      0.000 RR    IC  u_fir|tap_array_4_filter_block_next_sum_add16_0|ix2247z52937|cin
+    Info:     10.677      0.458 RR  CELL  u_fir|tap_array_4_filter_block_next_sum_add16_0|ix2247z52937|combout
+    Info:     12.249      1.572 RR    IC  u_fir|tap_array_5_filter_block_next_sum_add16_0|ix2247z52937|datab
+    Info:     12.770      0.521 RR  CELL  u_fir|tap_array_5_filter_block_next_sum_add16_0|ix2247z52937|combout
+    Info:     13.929      1.159 RR    IC  u_fir|tap_array_6_filter_block_next_sum_add16_0|ix2247z52937|dataa
+    Info:     14.473      0.544 RR  CELL  u_fir|tap_array_6_filter_block_next_sum_add16_0|ix2247z52937|combout
+    Info:     15.005      0.532 RR    IC  u_fir|tap_array_7_filter_block_next_sum_add16_0|ix2247z52937|datab
+    Info:     15.526      0.521 RR  CELL  u_fir|tap_array_7_filter_block_next_sum_add16_0|ix2247z52937|combout
+    Info:     16.615      1.089 RR    IC  u_fir|tap_array_8_filter_block_next_sum_add16_0|ix2247z52937|dataa
+    Info:     17.159      0.544 RR  CELL  u_fir|tap_array_8_filter_block_next_sum_add16_0|ix2247z52937|combout
+    Info:     18.691      1.532 RR    IC  u_fir|tap_array_9_filter_block_next_sum_add16_0|ix2247z52937|dataa
+    Info:     19.208      0.517 RR  CELL  u_fir|tap_array_9_filter_block_next_sum_add16_0|ix2247z52937|cout
+    Info:     19.208      0.000 RR    IC  u_fir|tap_array_9_filter_block_next_sum_add16_0|ix2247z52936|cin
+    Info:     19.666      0.458 RR  CELL  u_fir|tap_array_9_filter_block_next_sum_add16_0|ix2247z52936|combout
+    Info:     20.452      0.786 RR    IC  u_fir|tap_array_10_filter_block_next_sum_add16_0|ix2247z52936|datab
+    Info:     20.968      0.516 RR  CELL  u_fir|tap_array_10_filter_block_next_sum_add16_0|ix2247z52936|combout
+    Info:     21.809      0.841 RR    IC  u_fir|tap_array_11_filter_block_next_sum_add16_0|ix2247z52936|dataa
+    Info:     22.326      0.517 RF  CELL  u_fir|tap_array_11_filter_block_next_sum_add16_0|ix2247z52936|cout
+    Info:     22.326      0.000 FF    IC  u_fir|tap_array_11_filter_block_next_sum_add16_0|ix2247z52935|cin
+    Info:     22.784      0.458 FF  CELL  u_fir|tap_array_11_filter_block_next_sum_add16_0|ix2247z52935|combout
+    Info:     24.312      1.528 FF    IC  u_fir|tap_array_12_filter_block_next_sum_add16_0|ix2247z52935|datab
+    Info:     24.807      0.495 FF  CELL  u_fir|tap_array_12_filter_block_next_sum_add16_0|ix2247z52935|cout
+    Info:     24.807      0.000 FF    IC  u_fir|tap_array_12_filter_block_next_sum_add16_0|ix2247z52934|cin
+    Info:     24.887      0.080 FR  CELL  u_fir|tap_array_12_filter_block_next_sum_add16_0|ix2247z52934|cout
+    Info:     24.887      0.000 RR    IC  u_fir|tap_array_12_filter_block_next_sum_add16_0|ix2247z52933|cin
+    Info:     25.345      0.458 RR  CELL  u_fir|tap_array_12_filter_block_next_sum_add16_0|ix2247z52933|combout
+    Info:     26.185      0.840 RR    IC  u_fir|tap_array_13_filter_block_next_sum_add16_0|ix2247z52933|dataa
+    Info:     26.702      0.517 RR  CELL  u_fir|tap_array_13_filter_block_next_sum_add16_0|ix2247z52933|cout
+    Info:     26.702      0.000 RR    IC  u_fir|tap_array_13_filter_block_next_sum_add16_0|ix2247z52932|cin
+    Info:     27.160      0.458 RR  CELL  u_fir|tap_array_13_filter_block_next_sum_add16_0|ix2247z52932|combout
+    Info:     28.038      0.878 RR    IC  u_fir|tap_array_14_filter_block_next_sum_add16_0|ix2247z52932|dataa
+    Info:     28.658      0.620 RF  CELL  u_fir|tap_array_14_filter_block_next_sum_add16_0|ix2247z52932|cout
+    Info:     28.658      0.000 FF    IC  u_fir|tap_array_14_filter_block_next_sum_add16_0|ix2247z52931|cin
+    Info:     29.116      0.458 FF  CELL  u_fir|tap_array_14_filter_block_next_sum_add16_0|ix2247z52931|combout
+    Info:     29.666      0.550 FF    IC  u_fir|tap_array_15_filter_block_next_sum_add16_0|ix2247z52931|dataa
+    Info:     30.183      0.517 FF  CELL  u_fir|tap_array_15_filter_block_next_sum_add16_0|ix2247z52931|cout
+    Info:     30.183      0.000 FF    IC  u_fir|tap_array_15_filter_block_next_sum_add16_0|ix2247z52930|cin
+    Info:     30.641      0.458 FF  CELL  u_fir|tap_array_15_filter_block_next_sum_add16_0|ix2247z52930|combout
+    Info:     32.114      1.473 FF    IC  u_fir|tap_array_16_filter_block_next_sum_add16_0|ix2247z52930|datab
+    Info:     32.609      0.495 FR  CELL  u_fir|tap_array_16_filter_block_next_sum_add16_0|ix2247z52930|cout
+    Info:     32.609      0.000 RR    IC  u_fir|tap_array_16_filter_block_next_sum_add16_0|ix2247z52929|cin
+    Info:     32.689      0.080 RF  CELL  u_fir|tap_array_16_filter_block_next_sum_add16_0|ix2247z52929|cout
+    Info:     32.689      0.000 FF    IC  u_fir|tap_array_16_filter_block_next_sum_add16_0|ix2247z52928|cin
+    Info:     32.769      0.080 FR  CELL  u_fir|tap_array_16_filter_block_next_sum_add16_0|ix2247z52928|cout
+    Info:     32.769      0.000 RR    IC  u_fir|tap_array_16_filter_block_next_sum_add16_0|ix2247z52927|cin
+    Info:     33.227      0.458 RR  CELL  u_fir|tap_array_16_filter_block_next_sum_add16_0|ix2247z52927|combout
+    Info:     34.022      0.795 RR    IC  u_fir|tap_array_17_filter_block_next_sum_add16_0|ix2247z52927|datab
+    Info:     34.517      0.495 RR  CELL  u_fir|tap_array_17_filter_block_next_sum_add16_0|ix2247z52927|cout
+    Info:     34.517      0.000 RR    IC  u_fir|tap_array_17_filter_block_next_sum_add16_0|ix2247z52926|cin
+    Info:     34.597      0.080 RF  CELL  u_fir|tap_array_17_filter_block_next_sum_add16_0|ix2247z52926|cout
+    Info:     34.597      0.000 FF    IC  u_fir|tap_array_17_filter_block_next_sum_add16_0|ix2247z52925|cin
+    Info:     34.677      0.080 FR  CELL  u_fir|tap_array_17_filter_block_next_sum_add16_0|ix2247z52925|cout
+    Info:     34.677      0.000 RR    IC  u_fir|tap_array_17_filter_block_next_sum_add16_0|ix2247z52923|cin
+    Info:     35.135      0.458 RR  CELL  u_fir|tap_array_17_filter_block_next_sum_add16_0|ix2247z52923|combout
+    Info:     36.227      1.092 RR    IC  reg_audio_out_15_|sdata
+    Info:     36.640      0.413 RR  CELL  audio_out_15_
+    Info: 
+    Info: Data Required Path:
+    Info: 
+    Info: Total (ns)  Incr (ns)     Type  Element
+    Info: ==========  ========= ==  ====  ===================================
+    Info:      1.000      1.000           latch edge time
+    Info:      3.574      2.574  R        clock network delay
+    Info:      3.612      0.038     uTsu  audio_out_15_
+    Info: 
+    Info: Data Arrival Time  :    36.640
+    Info: Data Required Time :     3.612
+    Info: Slack              :   -33.028 (VIOLATED)
+    Info: ===================================================================
+    Info: 
+Info: Evaluation of Tcl script uw-chip-synth-quartus-timing.tcl was successful
+Info: Quartus II TimeQuest Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 148 megabytes
+    Info: Processing ended: Tue Jan 26 18:36:54 2016
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:01
+Warning: Can't contact license server "7417@maxwell5.uwaterloo.ca" -- this server will be ignored
+Info: *******************************************************************
+Info: Running Quartus II Assembler
+    Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
+    Info: Copyright (C) 1991-2009 Altera Corporation. All rights reserved.
+    Info: Your use of Altera Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Altera Program License 
+    Info: Subscription Agreement, Altera MegaCore Function License 
+    Info: Agreement, or other applicable license agreement, including, 
+    Info: without limitation, that your use is for the sole purpose of 
+    Info: programming logic devices manufactured by Altera and sold by 
+    Info: Altera or its authorized distributors.  Please refer to the 
+    Info: applicable agreement for further details.
+    Info: Processing started: Tue Jan 26 18:36:55 2016
+Info: Command: quartus_asm fir_top
+Info: Writing out detailed assembly data for power analysis
+Info: Assembler is generating device programming files
+Info: Quartus II Assembler was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 236 megabytes
+    Info: Processing ended: Tue Jan 26 18:37:07 2016
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:06
+Warning: Can't contact license server "7417@maxwell5.uwaterloo.ca" -- this server will be ignored
+Info: *******************************************************************
+Info: Running Quartus II EDA Netlist Writer
+    Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
+    Info: Copyright (C) 1991-2009 Altera Corporation. All rights reserved.
+    Info: Your use of Altera Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Altera Program License 
+    Info: Subscription Agreement, Altera MegaCore Function License 
+    Info: Agreement, or other applicable license agreement, including, 
+    Info: without limitation, that your use is for the sole purpose of 
+    Info: programming logic devices manufactured by Altera and sold by 
+    Info: Altera or its authorized distributors.  Please refer to the 
+    Info: applicable agreement for further details.
+    Info: Processing started: Tue Jan 26 18:37:07 2016
+Info: Command: quartus_eda fir_top --simulation=on --tool=modelsim --format=vhdl
+Info: Generated files "fir_top.vho" and "fir_top_vhd.sdo" in directory "simulation/modelsim/" for EDA simulation tool
+Info: Quartus II EDA Netlist Writer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 172 megabytes
+    Info: Processing ended: Tue Jan 26 18:37:11 2016
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:01
+Warning: Can't contact license server "7417@maxwell5.uwaterloo.ca" -- this server will be ignored
+Info: *******************************************************************
+Info: Running Quartus II EDA Netlist Writer
+    Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
+    Info: Copyright (C) 1991-2009 Altera Corporation. All rights reserved.
+    Info: Your use of Altera Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Altera Program License 
+    Info: Subscription Agreement, Altera MegaCore Function License 
+    Info: Agreement, or other applicable license agreement, including, 
+    Info: without limitation, that your use is for the sole purpose of 
+    Info: programming logic devices manufactured by Altera and sold by 
+    Info: Altera or its authorized distributors.  Please refer to the 
+    Info: applicable agreement for further details.
+    Info: Processing started: Tue Jan 26 18:37:12 2016
+Info: Command: quartus_eda fir_top --simulation=on --tool=modelsim --format=verilog
+Info: Generated files "fir_top.vo" and "fir_top_v.sdo" in directory "simulation/modelsim/" for EDA simulation tool
+Info: Quartus II EDA Netlist Writer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 172 megabytes
+    Info: Processing ended: Tue Jan 26 18:37:17 2016
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:01
+Warning: vmap will not overwrite local modelsim.ini.
+Warning: Library already exists at "work-msim".
+Warning: Library already exists at "altera_mf".
+Modifying modelsim.ini
+Warning: Library already exists at "cycloneii".
+Modifying modelsim.ini
+Model Technology ModelSim SE-64 vlog 10.1 Compiler 2011.12 Dec  5 2011
+-- Compiling module fir_top
+-- Compiling module modgen_counter_9_0
+-- Compiling module modgen_counter_10_0
+-- Compiling module add_9_0
+-- Compiling module i2c_av_config_notri
+-- Compiling module i2c_ctrl_notri
+-- Compiling module modgen_counter_6_0
+-- Compiling module sub_5_0
+-- Compiling module modgen_counter_16_1
+-- Compiling module modgen_counter_16_0
+-- Compiling module fir
+-- Compiling module add_16_15
+-- Compiling module mult_32_83
+-- Compiling module add_16_14
+-- Compiling module mult_32_82
+-- Compiling module add_16_13
+-- Compiling module mult_32_81
+-- Compiling module add_16_12
+-- Compiling module mult_32_80
+-- Compiling module add_16_11
+-- Compiling module mult_32_79
+-- Compiling module add_16_10
+-- Compiling module mult_32_78
+-- Compiling module add_16_9
+-- Compiling module mult_32_77
+-- Compiling module add_16_8
+-- Compiling module mult_32_76
+-- Compiling module add_16_7
+-- Compiling module mult_32_75
+-- Compiling module add_16_6
+-- Compiling module mult_32_74
+-- Compiling module add_16_5
+-- Compiling module mult_32_73
+-- Compiling module add_16_4
+-- Compiling module mult_32_72
+-- Compiling module add_16_3
+-- Compiling module mult_32_71
+-- Compiling module add_16_2
+-- Compiling module mult_32_70
+-- Compiling module add_16_1
+-- Compiling module mult_32_69
+-- Compiling module add_16_0
+-- Compiling module mult_32_68
+-- Compiling module mult_32_67
+
+Top level modules:
+	fir_top
+Warning: vmap will not overwrite local modelsim.ini.
+Warning: Library already exists at "work-msim".
+DEBUG: modelsim_pfx: testing: /opt/ModelSim101/modeltech/bin/
+** Warning: (vlib-34) Library already exists at "work-msim".
+** Warning: (vlib-34) Library already exists at "work-msim".
+  Model Technology ModelSim SE-64 vcom 10.1 Compiler 2011.12 Dec  5 2011
+Model Technology ModelSim SE-64 vcom 10.1 Compiler 2011.12 Dec  5 2011
+-- Loading package STANDARD
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package NUMERIC_STD
+-- Compiling package fir_synth_pkg
+-- Compiling package fir_synth_pkg
+-- Compiling package body fir_synth_pkg
+-- Compiling package body fir_synth_pkg
+-- Loading package fir_synth_pkg
+-- Loading package fir_synth_pkg
+-- Loading package fir_synth_pkg
+-- Loading package fir_synth_pkg
+-- Compiling entity sine_wave
+-- Compiling entity sine_wave
+-- Compiling architecture sample_1024 of sine_wave
+-- Compiling architecture sample_1024 of sine_wave
+-- Compiling architecture sample_64 of sine_wave
+-- Compiling architecture sample_64 of sine_wave
+-- Loading entity sine_wave
+-- Loading entity sine_wave
+-- Compiling entity white_noise
+-- Compiling entity white_noise
+-- Compiling architecture main of white_noise
+-- Compiling architecture main of white_noise
+-- Loading package altera_mf_components
+-- Loading package altera_mf_components
+-- Compiling entity audio_pll
+-- Compiling entity audio_pll
+-- Compiling architecture main of audio_pll
+-- Compiling architecture main of audio_pll
+-- Compiling entity audio_dac
+-- Compiling entity audio_dac
+-- Compiling architecture main of audio_dac
+-- Compiling architecture main of audio_dac
+-- Loading entity audio_pll
+-- Loading entity audio_pll
+-- Compiling entity i2c_ctrl
+-- Compiling entity i2c_ctrl
+-- Compiling architecture main of i2c_ctrl
+-- Compiling architecture main of i2c_ctrl
+-- Compiling entity i2c_av_config
+-- Compiling entity i2c_av_config
+-- Compiling architecture main of i2c_av_config
+-- Compiling architecture main of i2c_av_config
+-- Loading entity i2c_ctrl
+-- Loading entity i2c_ctrl
+** Warning: fir_lib.vhd(768): Choice in selected signal assignment must be locally static.
+** Warning: fir_lib.vhd(768): Choice in selected signal assignment must be locally static.
+** Warning: fir_lib.vhd(769): Choice in selected signal assignment must be locally static.
+** Warning: fir_lib.vhd(769): Choice in selected signal assignment must be locally static.
+** Warning: fir_lib.vhd(770): Choice in selected signal assignment must be locally static.
+** Warning: fir_lib.vhd(770): Choice in selected signal assignment must be locally static.
+** Warning: fir_lib.vhd(771): Choice in selected signal assignment must be locally static.
+** Warning: fir_lib.vhd(771): Choice in selected signal assignment must be locally static.
+** Warning: fir_lib.vhd(772): Choice in selected signal assignment must be locally static.
+** Warning: fir_lib.vhd(772): Choice in selected signal assignment must be locally static.
+** Warning: fir_lib.vhd(773): Choice in selected signal assignment must be locally static.
+** Warning: fir_lib.vhd(773): Choice in selected signal assignment must be locally static.
+** Warning: fir_lib.vhd(774): Choice in selected signal assignment must be locally static.
+** Warning: fir_lib.vhd(774): Choice in selected signal assignment must be locally static.
+** Warning: fir_lib.vhd(775): Choice in selected signal assignment must be locally static.
+** Warning: fir_lib.vhd(775): Choice in selected signal assignment must be locally static.
+** Warning: fir_lib.vhd(776): Choice in selected signal assignment must be locally static.
+** Warning: fir_lib.vhd(776): Choice in selected signal assignment must be locally static.
+** Warning: fir_lib.vhd(777): Choice in selected signal assignment must be locally static.
+** Warning: fir_lib.vhd(777): Choice in selected signal assignment must be locally static.
+-- Compiling entity fir
+-- Compiling entity fir
+-- Compiling architecture avg of fir
+-- Compiling architecture avg of fir
+-- Compiling architecture low_pass of fir
+-- Compiling architecture low_pass of fir
+-- Loading entity fir
+-- Loading entity fir
+-- Compiling entity shiftr
+-- Compiling entity shiftr
+-- Compiling architecture main of shiftr
+-- Compiling architecture main of shiftr
+-- Compiling entity fir_top
+-- Compiling entity fir_top
+-- Compiling architecture main of fir_top
+-- Compiling architecture main of fir_top
+-- Loading entity sine_wave
+-- Loading entity sine_wave
+-- Loading entity white_noise
+-- Loading entity white_noise
+-- Loading entity fir
+-- Loading entity fir
+-- Loading entity audio_dac
+-- Loading entity audio_dac
+-- Loading entity i2c_av_config
+-- Loading entity i2c_av_config
+ 
+Warning: vmap will not overwrite local modelsim.ini.
+Warning: Library already exists at "work-msim".
+DEBUG: modelsim_pfx: testing: /opt/ModelSim101/modeltech/bin/
+** Warning: (vlib-34) Library already exists at "work-msim".
+** Warning: (vlib-34) Library already exists at "work-msim".
+  Model Technology ModelSim SE-64 vlog 10.1 Compiler 2011.12 Dec  5 2011
+Model Technology ModelSim SE-64 vlog 10.1 Compiler 2011.12 Dec  5 2011
+-- Compiling module fir_top_chip
+-- Compiling module fir_top_chip
+
+
+Top level modules:
+Top level modules:
+	fir_top_chip
+	fir_top_chip
+ 
+Warning: vmap will not overwrite local modelsim.ini.
+Warning: Library already exists at "work-msim".
+INFO: generic-gate       netlist         written to uw_tmp/fir_top_gate.vhd
+INFO: generic-gate       area estimate   written to RPT/area_gate.rpt
+INFO: logic-synthesis    netlist         written to uw_tmp/fir_top_logic.edf
+INFO: logic-synthesis    area estimate   written to RPT/area_logic.rpt
+INFO: logic-synthesis    timing estimate written to RPT/timing_logic.rpt
+INFO: chip               netlist         written to uw_tmp/fir_top_chip.vhd
+INFO: chip               area estimate   written to RPT/area_chip.rpt
+INFO: 
+INFO: ***********************************************
+INFO: *
+INFO: * uw-synth to DE2 was successful
+INFO: * log file stored in LOG/uw-synth.log
+INFO: *
+INFO: ***********************************************

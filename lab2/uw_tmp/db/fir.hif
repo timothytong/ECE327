@@ -1,0 +1,86 @@
+Version 9.0 Build 132 02/25/2009 SJ Full Version
+11
+3344
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+fir
+# storage
+db|fir.(0).cnf
+db|fir.(0).cnf
+# case_insensitive
+# source_file
+fir_logic.edf
+881706dbadcfe58fbb10d99344507c
+10
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+add_16_1
+# storage
+db|fir.(1).cnf
+db|fir.(1).cnf
+# case_insensitive
+# source_file
+fir_logic.edf
+881706dbadcfe58fbb10d99344507c
+10
+# hierarchies {
+add_16_1:o_data_add16_1
+}
+# macro_sequence
+
+# end
+# entity
+add_15_0
+# storage
+db|fir.(2).cnf
+db|fir.(2).cnf
+# case_insensitive
+# source_file
+fir_logic.edf
+881706dbadcfe58fbb10d99344507c
+10
+# hierarchies {
+add_15_0:sum2_add15_2
+}
+# macro_sequence
+
+# end
+# entity
+add_16_0
+# storage
+db|fir.(3).cnf
+db|fir.(3).cnf
+# case_insensitive
+# source_file
+fir_logic.edf
+881706dbadcfe58fbb10d99344507c
+10
+# hierarchies {
+add_16_0:sum3_add16_0
+}
+# macro_sequence
+
+# end
+# complete
+

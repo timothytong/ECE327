@@ -1,0 +1,30 @@
+
+             Clock Constraint Violations 
+ Clock                  Constrained  
+ Name                   Period       Slack 
+ ---------------------- ------------ -------------
+            clock_27        4         -1.8
+u_audio_dac_reg_lrck_1x/regout       12         -3.9
+
+
+        Input Constraint Violations 
+ Port                  Input                       
+ Name                  Constraint   Clock           Slack 
+ --------------------- ------------ --------------- ---------
+  All input constraints were met; no violations
+
+
+
+        Output Constraint Violations 
+ Port                  Output                      
+ Name                  Constraint   Clock           Slack 
+ --------------------- ------------ --------------- ---------
+  All output constraints were met; no violations
+
+
+
+        Inout Constraint Violations 
+ Port                  Inout                      
+ Name                  Constraint   Clock           Slack 
+ --------------------- ------------ --------------- ---------
+

@@ -1,0 +1,4 @@
+work "/home/kyttong/ECE-327/lab2/fir_synth_pkg.vhd" 
+work "/home/kyttong/ECE-327/lab2/fir_lib.vhd" 
+work "/home/kyttong/ECE-327/lab2/fir.vhd" 
+work "/home/kyttong/ECE-327/lab2/fir_top.vhd" 

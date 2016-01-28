@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="fir_top">
+		<CBX_INST_ENTRY INSTANCE_NAME="|fir_top|altsyncram:u_noise_modgen_rom_ix24__ix62120z34212" CBX_FILE_NAME="altsyncram_9nk2.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|fir_top|altsyncram:u_sine_modgen_rom_ix21__ix62120z58996" CBX_FILE_NAME="altsyncram_0bk2.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

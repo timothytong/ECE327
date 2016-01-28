@@ -1,0 +1,27 @@
+<interfaceDefinition version='1.2' language='verilog' kind='module' name='fir_top_chip'>
+    <portList>
+
+      <port name='clock_50' direction='input' type='' kind=''> </port>
+      <port name='clock_27' direction='input' type='' kind=''> </port>
+      <port name='key' direction='input' type='[3:0]' kind='array' packedDimension='[3:0]'> </port>
+      <port name='sw' direction='input' type='[17:0]' kind='array' packedDimension='[17:0]'> </port>
+      <port name='ledg' direction='output' type='[8:0]' kind='array' packedDimension='[8:0]'> </port>
+      <port name='ledr' direction='output' type='[17:0]' kind='array' packedDimension='[17:0]'> </port>
+      <port name='hex0' direction='output' type='[6:0]' kind='array' packedDimension='[6:0]'> </port>
+      <port name='hex1' direction='output' type='[6:0]' kind='array' packedDimension='[6:0]'> </port>
+      <port name='hex2' direction='output' type='[6:0]' kind='array' packedDimension='[6:0]'> </port>
+      <port name='hex3' direction='output' type='[6:0]' kind='array' packedDimension='[6:0]'> </port>
+      <port name='hex4' direction='output' type='[6:0]' kind='array' packedDimension='[6:0]'> </port>
+      <port name='hex5' direction='output' type='[6:0]' kind='array' packedDimension='[6:0]'> </port>
+      <port name='hex6' direction='output' type='[6:0]' kind='array' packedDimension='[6:0]'> </port>
+      <port name='hex7' direction='output' type='[6:0]' kind='array' packedDimension='[6:0]'> </port>
+      <port name='aud_xck' direction='output' type='' kind=''> </port>
+      <port name='aud_bclk' direction='inout' type='' kind=''> </port>
+      <port name='aud_dacdat' direction='output' type='' kind=''> </port>
+      <port name='aud_daclrck' direction='output' type='' kind=''> </port>
+      <port name='aud_adclrck' direction='output' type='' kind=''> </port>
+      <port name='i2c_sdat' direction='inout' type='' kind=''> </port>
+      <port name='i2c_sclk' direction='output' type='' kind=''> </port>
+
+    </portList>
+</interfaceDefinition>

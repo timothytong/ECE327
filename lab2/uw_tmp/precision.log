@@ -1,0 +1,213 @@
+# Info: [9566]: Logging session transcript to file /home/kyttong/ECE-327/lab2/precision.log
+//  Precision RTL Synthesis 2008a.47 (Production Release) Tue Dec  9 03:06:25 PST 2008
+//  
+//  Copyright (c) Mentor Graphics Corporation, 1996-2008, All Rights Reserved.
+//             Portions copyright 1991-2004 Compuware Corporation
+//                       UNPUBLISHED, LICENSED SOFTWARE.
+//            CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+//          PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+//  
+//  Running on Linux kyttong@ecelinux5.uwaterloo.ca #1 SMP Wed Nov 11 08:12:41 EST 2015 2.6.18-407.el5 x86_64
+//  
+//  Start time Tue Jan 26 18:36:11 2016
+# -------------------------------------------------
+# Info: [9566]: Logging session transcript to file /home/kyttong/ECE-327/lab2/precision.log
+# Info: [9575]: Results directory: /home/kyttong/ECE-327/lab2/uw_tmp/
+# Info: [9569]: Moving session transcript to file /home/kyttong/ECE-327/lab2/uw_tmp/precision.log
+# Info: [15291]:  Setting up the design to use synthesis library "cycloneii.syn"
+# Info: [566]: The global max fanout is currently set to 1000 for Altera - Cyclone II.
+# Info:  Setting Part to: "EP2C35F672C"
+# Info:  Setting Process to: "7"
+# Info: USING DESIGN ARCH
+# Info: [3021]: Reading file: /opt/Precision_Synthesis_2008a.47/Mgc_home/pkgs/psr/techlibs/cycloneii.syn.
+# Info: [618]: Loading library initialization file /opt/Precision_Synthesis_2008a.47/Mgc_home/pkgs/psr/userware/yeager_rename.tcl
+# Info: [40000]: vhdlorder, Release 2008a.22
+# Info: [40000]: Files sorted successfully.
+# Info: [40000]: hdl-analyze, Release RTLC-Precision 2008a.22
+# Info: [42502]: Analyzing input file "/home/kyttong/ECE-327/lab2/fir_synth_pkg.vhd" ...
+# Info: [42502]: Analyzing input file "/home/kyttong/ECE-327/lab2/fir_lib.vhd" ...
+# Info: [42502]: Analyzing input file "/home/kyttong/ECE-327/lab2/fir.vhd" ...
+# Info: [42502]: Analyzing input file "/home/kyttong/ECE-327/lab2/fir_top.vhd" ...
+# Info: [641]: Current working directory: /home/kyttong/ECE-327/lab2/uw_tmp/.
+# Info: [40000]: RTLC-Driver, Release RTLC-Precision 2008a.22
+# Info: [40000]: Last compiled on Nov 27 2008 12:40:04
+# Info: [44512]: Initializing...
+# Info: [44504]: Partitioning design ....
+# Info: [40000]: RTLCompiler, Release RTLC-Precision 2008a.22
+# Info: [40000]: Last compiled on Nov 27 2008 12:46:53
+# Info: [44512]: Initializing...
+# Info: [44522]: Root Module work.fir_top(main): Pre-processing...
+# Info: [44506]: Module work.sine_wave(sample_64): Pre-processing...
+# Info: [45251]: Built-in hardware memory core inferred for variable ': sine_wave.sine_waveform_map_64 depth = 64, width = 16'.
+# Info: [44506]: Module work.white_noise(main){generic map (use_clock_50 => false)}: Pre-processing...
+# Warning: [45729]: "/home/kyttong/ECE-327/lab2/fir_lib.vhd", line 319: signal clock_count has never been used.
+# Info: [45251]: Built-in hardware memory core inferred for variable ': white_noise.noise_waveform_map depth = 1024, width = 16'.
+# Info: [44506]: Module work.fir(low_pass): Pre-processing...
+# Info: [44506]: Module work.shiftr(main): Pre-processing...
+# Info: [44506]: Module work.audio_dac(main): Pre-processing...
+# Info: [44506]: Module work.audio_pll(main): Pre-processing...
+# Info: [44506]: Module work.i2c_av_config(main): Pre-processing...
+# Info: [44506]: Module work.i2c_ctrl(main): Pre-processing...
+# Info: [45144]: Extracted FSM in module work.i2c_av_config(main), with state variable = m_setup_st[3:0], async set/reset state(s) = (none), number of states = 3.
+# Info: [45144]: Re-encoding 3 state FSM as "binary".
+# Info: [45144]: FSM: State encoding table.
+# Info: [40000]: FSM:	Index	                            Literal	                      Encoding
+# Info: [40000]: FSM:	    0	                               0000	                            00
+# Info: [40000]: FSM:	    1	                               0001	                            01
+# Info: [40000]: FSM:	    2	                               0010	                            10
+# Info: [40000]: FSM: Removing unreachable default branch
+# Info: [45251]: Built-in hardware memory core inferred for variable ': frequency_map depth = 128, width = 16'.
+# Warning: [45729]: "/home/kyttong/ECE-327/lab2/fir.vhd", line 73: signal taps(17) has never been used.
+# Warning: [45729]: "/home/kyttong/ECE-327/lab2/fir_lib.vhd", line 379: signal sub_wire0[5:2] has never been used.
+# Warning: [45729]: "/home/kyttong/ECE-327/lab2/fir_top.vhd", line 24: Input port clock_50 has never been used.
+# Warning: [45729]: "/home/kyttong/ECE-327/lab2/fir_top.vhd", line 27: Input port key[3:1] has never been used.
+# Warning: [45729]: "/home/kyttong/ECE-327/lab2/fir_top.vhd", line 28: Input port sw[15:7] has never been used.
+# Warning: [45731]: "/home/kyttong/ECE-327/lab2/fir_top.vhd", line 29: Output port ledg has never been assigned a value.
+# Warning: [45731]: "/home/kyttong/ECE-327/lab2/fir_top.vhd", line 30: Output port ledr has never been assigned a value.
+# Warning: [45729]: "/home/kyttong/ECE-327/lab2/fir_top.vhd", line 83: signal noise_clk has never been used.
+# Info: [44508]: Module work.sine_wave(sample_64): Compiling...
+# Info: [44508]: Module work.white_noise(main){generic map (use_clock_50 => false)}: Compiling...
+# Info: [44812]: "/home/kyttong/ECE-327/lab2/fir_lib.vhd", line 353: Sharing register o_data[15] with o_data[14]
+# Info: [44812]: "/home/kyttong/ECE-327/lab2/fir_lib.vhd", line 353: Sharing register o_data[15] with o_data[13]
+# Info: [44812]: "/home/kyttong/ECE-327/lab2/fir_lib.vhd", line 353: Sharing register o_data[15] with o_data[12]
+# Info: [44812]: "/home/kyttong/ECE-327/lab2/fir_lib.vhd", line 353: Sharing register o_data[15] with o_data[11]
+# Info: [44812]: "/home/kyttong/ECE-327/lab2/fir_lib.vhd", line 353: Sharing register o_data[3] with o_data[2]
+# Info: [44812]: "/home/kyttong/ECE-327/lab2/fir_lib.vhd", line 353: Sharing register o_data[3] with o_data[1]
+# Info: [44812]: "/home/kyttong/ECE-327/lab2/fir_lib.vhd", line 353: Sharing register o_data[3] with o_data[0]
+# Info: [44838]: "/home/kyttong/ECE-327/lab2/fir_lib.vhd", line 348: Macro Modgen_Counter "counter_up_clock_0_10" inferred for node "address".
+# Info: [44508]: Module work.shiftr(main): Compiling...
+# Info: [44508]: Module work.fir(low_pass): Compiling...
+# Info: [44508]: Module work.audio_pll(main): Compiling...
+# Info: [44508]: Module work.audio_dac(main): Compiling...
+# Info: [44838]: "/home/kyttong/ECE-327/lab2/fir_lib.vhd", line 481: Macro Modgen_Counter "counter_up_sclear_clock_0_4" inferred for node "bck_div".
+# Info: [44838]: "/home/kyttong/ECE-327/lab2/fir_lib.vhd", line 496: Macro Modgen_Counter "counter_up_sclear_clock_0_9" inferred for node "lrck_1x_div".
+# Info: [44508]: Module work.i2c_ctrl(main): Compiling...
+# Info: [44838]: "/home/kyttong/ECE-327/lab2/fir_lib.vhd", line 563: Macro Modgen_Counter "counter_up_sload_sclear_clock_cnt_en_0_6" inferred for node "sd_counter".
+# Info: [44508]: Module work.i2c_av_config(main): Compiling...
+# Info: [44812]: "/home/kyttong/ECE-327/lab2/fir_lib.vhd", line 734: Sharing register m_i2c_data[21] with m_i2c_data[20]
+# Info: [44812]: "/home/kyttong/ECE-327/lab2/fir_lib.vhd", line 734: Sharing register m_i2c_data[21] with m_i2c_data[18]
+# Info: [44812]: "/home/kyttong/ECE-327/lab2/fir_lib.vhd", line 734: Sharing register m_i2c_data[6] with m_i2c_data[5]
+# Info: [44812]: "/home/kyttong/ECE-327/lab2/fir_lib.vhd", line 734: Sharing register m_i2c_data[4] with m_i2c_data[3]
+# Info: [44838]: "/home/kyttong/ECE-327/lab2/fir_lib.vhd", line 700: Macro Modgen_Counter "counter_up_clock_cnt_en_0_16" inferred for node "cont".
+# Info: [44838]: "/home/kyttong/ECE-327/lab2/fir_lib.vhd", line 714: Macro Modgen_Counter "counter_up_sclear_clock_0_16" inferred for node "m_i2c_clk_div".
+# Info: [44838]: "/home/kyttong/ECE-327/lab2/fir_lib.vhd", line 759: Macro Modgen_Counter "counter_up_sclear_clock_cnt_en_0_6" inferred for node "lut_index".
+# Info: [44523]: Root Module work.fir_top(main): Compiling...
+# Info: [44838]: "/home/kyttong/ECE-327/lab2/fir_top.vhd", line 188: Macro Modgen_Counter "counter_up_clock_0_4" inferred for node "bit_position".
+# Info: [45252]: "/home/kyttong/ECE-327/lab2/fir_lib.vhd", line 111: Inferred rom instance 'rtlcI6' of type 'rom_12_6_64_30'.
+# Info: [45252]: "/home/kyttong/ECE-327/lab2/fir_lib.vhd", line 166: Inferred rom instance 'rtlcI7' of type 'rom_8_10_1024_32'.
+# Warning: [45733]: "/home/kyttong/ECE-327/lab2/fir_lib.vhd", line 353: Optimizing state bit(s) o_data[3] to constant 0
+# Info: [45252]: "/home/kyttong/ECE-327/lab2/fir_lib.vhd", line 767: Inferred rom instance 'rtlcI8' of type 'rom_8_6_64_33'.
+# Warning: [45733]: "/home/kyttong/ECE-327/lab2/fir_lib.vhd", line 734: Optimizing state bit(s) m_i2c_data[23] to constant 0
+# Warning: [45733]: "/home/kyttong/ECE-327/lab2/fir_lib.vhd", line 734: Optimizing state bit(s) m_i2c_data[19] to constant 0
+# Warning: [45733]: "/home/kyttong/ECE-327/lab2/fir_lib.vhd", line 734: Optimizing state bit(s) m_i2c_data[17:13] to constant 0
+# Warning: [45733]: "/home/kyttong/ECE-327/lab2/fir_lib.vhd", line 734: Optimizing state bit(s) m_i2c_data[8] to constant 0
+# Info: [45252]: "/home/kyttong/ECE-327/lab2/fir_synth_pkg.vhd", line 57: Inferred rom instance 'rtlcI9' of type 'rom_13_7_128_36'.
+# Info: [44846]: Rebalanced Expression Tree...
+# Info: [44842]: Compilation successfully completed.
+# Info: [44841]: Counter Inferencing === Detected : 9, Inferred (Modgen/Selcounter/AddSub) : 8 (8 / 0 / 0), AcrossDH (Merged/Not-Merged) : (0 / 0), Not-Inferred (Acrossdh/Attempted) : (0 / 0), Local Vars : 1 ===
+# Info: [44835]: Total CPU time taken for compilation: 1.0 secs.
+# Info: [44856]: Total lines of RTL compiled: 1303.
+# Info: [44513]: Overall running time 2.0 secs.
+# Info: [641]: Current working directory: /home/kyttong/ECE-327/lab2/uw_tmp/.
+# Info: [644]: Finished compiling design.
+# Info: -- Saving the design database in uw_tmp/fir_top_gate.xdb
+# Info: [3026]: Writing file: uw_tmp/fir_top_gate.vhd.
+# Info: Info, Writing xrf file 'uw_tmp/fir_top_gate.xrf'
+# Info: [3026]: Writing file: uw_tmp/fir_top_gate.xrf.
+# Info: Info, Command 'auto_write' finished successfully
+# Info: [641]: Current working directory: /home/kyttong/ECE-327/lab2/uw_tmp/.
+# Info: [4552]: 17 Instances are flattened in hierarchical block .work.fir.low_pass.
+# Info: [4552]: 1 Instances are flattened in hierarchical block .work.audio_dac.main.
+# Info: [4552]: 3 Instances are flattened in hierarchical block .work.fir_top.main.
+# Info:  Writing ROM data in 'u_sine_modgen_rom_ix21__altsyncram_12_6_64_2_0.hex'.
+# Info:  Writing ROM data in 'u_noise_modgen_rom_ix24__altsyncram_8_10_1024_2_0.hex'.
+# Info: [15002]: Optimizing design view:.OPERATORS.mult_32_70.IMPLEMENTATION
+# Info: [15002]: Optimizing design view:.OPERATORS.mult_32_80.IMPLEMENTATION
+# Info: [15002]: Optimizing design view:.work.fir.low_pass
+# Info: [15002]: Optimizing design view:.work.i2c_ctrl_notri.main_unfold_1393
+# Info: [15002]: Optimizing design view:.work.i2c_av_config_notri.main_unfold_1971
+# Info: [15002]: Optimizing design view:.work.fir_top.main
+# Warning: [1621]: Port hex0(6) is connected to a disabled tristate, possibly unconnected Port in design.
+# Warning: [1621]: Port hex0(5) is connected to a disabled tristate, possibly unconnected Port in design.
+# Warning: [1621]: Port hex0(4) is connected to a disabled tristate, possibly unconnected Port in design.
+# Warning: [1621]: Port hex0(3) is connected to a disabled tristate, possibly unconnected Port in design.
+# Warning: [1621]: Port hex0(2) is connected to a disabled tristate, possibly unconnected Port in design.
+# Warning: [1621]: Port hex0(1) is connected to a disabled tristate, possibly unconnected Port in design.
+# Warning: [1621]: Port hex0(0) is connected to a disabled tristate, possibly unconnected Port in design.
+# Warning: [1621]: Port hex1(6) is connected to a disabled tristate, possibly unconnected Port in design.
+# Warning: [1621]: Port hex1(5) is connected to a disabled tristate, possibly unconnected Port in design.
+# Warning: [1621]: Port hex1(4) is connected to a disabled tristate, possibly unconnected Port in design.
+# Warning: [1621]: Port hex1(3) is connected to a disabled tristate, possibly unconnected Port in design.
+# Warning: [1621]: Port hex1(2) is connected to a disabled tristate, possibly unconnected Port in design.
+# Warning: [1621]: Port hex1(1) is connected to a disabled tristate, possibly unconnected Port in design.
+# Warning: [1621]: Port hex1(0) is connected to a disabled tristate, possibly unconnected Port in design.
+# Warning: [1621]: Port hex2(6) is connected to a disabled tristate, possibly unconnected Port in design.
+# Warning: [1621]: Port hex2(5) is connected to a disabled tristate, possibly unconnected Port in design.
+# Warning: [1621]: Port hex2(4) is connected to a disabled tristate, possibly unconnected Port in design.
+# Warning: [1621]: Port hex2(3) is connected to a disabled tristate, possibly unconnected Port in design.
+# Warning: [1621]: Port hex2(2) is connected to a disabled tristate, possibly unconnected Port in design.
+# Warning: [1621]: Port hex2(1) is connected to a disabled tristate, possibly unconnected Port in design.
+# Warning: [1621]: Port hex2(0) is connected to a disabled tristate, possibly unconnected Port in design.
+# Warning: [1621]: Port hex3(6) is connected to a disabled tristate, possibly unconnected Port in design.
+# Warning: [1621]: Port hex3(5) is connected to a disabled tristate, possibly unconnected Port in design.
+# Warning: [1621]: Port hex3(4) is connected to a disabled tristate, possibly unconnected Port in design.
+# Warning: [1621]: Port hex3(3) is connected to a disabled tristate, possibly unconnected Port in design.
+# Warning: [1621]: Port hex3(2) is connected to a disabled tristate, possibly unconnected Port in design.
+# Warning: [1621]: Port hex3(1) is connected to a disabled tristate, possibly unconnected Port in design.
+# Warning: [1621]: Port hex3(0) is connected to a disabled tristate, possibly unconnected Port in design.
+# Warning: [1621]: Port ledg(0) is connected to a disabled tristate, possibly unconnected Port in design.
+# Warning: [1621]: Port ledg(1) is connected to a disabled tristate, possibly unconnected Port in design.
+# Warning: [1621]: Port ledg(2) is connected to a disabled tristate, possibly unconnected Port in design.
+# Warning: [1621]: Port ledg(3) is connected to a disabled tristate, possibly unconnected Port in design.
+# Warning: [1621]: Port ledg(4) is connected to a disabled tristate, possibly unconnected Port in design.
+# Warning: [1621]: Port ledg(5) is connected to a disabled tristate, possibly unconnected Port in design.
+# Warning: [1621]: Port ledg(6) is connected to a disabled tristate, possibly unconnected Port in design.
+# Warning: [1621]: Port ledg(7) is connected to a disabled tristate, possibly unconnected Port in design.
+# Warning: [1621]: Port ledg(8) is connected to a disabled tristate, possibly unconnected Port in design.
+# Warning: [1621]: Port ledr(0) is connected to a disabled tristate, possibly unconnected Port in design.
+# Warning: [1621]: Port ledr(1) is connected to a disabled tristate, possibly unconnected Port in design.
+# Warning: [1621]: Port ledr(2) is connected to a disabled tristate, possibly unconnected Port in design.
+# Warning: [1621]: Port ledr(3) is connected to a disabled tristate, possibly unconnected Port in design.
+# Warning: [1621]: Port ledr(4) is connected to a disabled tristate, possibly unconnected Port in design.
+# Warning: [1621]: Port ledr(5) is connected to a disabled tristate, possibly unconnected Port in design.
+# Warning: [1621]: Port ledr(6) is connected to a disabled tristate, possibly unconnected Port in design.
+# Warning: [1621]: Port ledr(7) is connected to a disabled tristate, possibly unconnected Port in design.
+# Warning: [1621]: Port ledr(8) is connected to a disabled tristate, possibly unconnected Port in design.
+# Warning: [1621]: Port ledr(9) is connected to a disabled tristate, possibly unconnected Port in design.
+# Warning: [1621]: Port ledr(10) is connected to a disabled tristate, possibly unconnected Port in design.
+# Warning: [1621]: Port ledr(11) is connected to a disabled tristate, possibly unconnected Port in design.
+# Warning: [1621]: Port ledr(12) is connected to a disabled tristate, possibly unconnected Port in design.
+# Warning: [1621]: Port ledr(13) is connected to a disabled tristate, possibly unconnected Port in design.
+# Warning: [1621]: Port ledr(14) is connected to a disabled tristate, possibly unconnected Port in design.
+# Warning: [1621]: Port ledr(15) is connected to a disabled tristate, possibly unconnected Port in design.
+# Warning: [1621]: Port ledr(16) is connected to a disabled tristate, possibly unconnected Port in design.
+# Warning: [1621]: Port ledr(17) is connected to a disabled tristate, possibly unconnected Port in design.
+# Info: [12041]: -- Running timing characterization...
+# Warning: [12006]: Timer notification: No timing arcs found for model 'altpll' in technology 'cycloneii'.
+# Warning:     Creating black box model..
+# Warning: [12006]: Timer notification: Attempt to propagate clock u_i2c_av_config/reg_m_i2c_ctrl_clk/out(6) assigned to pin u_i2c_av_config/reg_m_i2c_ctrl_clk/regout from
+# Warning:     instance u_i2c_av_config/ix83 over non-unate connection, stopping propagation of clocks to O..
+# Info: -- Synthesize Done
+# Info: [8014]: Ripple clock net m_i2c_ctrl_clk converted into clock net and enable net.
+# Info: -- Saving the design database in /home/kyttong/ECE-327/lab2/uw_tmp/fir_top.xdb
+# Info: [3026]: Writing file: /home/kyttong/ECE-327/lab2/uw_tmp/fir_top.edf.
+# Info: Info, Writing xrf file '/home/kyttong/ECE-327/lab2/uw_tmp/fir_top.xrf'
+# Info: [3026]: Writing file: /home/kyttong/ECE-327/lab2/uw_tmp/fir_top.xrf.
+# Info: -- Writing file /home/kyttong/ECE-327/lab2/uw_tmp/fir_top.tcl
+# Info: exq_pr_compile_project gen_vcf fir_top 1
+# Info: [644]: Finished synthesizing design.
+# Info: [11019]: Total CPU time taken for synthesis: 5.3 secs.
+# Info: [11020]: Overall running time 5.6 secs.
+# Info: /home/kyttong/ECE-327/lab2/uw_tmp/precision_tech.sdc
+# Info: -- Saving the design database in uw_tmp/fir_top_logic.xdb
+# Info: [3026]: Writing file: uw_tmp/fir_top_logic.vhd.
+# Info: Info, Writing xrf file 'uw_tmp/fir_top_logic.xrf'
+# Info: [3026]: Writing file: uw_tmp/fir_top_logic.xrf.
+# Info: Info, Command 'auto_write' finished successfully
+# Info: clock_27 aud_bclk u_audio_dac_reg_lrck_1x.regout
+# Info: -- Saving the design database in uw_tmp/fir_top_logic.xdb
+# Info: [3026]: Writing file: uw_tmp/fir_top_logic.v.
+# Info: Warning, Moving uw_tmp/fir_top_logic.xrf to uw_tmp/mgc_old_fir_top_logic.xrf as uw_tmp/fir_top_logic.xrf exists
+# Info: [3026]: Writing file: uw_tmp/fir_top_logic.xrf.
+# Info: Info, Command 'auto_write' finished successfully
+# Info: *** logic synthesis succeeded ***

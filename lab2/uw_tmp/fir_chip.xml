@@ -1,0 +1,9 @@
+<interfaceDefinition version='1.2' language='verilog' kind='module' name='fir_chip'>
+    <portList>
+
+      <port name='clk' direction='input' type='' kind=''> </port>
+      <port name='i_data' direction='input' type='[15:0]' kind='array' packedDimension='[15:0]'> </port>
+      <port name='o_data' direction='output' type='[15:0]' kind='array' packedDimension='[15:0]'> </port>
+
+    </portList>
+</interfaceDefinition>

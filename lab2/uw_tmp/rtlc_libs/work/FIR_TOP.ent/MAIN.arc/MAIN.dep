@@ -1,0 +1,23 @@
+1453851373.110085
+work	/home/kyttong/ECE-327/lab2/uw_tmp/rtlc_libs/work	FIR_TOP	FIR_TOP	0
+work	/home/kyttong/ECE-327/lab2/uw_tmp/rtlc_libs/work	SINE_WAVE	SINE_WAVE	0
+ieee	/opt/Precision_Synthesis_2008a.47/Mgc_home/pkgs/rtlc_psr.ixl/rtlc/IEEE	STD_LOGIC_1164	STD_LOGIC_1164	2
+ieee	/opt/Precision_Synthesis_2008a.47/Mgc_home/pkgs/rtlc_psr.ixl/rtlc/IEEE	NUMERIC_STD	NUMERIC_STD	2
+work	/home/kyttong/ECE-327/lab2/uw_tmp/rtlc_libs/work	FIR_SYNTH_PKG	FIR_SYNTH_PKG	2
+work	/home/kyttong/ECE-327/lab2/uw_tmp/rtlc_libs/work	SAMPLE_64	SINE_WAVE	1
+work	/home/kyttong/ECE-327/lab2/uw_tmp/rtlc_libs/work	WHITE_NOISE	WHITE_NOISE	0
+ieee	/opt/Precision_Synthesis_2008a.47/Mgc_home/pkgs/rtlc_psr.ixl/rtlc/IEEE	STD_LOGIC_1164	STD_LOGIC_1164	2
+ieee	/opt/Precision_Synthesis_2008a.47/Mgc_home/pkgs/rtlc_psr.ixl/rtlc/IEEE	NUMERIC_STD	NUMERIC_STD	2
+work	/home/kyttong/ECE-327/lab2/uw_tmp/rtlc_libs/work	FIR_SYNTH_PKG	FIR_SYNTH_PKG	2
+work	/home/kyttong/ECE-327/lab2/uw_tmp/rtlc_libs/work	MAIN	WHITE_NOISE	1
+work	/home/kyttong/ECE-327/lab2/uw_tmp/rtlc_libs/work	FIR	FIR	0
+ieee	/opt/Precision_Synthesis_2008a.47/Mgc_home/pkgs/rtlc_psr.ixl/rtlc/IEEE	STD_LOGIC_1164	STD_LOGIC_1164	2
+ieee	/opt/Precision_Synthesis_2008a.47/Mgc_home/pkgs/rtlc_psr.ixl/rtlc/IEEE	NUMERIC_STD	NUMERIC_STD	2
+work	/home/kyttong/ECE-327/lab2/uw_tmp/rtlc_libs/work	FIR_SYNTH_PKG	FIR_SYNTH_PKG	2
+work	/home/kyttong/ECE-327/lab2/uw_tmp/rtlc_libs/work	LOW_PASS	FIR	1
+work	/home/kyttong/ECE-327/lab2/uw_tmp/rtlc_libs/work	AUDIO_DAC	AUDIO_DAC	0
+ieee	/opt/Precision_Synthesis_2008a.47/Mgc_home/pkgs/rtlc_psr.ixl/rtlc/IEEE	STD_LOGIC_1164	STD_LOGIC_1164	2
+ieee	/opt/Precision_Synthesis_2008a.47/Mgc_home/pkgs/rtlc_psr.ixl/rtlc/IEEE	NUMERIC_STD	NUMERIC_STD	2
+work	/home/kyttong/ECE-327/lab2/uw_tmp/rtlc_libs/work	I2C_AV_CONFIG	I2C_AV_CONFIG	0
+ieee	/opt/Precision_Synthesis_2008a.47/Mgc_home/pkgs/rtlc_psr.ixl/rtlc/IEEE	STD_LOGIC_1164	STD_LOGIC_1164	2
+ieee	/opt/Precision_Synthesis_2008a.47/Mgc_home/pkgs/rtlc_psr.ixl/rtlc/IEEE	NUMERIC_STD	NUMERIC_STD	2

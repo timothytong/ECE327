@@ -1,0 +1,8 @@
+8:-out_dir
+43:/home/kyttong/ECE-327/lab2/uw_tmp//rtlc.out
+10:-pipe_flow
+25:-comment_transoff_regions
+13:-lib_map_file
+43:/home/kyttong/ECE-327/lab2/uw_tmp//.jaguarc
+62:+incdir+/home/kyttong/ECE-327/lab2+/home/kyttong/ECE-327/lab2/
+17:+define+synthesis

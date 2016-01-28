@@ -1,0 +1,177 @@
+                   Clock Frequency Report
+
+	Domain                  Clock Name                            Min Period (Freq)
+	------                  ----------                            -----------------
+	ClockDomain2            u_audio_dac_reg_lrck_1x/regout        15.862 (63.044 MHz)  
+	ClockDomain1            aud_bclk                              1.381 (724.113 MHz)  
+	ClockDomain0            clock_27                              5.791 (172.682 MHz) *
+
+*  DLL/PLL clocks present in this clock domain. Estimated frequencies are shown.
+-- Device: Altera - Cyclone II : EP2C35F672C : 7
+-- CTE report summary..
+                  CTE Report Summary
+
+End CTE Report Summary ..... CPU Time Used: 0 sec.
+
+Setup Slack Path Summary
+
+                Data                                                                                                                                                   Data
+       Setup    Path                                                                                                                                                   End 
+Index  Slack   Delay            Source Clock                    Dest. Clock                               Data Start Pin                           Data End Pin        Edge
+-----  ------  ------  ------------------------------  ------------------------------  -----------------------------------------------------  -----------------------  ----
+  1    -3.862  15.449  u_audio_dac_reg_lrck_1x/regout  u_audio_dac_reg_lrck_1x/regout  u_fir/tap_array_2_filter_block_reg_current_tap(0)/clk  reg_audio_out(15)/sdata  Rise
+  2    -3.860  15.447  u_audio_dac_reg_lrck_1x/regout  u_audio_dac_reg_lrck_1x/regout  u_fir/tap_array_2_filter_block_reg_current_tap(1)/clk  reg_audio_out(15)/sdata  Rise
+  3    -3.802  15.389  u_audio_dac_reg_lrck_1x/regout  u_audio_dac_reg_lrck_1x/regout  u_fir/tap_array_2_filter_block_reg_current_tap(2)/clk  reg_audio_out(15)/sdata  Rise
+  4    -3.802  15.389  u_audio_dac_reg_lrck_1x/regout  u_audio_dac_reg_lrck_1x/regout  u_fir/tap_array_1_filter_block_reg_current_tap(0)/clk  reg_audio_out(15)/sdata  Rise
+  5    -3.800  15.387  u_audio_dac_reg_lrck_1x/regout  u_audio_dac_reg_lrck_1x/regout  u_fir/tap_array_1_filter_block_reg_current_tap(3)/clk  reg_audio_out(15)/sdata  Rise
+  6    -3.742  15.329  u_audio_dac_reg_lrck_1x/regout  u_audio_dac_reg_lrck_1x/regout  u_fir/tap_array_1_filter_block_reg_current_tap(4)/clk  reg_audio_out(15)/sdata  Rise
+  7    -3.722  15.309  u_audio_dac_reg_lrck_1x/regout  u_audio_dac_reg_lrck_1x/regout  u_fir/tap_array_2_filter_block_reg_current_tap(3)/clk  reg_audio_out(15)/sdata  Rise
+  8    -3.700  15.287  u_audio_dac_reg_lrck_1x/regout  u_audio_dac_reg_lrck_1x/regout  u_fir/tap_array_1_filter_block_reg_current_tap(1)/clk  reg_audio_out(15)/sdata  Rise
+  9    -3.670  15.257  u_audio_dac_reg_lrck_1x/regout  u_audio_dac_reg_lrck_1x/regout  u_fir/tap_array_2_filter_block_reg_current_tap(5)/clk  reg_audio_out(15)/sdata  Rise
+ 10    -3.662  15.249  u_audio_dac_reg_lrck_1x/regout  u_audio_dac_reg_lrck_1x/regout  u_fir/tap_array_1_filter_block_reg_current_tap(5)/clk  reg_audio_out(15)/sdata  Rise
+
+-- Device: Altera - Cyclone II : EP2C35F672C : 7
+-- CTE report summary..
+                  CTE Report Summary
+
+Analyzing setup constraint violations 
+End CTE Report Summary ..... CPU Time Used: 0 sec.
+-- Device: Altera - Cyclone II : EP2C35F672C : 7
+-- CTE report timing..
+                  CTE Path Report
+
+
+Critical path #1, (path slack = -3.862):
+
+SOURCE CLOCK: name: u_audio_dac_reg_lrck_1x/regout period: 12.000000
+     Times are relative to the 1st rising edge
+  DEST CLOCK: name: u_audio_dac_reg_lrck_1x/regout period: 12.000000
+     Times are relative to the 2nd rising edge
+
+NAME                                                                               GATE                     DELAY    ARRIVAL DIR  FANOUT
+u_fir/tap_array_2_filter_block_reg_current_tap(0)/clk                           cycloneii_lcell_ff                   0.000   up
+u_fir/tap_array_2_filter_block_reg_current_tap(0)/regout                        cycloneii_lcell_ff         0.000     0.000   up
+u_fir/taps(2)(0)                                                                (net)                      0.290                   2
+u_fir/tap_array_2_filter_block_prod_mults28_0/modgen_add_1_ix8231z52936/dataa   cycloneii_lcell_comb                 0.290   up
+u_fir/tap_array_2_filter_block_prod_mults28_0/modgen_add_1_ix8231z52936/cout    cycloneii_lcell_comb       0.517     0.807   up
+u_fir/tap_array_2_filter_block_prod_mults28_0/nx8231z13                         (net)                *     0.000                   1
+u_fir/tap_array_2_filter_block_prod_mults28_0/modgen_add_1_ix8231z52935/cin     cycloneii_lcell_comb                 0.807   up
+u_fir/tap_array_2_filter_block_prod_mults28_0/modgen_add_1_ix8231z52935/cout    cycloneii_lcell_comb       0.080     0.887   up
+u_fir/tap_array_2_filter_block_prod_mults28_0/nx8231z12                         (net)                *     0.000                   1
+u_fir/tap_array_2_filter_block_prod_mults28_0/modgen_add_1_ix8231z52934/cin     cycloneii_lcell_comb                 0.887   up
+u_fir/tap_array_2_filter_block_prod_mults28_0/modgen_add_1_ix8231z52934/cout    cycloneii_lcell_comb       0.080     0.967   up
+u_fir/tap_array_2_filter_block_prod_mults28_0/nx8231z11                         (net)                *     0.000                   1
+u_fir/tap_array_2_filter_block_prod_mults28_0/modgen_add_1_ix8231z52933/cin     cycloneii_lcell_comb                 0.967   up
+u_fir/tap_array_2_filter_block_prod_mults28_0/modgen_add_1_ix8231z52933/cout    cycloneii_lcell_comb       0.080     1.047   up
+u_fir/tap_array_2_filter_block_prod_mults28_0/nx8231z10                         (net)                *     0.000                   1
+u_fir/tap_array_2_filter_block_prod_mults28_0/modgen_add_1_ix8231z52932/cin     cycloneii_lcell_comb                 1.047   up
+u_fir/tap_array_2_filter_block_prod_mults28_0/modgen_add_1_ix8231z52932/combout cycloneii_lcell_comb       0.000     1.047   up
+u_fir/tap_array_2_filter_block_prod_mults28_0/d(4)                              (net)                *     0.270                   1
+u_fir/tap_array_2_filter_block_next_sum_add16_0/ix2247z52939/dataa              cycloneii_lcell_comb                 1.317   up
+u_fir/tap_array_2_filter_block_next_sum_add16_0/ix2247z52939/cout               cycloneii_lcell_comb       0.517     1.834   up
+u_fir/tap_array_2_filter_block_next_sum_add16_0/nx2247z46                       (net)                *     0.000                   1
+u_fir/tap_array_2_filter_block_next_sum_add16_0/ix2247z52938/cin                cycloneii_lcell_comb                 1.834   up
+u_fir/tap_array_2_filter_block_next_sum_add16_0/ix2247z52938/cout               cycloneii_lcell_comb       0.080     1.914   up
+u_fir/tap_array_2_filter_block_next_sum_add16_0/nx2247z43                       (net)                *     0.000                   1
+u_fir/tap_array_2_filter_block_next_sum_add16_0/ix2247z52937/cin                cycloneii_lcell_comb                 1.914   up
+u_fir/tap_array_2_filter_block_next_sum_add16_0/ix2247z52937/cout               cycloneii_lcell_comb       0.080     1.994   up
+u_fir/tap_array_2_filter_block_next_sum_add16_0/nx2247z40                       (net)                *     0.000                   1
+u_fir/tap_array_2_filter_block_next_sum_add16_0/ix2247z52936/cin                cycloneii_lcell_comb                 1.994   up
+u_fir/tap_array_2_filter_block_next_sum_add16_0/ix2247z52936/cout               cycloneii_lcell_comb       0.080     2.074   up
+u_fir/tap_array_2_filter_block_next_sum_add16_0/nx2247z37                       (net)                *     0.000                   1
+u_fir/tap_array_2_filter_block_next_sum_add16_0/ix2247z52935/cin                cycloneii_lcell_comb                 2.074   up
+u_fir/tap_array_2_filter_block_next_sum_add16_0/ix2247z52935/cout               cycloneii_lcell_comb       0.080     2.154   up
+u_fir/tap_array_2_filter_block_next_sum_add16_0/nx2247z34                       (net)                *     0.000                   1
+u_fir/tap_array_2_filter_block_next_sum_add16_0/ix2247z52934/cin                cycloneii_lcell_comb                 2.154   up
+u_fir/tap_array_2_filter_block_next_sum_add16_0/ix2247z52934/cout               cycloneii_lcell_comb       0.080     2.234   up
+u_fir/tap_array_2_filter_block_next_sum_add16_0/nx2247z31                       (net)                *     0.000                   1
+u_fir/tap_array_2_filter_block_next_sum_add16_0/ix2247z52933/cin                cycloneii_lcell_comb                 2.234   up
+u_fir/tap_array_2_filter_block_next_sum_add16_0/ix2247z52933/cout               cycloneii_lcell_comb       0.080     2.314   up
+u_fir/tap_array_2_filter_block_next_sum_add16_0/nx2247z28                       (net)                *     0.000                   1
+u_fir/tap_array_2_filter_block_next_sum_add16_0/ix2247z52932/cin                cycloneii_lcell_comb                 2.314   up
+u_fir/tap_array_2_filter_block_next_sum_add16_0/ix2247z52932/cout               cycloneii_lcell_comb       0.080     2.394   up
+u_fir/tap_array_2_filter_block_next_sum_add16_0/nx2247z25                       (net)                *     0.000                   1
+u_fir/tap_array_2_filter_block_next_sum_add16_0/ix2247z52931/cin                cycloneii_lcell_comb                 2.394   up
+u_fir/tap_array_2_filter_block_next_sum_add16_0/ix2247z52931/cout               cycloneii_lcell_comb       0.080     2.474   up
+u_fir/tap_array_2_filter_block_next_sum_add16_0/nx2247z22                       (net)                *     0.000                   1
+u_fir/tap_array_2_filter_block_next_sum_add16_0/ix2247z52930/cin                cycloneii_lcell_comb                 2.474   up
+u_fir/tap_array_2_filter_block_next_sum_add16_0/ix2247z52930/cout               cycloneii_lcell_comb       0.080     2.554   up
+u_fir/tap_array_2_filter_block_next_sum_add16_0/nx2247z19                       (net)                *     0.000                   1
+u_fir/tap_array_2_filter_block_next_sum_add16_0/ix2247z52929/cin                cycloneii_lcell_comb                 2.554   up
+u_fir/tap_array_2_filter_block_next_sum_add16_0/ix2247z52929/cout               cycloneii_lcell_comb       0.080     2.634   up
+u_fir/tap_array_2_filter_block_next_sum_add16_0/nx2247z16                       (net)                *     0.000                   1
+u_fir/tap_array_2_filter_block_next_sum_add16_0/ix2247z52928/cin                cycloneii_lcell_comb                 2.634   up
+u_fir/tap_array_2_filter_block_next_sum_add16_0/ix2247z52928/cout               cycloneii_lcell_comb       0.080     2.714   up
+u_fir/tap_array_2_filter_block_next_sum_add16_0/nx2247z13                       (net)                *     0.000                   1
+u_fir/tap_array_2_filter_block_next_sum_add16_0/ix2247z52927/cin                cycloneii_lcell_comb                 2.714   up
+u_fir/tap_array_2_filter_block_next_sum_add16_0/ix2247z52927/cout               cycloneii_lcell_comb       0.080     2.794   up
+u_fir/tap_array_2_filter_block_next_sum_add16_0/nx2247z10                       (net)                *     0.000                   1
+u_fir/tap_array_2_filter_block_next_sum_add16_0/ix2247z52926/cin                cycloneii_lcell_comb                 2.794   up
+u_fir/tap_array_2_filter_block_next_sum_add16_0/ix2247z52926/cout               cycloneii_lcell_comb       0.080     2.874   up
+u_fir/tap_array_2_filter_block_next_sum_add16_0/nx2247z7                        (net)                *     0.000                   1
+u_fir/tap_array_2_filter_block_next_sum_add16_0/ix2247z52925/cin                cycloneii_lcell_comb                 2.874   up
+u_fir/tap_array_2_filter_block_next_sum_add16_0/ix2247z52925/cout               cycloneii_lcell_comb       0.080     2.954   up
+u_fir/tap_array_2_filter_block_next_sum_add16_0/nx2247z4                        (net)                *     0.000                   1
+u_fir/tap_array_2_filter_block_next_sum_add16_0/ix2247z52923/cin                cycloneii_lcell_comb                 2.954   up
+u_fir/tap_array_2_filter_block_next_sum_add16_0/ix2247z52923/combout            cycloneii_lcell_comb       0.000     2.954   up
+u_fir/tap_array_2_filter_block_next_sum_add16_0/nx2247z1                        (net)                *     0.270                   1
+u_fir/tap_array_3_filter_block_next_sum_add16_0/ix2247z52923/dataa              cycloneii_lcell_comb                 3.224   up
+u_fir/tap_array_3_filter_block_next_sum_add16_0/ix2247z52923/combout            cycloneii_lcell_comb       0.545     3.769   up
+u_fir/tap_array_3_filter_block_next_sum_add16_0/nx2247z1                        (net)                *     0.270                   1
+u_fir/tap_array_4_filter_block_next_sum_add16_0/ix2247z52923/dataa              cycloneii_lcell_comb                 4.039   up
+u_fir/tap_array_4_filter_block_next_sum_add16_0/ix2247z52923/combout            cycloneii_lcell_comb       0.545     4.584   up
+u_fir/tap_array_4_filter_block_next_sum_add16_0/nx2247z1                        (net)                *     0.270                   1
+u_fir/tap_array_5_filter_block_next_sum_add16_0/ix2247z52923/dataa              cycloneii_lcell_comb                 4.854   up
+u_fir/tap_array_5_filter_block_next_sum_add16_0/ix2247z52923/combout            cycloneii_lcell_comb       0.545     5.399   up
+u_fir/tap_array_5_filter_block_next_sum_add16_0/nx2247z1                        (net)                *     0.270                   1
+u_fir/tap_array_6_filter_block_next_sum_add16_0/ix2247z52923/dataa              cycloneii_lcell_comb                 5.669   up
+u_fir/tap_array_6_filter_block_next_sum_add16_0/ix2247z52923/combout            cycloneii_lcell_comb       0.545     6.214   up
+u_fir/tap_array_6_filter_block_next_sum_add16_0/nx2247z1                        (net)                *     0.270                   1
+u_fir/tap_array_7_filter_block_next_sum_add16_0/ix2247z52923/dataa              cycloneii_lcell_comb                 6.484   up
+u_fir/tap_array_7_filter_block_next_sum_add16_0/ix2247z52923/combout            cycloneii_lcell_comb       0.545     7.029   up
+u_fir/tap_array_7_filter_block_next_sum_add16_0/nx2247z1                        (net)                *     0.270                   1
+u_fir/tap_array_8_filter_block_next_sum_add16_0/ix2247z52923/dataa              cycloneii_lcell_comb                 7.299   up
+u_fir/tap_array_8_filter_block_next_sum_add16_0/ix2247z52923/combout            cycloneii_lcell_comb       0.545     7.844   up
+u_fir/tap_array_8_filter_block_next_sum_add16_0/nx2247z1                        (net)                *     0.270                   1
+u_fir/tap_array_9_filter_block_next_sum_add16_0/ix2247z52923/dataa              cycloneii_lcell_comb                 8.114   up
+u_fir/tap_array_9_filter_block_next_sum_add16_0/ix2247z52923/combout            cycloneii_lcell_comb       0.545     8.659   up
+u_fir/tap_array_9_filter_block_next_sum_add16_0/nx2247z1                        (net)                *     0.270                   1
+u_fir/tap_array_10_filter_block_next_sum_add16_0/ix2247z52923/dataa             cycloneii_lcell_comb                 8.929   up
+u_fir/tap_array_10_filter_block_next_sum_add16_0/ix2247z52923/combout           cycloneii_lcell_comb       0.545     9.474   up
+u_fir/tap_array_10_filter_block_next_sum_add16_0/nx2247z1                       (net)                *     0.270                   1
+u_fir/tap_array_11_filter_block_next_sum_add16_0/ix2247z52923/dataa             cycloneii_lcell_comb                 9.744   up
+u_fir/tap_array_11_filter_block_next_sum_add16_0/ix2247z52923/combout           cycloneii_lcell_comb       0.545    10.289   up
+u_fir/tap_array_11_filter_block_next_sum_add16_0/nx2247z1                       (net)                *     0.270                   1
+u_fir/tap_array_12_filter_block_next_sum_add16_0/ix2247z52923/dataa             cycloneii_lcell_comb                10.559   up
+u_fir/tap_array_12_filter_block_next_sum_add16_0/ix2247z52923/combout           cycloneii_lcell_comb       0.545    11.104   up
+u_fir/tap_array_12_filter_block_next_sum_add16_0/nx2247z1                       (net)                *     0.270                   1
+u_fir/tap_array_13_filter_block_next_sum_add16_0/ix2247z52923/dataa             cycloneii_lcell_comb                11.374   up
+u_fir/tap_array_13_filter_block_next_sum_add16_0/ix2247z52923/combout           cycloneii_lcell_comb       0.545    11.919   up
+u_fir/tap_array_13_filter_block_next_sum_add16_0/nx2247z1                       (net)                *     0.270                   1
+u_fir/tap_array_14_filter_block_next_sum_add16_0/ix2247z52923/dataa             cycloneii_lcell_comb                12.189   up
+u_fir/tap_array_14_filter_block_next_sum_add16_0/ix2247z52923/combout           cycloneii_lcell_comb       0.545    12.734   up
+u_fir/tap_array_14_filter_block_next_sum_add16_0/nx2247z1                       (net)                *     0.270                   1
+u_fir/tap_array_15_filter_block_next_sum_add16_0/ix2247z52923/dataa             cycloneii_lcell_comb                13.004   up
+u_fir/tap_array_15_filter_block_next_sum_add16_0/ix2247z52923/combout           cycloneii_lcell_comb       0.545    13.549   up
+u_fir/tap_array_15_filter_block_next_sum_add16_0/nx2247z1                       (net)                *     0.270                   1
+u_fir/tap_array_16_filter_block_next_sum_add16_0/ix2247z52923/dataa             cycloneii_lcell_comb                13.819   up
+u_fir/tap_array_16_filter_block_next_sum_add16_0/ix2247z52923/combout           cycloneii_lcell_comb       0.545    14.364   up
+u_fir/tap_array_16_filter_block_next_sum_add16_0/nx2247z1                       (net)                *     0.270                   1
+u_fir/tap_array_17_filter_block_next_sum_add16_0/ix2247z52923/dataa             cycloneii_lcell_comb                14.634   up
+u_fir/tap_array_17_filter_block_next_sum_add16_0/ix2247z52923/combout           cycloneii_lcell_comb       0.545    15.179   up
+u_fir/tap_array_17_filter_block_next_sum_add16_0/nx2247z1                       (net)                *     0.270                   1
+reg_audio_out(15)/sdata                                                         cycloneii_lcell_ff                  15.449   up
+
+		Initial edge separation:     12.000
+		Source clock delay:      -    0.650
+		Dest clock delay:        +    0.650
+		                        -----------
+		Edge separation:             12.000
+		Setup constraint:        -    0.413
+		                        -----------
+		Data required time:          11.587
+		Data arrival time:       -   15.449   ( 68.41% cell delay, 31.59% net delay )
+		                        -----------
+		Slack (VIOLATED):            -3.862
+
+End CTE Analysis ..... CPU Time Used: 0 sec.
