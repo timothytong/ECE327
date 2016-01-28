@@ -1,0 +1,60 @@
+# //  ModelSim SE-64 10.1 Dec  5 2011 Linux 2.6.18-407.el5
+# //
+# //  Copyright 1991-2011 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# vsim -do uw_tmp/uw-sim.tcl -lib work-msim -t 1ns -wlf uw_tmp/vsim.wlf add2_tb(main) 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.add2_tb(main)#1
+# Loading work.add2(main)#1
+# Loading work.fulladder(main)#1
+# Loading work.sum(main)#1
+# Loading work.carry(main)#1
+# do uw_tmp/uw-sim.tcl 
+# ** Error: Unable to lock WLF file "uw_tmp/vsim.wlf". Retrying 1 times, errno 11
+# ** Error: Unable to lock WLF file "uw_tmp/vsim.wlf". Retrying 2 times, errno 11
+# ** Error: Unable to lock WLF file "uw_tmp/vsim.wlf". Retrying 3 times, errno 11
+# ** Error: Cannot lock WLF file: "uw_tmp/vsim.wlf"
+#           errno 11: Resource temporarily unavailable.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: uw_tmp/vsim.wlf
+#           File in use by: kyttong  Hostname: eceLinux2.uwaterloo.ca  ProcessID: 25467
+#           Attempting to use alternate WLF file "uw_tmp/wlftUWaerb".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: uw_tmp/vsim.wlf
+#           Using alternate file: uw_tmp/wlftUWaerb
+#  
+rr
+# Model Technology ModelSim SE-64 vcom 10.1 Compiler 2011.12 Dec  5 2011
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity sum
+# -- Compiling architecture main of sum
+# -- Compiling entity carry
+# -- Compiling architecture main of carry
+# -- Compiling entity fulladder
+# -- Compiling architecture main of fulladder
+# -- Loading entity sum
+# -- Loading entity carry
+# -- Compiling entity add2
+# -- Compiling architecture main of add2
+# -- Loading entity fulladder
+# -- Compiling entity add2_tb
+# -- Compiling architecture main of add2_tb
+# -- Loading entity add2
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.add2_tb(main)#1
+# Loading work.add2(main)#1
+# Loading work.fulladder(main)#1
+# Loading work.sum(main)#1
+# Loading work.carry(main)#1
+# {0 ns} {64 ns}
